@@ -1,0 +1,8 @@
+{
+  "model_used": "gemini-3.8-flash",
+  "prompt_tokens": 39,
+  "candidates_tokens": 58,
+  "total_tokens": 389,
+  "response_text": "```json\n{\n  \"status\": \"verified\",\n  \"analyst_note\": \"The cash conversion ratio (CFO/PAT) matters because it reflects the quality of reported earnings by measuring how effectively accounting profits are converted into actual operating cash flow.\"\n}\n```",
+  "latency_seconds": 490.78
+}

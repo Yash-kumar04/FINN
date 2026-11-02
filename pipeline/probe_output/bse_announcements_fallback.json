@@ -1,0 +1,15 @@
+{
+  "BSE API Announcements GetData": {
+    "status": 403,
+    "text": "<HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;api&#46;bseindia&#46;com&#47;BseIndiaAPI&#47;api&#47;AnnSubCate"
+  },
+  "BSE API CorpAnn Scrip 540699 (DIXON)": {
+    "status": 200,
+    "count": 0,
+    "sample": null
+  },
+  "BSE_RSS": {
+    "status": 404,
+    "length": 8315
+  }
+}

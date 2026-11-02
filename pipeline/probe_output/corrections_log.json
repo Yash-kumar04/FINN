@@ -1,0 +1,31 @@
+{
+  "corrections_applied": [
+    {
+      "issue": "Agent wrote 'Dixon +12% followed its results'. This is a causal claim \u2014 a guess.",
+      "context": "Dixon PAT was DOWN 45% YoY. Claiming the price rose 'because of results' is editorializing.",
+      "fix": "Show price reaction (delta %, volume spike) next to results numbers without ever claiming causation.",
+      "rule": "NEVER write 'rose because', 'fell due to', or any causal language linking price moves to events."
+    },
+    {
+      "issue": "TRENT has 0 concall transcripts on Screener.",
+      "context": "Promised-vs-Delivered requires multiple quarters of management commentary from earnings calls.",
+      "fix": "Keep TRENT in portfolio (for Briefing tab), remove from research universe. Research tickers must have >= 4 recent transcript links on Screener."
+    },
+    {
+      "issue": "gemini-2.5-flash appeared in models.list() but was not callable (404).",
+      "fix": "Read model name from GEMINI_MODEL env var. Always make a verification generate call at pipeline startup before running extraction. Never trust models.list() alone."
+    },
+    {
+      "issue": "Total tokens included 292 hidden reasoning tokens not logged separately.",
+      "fix": "Log prompt_tokens, candidates_tokens, thinking_tokens (= total - prompt - candidates) separately per call. Use thinking_budget=0 for bulk extraction to minimize cost."
+    },
+    {
+      "issue": "QoQ calculation impossible from headline filing text (only shows YoY).",
+      "fix": "Parse the full 3-column SEBI-format results table from the PDF (current Q, preceding Q, year-ago Q). Also test NSE XBRL structured results as a cheaper/more accurate alternative to LLM extraction."
+    },
+    {
+      "issue": "Cloud servers blocked by NSE/BSE/Screener.",
+      "fix": "Run pipeline locally, commit snapshots to repo. On Render: serve pre-cached demo tickers from disk, fail live lookups with clear 'Data unavailable from cloud \u2014 run pipeline locally' message. Handle Render free-tier cold start (~60s) in the frontend with a loading state."
+    }
+  ]
+}

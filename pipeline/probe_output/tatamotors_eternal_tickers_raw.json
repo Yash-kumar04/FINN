@@ -1,0 +1,104 @@
+[
+  {
+    "entity": "Tata Motors Passenger Vehicles",
+    "symbol": "TMPV.NS",
+    "status": "ACTIVE_VERIFIED",
+    "last_date": "2026-11-02",
+    "last_close": 272.3999938964844,
+    "last_volume": 7286435,
+    "raw_last_row": {
+      "Open": 267.0,
+      "High": 274.0,
+      "Low": 267.0,
+      "Close": 272.3999938964844,
+      "Volume": 7286435.0,
+      "Dividends": 0.0,
+      "Stock Splits": 0.0
+    }
+  },
+  {
+    "entity": "Tata Motors Commercial Vehicles",
+    "symbol": "TMCV.NS",
+    "status": "ACTIVE_VERIFIED",
+    "last_date": "2026-11-02",
+    "last_close": 401.3999938964844,
+    "last_volume": 7435489,
+    "raw_last_row": {
+      "Open": 396.3500061035156,
+      "High": 409.75,
+      "Low": 393.3999938964844,
+      "Close": 401.3999938964844,
+      "Volume": 7435489.0,
+      "Dividends": 0.0,
+      "Stock Splits": 0.0
+    }
+  },
+  {
+    "entity": "Eternal Ltd (formerly Zomato)",
+    "symbol": "ETERNAL.NS",
+    "status": "ACTIVE_VERIFIED",
+    "last_date": "2026-11-02",
+    "last_close": 344.0,
+    "last_volume": 19039750,
+    "raw_last_row": {
+      "Open": 343.29998779296875,
+      "High": 348.3500061035156,
+      "Low": 343.0,
+      "Close": 344.0,
+      "Volume": 19039750.0,
+      "Dividends": 0.0,
+      "Stock Splits": 0.0
+    }
+  },
+  {
+    "entity": "Tata Motors PV (BSE)",
+    "symbol": "TMPV.BO",
+    "status": "ACTIVE_VERIFIED",
+    "last_date": "2026-11-02",
+    "last_close": 271.5,
+    "last_volume": 301042,
+    "raw_last_row": {
+      "Open": 267.5,
+      "High": 274.04998779296875,
+      "Low": 267.5,
+      "Close": 271.5,
+      "Volume": 301042.0,
+      "Dividends": 0.0,
+      "Stock Splits": 0.0
+    }
+  },
+  {
+    "entity": "Tata Motors CV (BSE)",
+    "symbol": "TMCV.BO",
+    "status": "ACTIVE_VERIFIED",
+    "last_date": "2026-11-02",
+    "last_close": 400.54998779296875,
+    "last_volume": 1020078,
+    "raw_last_row": {
+      "Open": 396.75,
+      "High": 409.5,
+      "Low": 393.95001220703125,
+      "Close": 400.54998779296875,
+      "Volume": 1020078.0,
+      "Dividends": 0.0,
+      "Stock Splits": 0.0
+    }
+  },
+  {
+    "entity": "Eternal Ltd (BSE)",
+    "symbol": "ETERNAL.BO",
+    "status": "ACTIVE_VERIFIED",
+    "last_date": "2026-11-02",
+    "last_close": 343.70001220703125,
+    "last_volume": 540627,
+    "raw_last_row": {
+      "Open": 343.75,
+      "High": 348.3999938964844,
+      "Low": 343.0,
+      "Close": 343.70001220703125,
+      "Volume": 540627.0,
+      "Dividends": 0.0,
+      "Stock Splits": 0.0
+    }
+  }
+]

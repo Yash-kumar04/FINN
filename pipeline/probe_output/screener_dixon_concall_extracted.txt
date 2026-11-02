@@ -1,0 +1,206 @@
+Title: Transcript
+URL: https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7ce2ca16-3043-48f4-97f9-a62a6a086c2f.pdf
+Page Count: 21
+Total Character Count: 58526
+First 300 Characters:
+Dixon Technologies (India) Limited 
+ 
+ 
+                                                                                                                                                  5th August, 2026 
+ 
+To 
+            
+ 
+ 
+ 
+Secretary 
+Listing Department 
+BSE Limited 
+Department of Corporate Ser
+
+--- FULL EXTRACTED TEXT (First 3 Pages) ---
+
+--- PAGE 1 ---
+ 
+ 
+Dixon Technologies (India) Limited 
+ 
+ 
+                                                                                                                                                  5th August, 2026 
+ 
+To 
+            
+ 
+ 
+ 
+Secretary 
+Listing Department 
+BSE Limited 
+Department of Corporate Services 
+Phiroze Jeejeebhoy Towers,  
+Dalal Street, Mumbai – 400 001 
+ 
+To 
+            
+ 
+ 
+ 
+Secretary 
+Listing Department 
+National Stock Exchange of India Limited 
+Exchange Plaza, Bandra Kurla Complex  
+Mumbai – 400 051 
+ 
+Scrip Code – 540699 
+ISIN: INE935N01020 
+Scrip Code - DIXON 
+ISIN: INE935N01020 
+ 
+ 
+Dear Sir/Madam, 
+ 
+Sub: Transcript of the Q1 FY 27 Earnings Conference Call held on 31st July, 2026  
+ 
+Pursuant to Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure 
+Requirements) Regulations, 2015, read with Para A of Part A of Schedule III thereto, please find enclosed 
+herewith the transcript of the Q1 FY 27 Earnings Conference Call of the Company held on Friday, 31st July, 
+2026. 
+ 
+The said transcript has also been uploaded by the Company on its website and the same is available at 
+https://dixoninfo.com/financial-performance under the head - Earnings Call Transcripts (2026-27- 
+Quarter Q1).  
+ 
+We request you to kindly take this on your record and oblige. 
+ 
+ 
+Thanking You, 
+ 
+For DIXON TECHNOLOGIES (INDIA) LIMITED 
+ 
+ 
+ 
+_________________________ 
+Ashish Kumar  
+President- Chief Legal Counsel & Group Company Secretary 
+ 
+Encl: As above 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Regd. Office: B-14 & 15, Phase-II, Noida-201305, (U.P.) India, Ph.:0120-4737200 
+           E-mail: info@dixoninfo.com  • Website: https://dixoninfo.com/  • Fax: 0120-4737263 
+CIN: L32101UP1993PLC066581 
+Ashish 
+Kumar
+Digitally signed 
+by Ashish Kumar 
+Date: 2026.08.05 
+18:08:08 +05'30'
+
+--- PAGE 2 ---
+Page 1 of 20 
+ 
+ 
+ 
+“Dixon Technologies (India) Limited 
+Q1 FY '27 Earnings Conference Call” 
+July 31, 2026 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+MANAGEMENT: MR. ATUL LALL – MANAGING DIRECTOR AND VICE 
+CHAIRMAN – DIXON TECHNOLOGIES (INDIA) LIMITED 
+ 
+MR. SAURABH GUPTA – DIRECTOR AND GROUP CHIEF 
+FINANCIAL OFFICER – DIXON TECHNOLOGIES (INDIA) 
+LIMITED 
+ 
+MODERATOR: 
+MR. TANAY SHAH – DAM CAPITAL ADVISORS 
+LIMITED 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 3 ---
+ 
+Dixon Technologies (India) Limited 
+ 
+ 
+July 31, 2026 
+ 
+Page 2 of 20 
+ 
+Moderator: 
+Ladies and gentlemen, good day, and welcome to the Dixon Technologies Q1 FY '27 Earnings 
+Conference Call hosted by DAM Capital Advisors Limited. As a reminder, all participant lines 
+will be in the listen-only mode and there will be an opportunity for you to ask questions after 
+the presentation concludes. Should you need assistance during the conference call, please 
+signal an operator by pressing star then zero on your touch-tone phone. Please note that this 
+conference is being recorded. I now hand the conference over to Mr. Tanay Shah. Thank you, 
+and over to you, sir. 
+Tanay Shah: 
+Yes. Thank you, Anushka. Good evening, everyone. Welcome to the Dixon Technologies Q1 
+FY '27 Earnings Call. Today, we have the management being represented by Mr. Atul Lall, 
+Vice Chairman and Managing Director; and Mr. Saurabh Gupta, Director and Group CFO. At 
+this point, I will hand over the floor to Mr. Lall for his initial remarks, post which we'll open 
+up the floor for Q&A. Thank you, and over to you, sir. 
+Atul Lall: 
+Thank you, Tanay. Good evening, everyone. This is Atul Lall, and joining me today is our 
+Director and Group CFO, Saurabh Gupta. 
+Saurabh Gupta: 
+Good evening, everybody. 
+Atul Lall: 
+I would like to warmly welcome all our stakeholders to discuss our Q1 performance for '26-
+'27. Key highlights for the quarter are as below. Revenues for the quarter ended June 30, 2026, 
+was INR15,557 crores. EBITDA, excluding fair value gain on the stake held by Dixon Aditya 
+Infotech Limited for the quarter was INR472 crores. PAT after minority interest and excluding 
+fair value gain on the stake held by Dixon in Aditya Infotech for the quarter is INR218 crores. 
+ 
+During the quarter 1 financial year '26-'27, the global and domestic electronics manufacturing 
+landscape navigated a very complex macroeconomic environment, characterized by persistent 
+inflationary pressure across commodities and supply chain. Sharp price spikes in core input 
+components exerted temporary cost pressures across the broader hardware ecosystem. 
+However, Dixon's agile cost-plus contract structures and pass-through mechanisms enabled us 
+to deliver a strong revenue growth even amid temporary volume friction. 
+ 
+Operating margin for the quarter reflected temporary compression on account of expiry of 
+Mobile PLI 1 in March '26 and from increased selling prices driven by elevated input costs and 
+broader supply chain inflationary factors. As increased input costs were passed through 
+increase in selling prices, percentage margins look optically lower, mostly in mobile and IT 
+hardware business. 
+ 
+While the sunset of Mobile 1 incentives impacted short-term percentage profitability, Dixon's 
+strategic pivot towards component backward integration, including display and camera 
+modules, along with participation in mobile PLI 2 and ECMS positions the company to drive 
+absolute profit growth and restore operating margins from the next fiscal of '27, '28. 
+ 
+Washing machine and refrigerator business witnessed temporary margin pressures on account 
+of volatility in polymer prices, other related input costs and adverse foreign exchange 

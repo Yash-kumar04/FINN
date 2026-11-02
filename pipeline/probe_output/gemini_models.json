@@ -1,0 +1,587 @@
+[
+  {
+    "name": "models/gemini-2.5-flash",
+    "display_name": "Gemini 2.5 Flash",
+    "description": "Stable version of Gemini 2.5 Flash, our mid-size multimodal model that supports up to 1 million tokens, released in June of 2025.",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-2.5-pro",
+    "display_name": "Gemini 2.5 Pro",
+    "description": "Stable release (June 17th, 2025) of Gemini 2.5 Pro",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-2.5-flash-preview-tts",
+    "display_name": "Gemini 2.5 Flash Preview TTS",
+    "description": "Gemini 2.5 Flash Preview TTS",
+    "supported_actions": [
+      "countTokens",
+      "generateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-2.5-pro-preview-tts",
+    "display_name": "Gemini 2.5 Pro Preview TTS",
+    "description": "Gemini 2.5 Pro Preview TTS",
+    "supported_actions": [
+      "countTokens",
+      "generateContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemma-4-26b-a4b-it",
+    "display_name": "Gemma 4 26B A4B IT",
+    "description": "Gemma 4 26B A4B IT",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/gemma-4-31b-it",
+    "display_name": "Gemma 4 31B IT",
+    "description": "Gemma 4 31B IT",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/gemini-flash-latest",
+    "display_name": "Gemini Flash Latest",
+    "description": "Latest release of Gemini Flash",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-flash-lite-latest",
+    "display_name": "Gemini Flash-Lite Latest",
+    "description": "Latest release of Gemini Flash-Lite",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-pro-latest",
+    "display_name": "Gemini Pro Latest",
+    "description": "Latest release of Gemini Pro",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-2.5-flash-lite",
+    "display_name": "Gemini 2.5 Flash-Lite",
+    "description": "Stable version of Gemini 2.5 Flash-Lite, released in July of 2025",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-2.5-flash-image",
+    "display_name": "Nano Banana",
+    "description": "Gemini 2.5 Flash Preview Image",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3-flash-preview",
+    "display_name": "Gemini 3 Flash Preview",
+    "description": "Gemini 3 Flash Preview",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.1-pro-preview",
+    "display_name": "Gemini 3.1 Pro Preview",
+    "description": "Gemini 3.1 Pro Preview",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.1-pro-preview-customtools",
+    "display_name": "Gemini 3.1 Pro Preview Custom Tools",
+    "description": "Gemini 3.1 Pro Preview optimized for custom tool usage",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.1-flash-lite-preview",
+    "display_name": "Gemini 3.1 Flash Lite Preview",
+    "description": "Gemini 3.1 Flash Lite Preview",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.1-flash-lite",
+    "display_name": "Gemini 3.1 Flash Lite",
+    "description": "Gemini 3.1 Flash Lite",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3-pro-image-preview",
+    "display_name": "Nano Banana Pro",
+    "description": "Gemini 3 Pro Image Preview",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3-pro-image",
+    "display_name": "Nano Banana Pro",
+    "description": "Gemini 3 Pro Image",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/nano-banana-pro-preview",
+    "display_name": "Nano Banana Pro",
+    "description": "Gemini 3 Pro Image Preview",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.1-flash-image-preview",
+    "display_name": "Nano Banana 2",
+    "description": "Gemini 3.1 Flash Image Preview.",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.1-flash-image",
+    "display_name": "Nano Banana 2",
+    "description": "Gemini 3.1 Flash Image.",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.1-flash-lite-image",
+    "display_name": "Nano Banana 2 Lite",
+    "description": "Gemini 3.1 Flash Lite Image.",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-nano-banana-2.1",
+    "display_name": "Nano Banana 2.1",
+    "description": "Gemini Nano Banana 2.1.",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.5-flash",
+    "display_name": "Gemini 3.5 Flash",
+    "description": "Gemini 3.5 Flash",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.5-flash-lite",
+    "display_name": "Gemini 3.5 Flash Lite",
+    "description": "Gemini 3.5 Flash Lite",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-omni-flash-preview",
+    "display_name": "Gemini Omni Flash Preview",
+    "description": "Gemini Omni Flash Preview",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/gemini-omni-1.1-flash",
+    "display_name": "Gemini Omni 1.1 Flash",
+    "description": "Gemini Omni 1.1 Flash ",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/gemini-3.5-transcribe",
+    "display_name": "Gemini 3.5 Transcribe",
+    "description": "Gemini 3.5 Transcribe",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/gemini-3.6-flash",
+    "display_name": "Gemini 3.6 Flash",
+    "description": "Gemini 3.6 Flash",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.7-flash",
+    "display_name": "Gemini 3.7 Flash",
+    "description": "Gemini 3.7 Flash",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.8-flash",
+    "display_name": "Gemini 3.8 Flash",
+    "description": "Gemini 3.8 Flash",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-4-argon",
+    "display_name": "Gemini 4 Argon",
+    "description": "Gemini 4 Argon",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/lyria-3-clip-preview",
+    "display_name": "Lyria 3 Clip Preview",
+    "description": "Lyria 3 30s model Preview",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/lyria-3-pro-preview",
+    "display_name": "Lyria 3 Pro Preview",
+    "description": "Lyria 3 Pro Preview",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/lyria-3.5",
+    "display_name": "Lyria 3.5",
+    "description": "Music Generation model",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/gemini-3.1-flash-tts-preview",
+    "display_name": "Gemini 3.1 Flash TTS Preview",
+    "description": "Gemini 3.1 Flash TTS Preview",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.8-flash-tts",
+    "display_name": "Gemini 3.8 Flash TTS",
+    "description": "Gemini 3.8 Flash TTS",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.8-flash-lite-tts",
+    "display_name": "Gemini 3.8 Flash Lite TTS",
+    "description": "Gemini 3.8 Flash Lite TTS",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-robotics-er-2-preview",
+    "display_name": "Gemini Robotics-ER 2 Preview",
+    "description": "Gemini Robotics-ER 2 Preview",
+    "supported_actions": [
+      "generateContent",
+      "countTokens",
+      "createCachedContent",
+      "batchGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-2.5-computer-use-preview-10-2025",
+    "display_name": "Gemini 2.5 Computer Use Preview 10-2025",
+    "description": "Gemini 2.5 Computer Use Preview 10-2025",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/antigravity-preview-05-2026",
+    "display_name": "Antigravity Agent Preview",
+    "description": "Preview release of Antigravity Agent (05-2026)",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/antigravity-preview-09-2026",
+    "display_name": "Antigravity Agent Preview",
+    "description": "Preview release of Antigravity Agent (09-2026)",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/antigravity-preview-latest",
+    "display_name": "Antigravity Agent Preview Latest",
+    "description": "Latest preview release of Antigravity Agent",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/deep-research-max-preview-04-2026",
+    "display_name": "Deep Research Max Preview (Apr-21-2026)",
+    "description": "Preview release (April 21st, 2026) of Deep Research Max",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/deep-research-preview-04-2026",
+    "display_name": "Deep Research Preview (Apr-21-2026)",
+    "description": "Preview release (April 21th, 2026) of Deep Research",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/deep-research-pro-preview-12-2025",
+    "display_name": "Deep Research Pro Preview (Dec-12-2025) [Rerouted]",
+    "description": "Deprecated preview agent; automatically rerouting traffic to deep-research-preview-04-2026.",
+    "supported_actions": [
+      "generateContent",
+      "countTokens"
+    ]
+  },
+  {
+    "name": "models/gemini-embedding-001",
+    "display_name": "Gemini Embedding 001",
+    "description": "Obtain a distributed representation of a text.",
+    "supported_actions": [
+      "embedContent",
+      "countTextTokens",
+      "countTokens",
+      "asyncBatchEmbedContent"
+    ]
+  },
+  {
+    "name": "models/gemini-embedding-2-preview",
+    "display_name": "Gemini Embedding 2 Preview",
+    "description": "Obtain a distributed representation of multimodal content.",
+    "supported_actions": [
+      "embedContent",
+      "countTextTokens",
+      "countTokens",
+      "asyncBatchEmbedContent"
+    ]
+  },
+  {
+    "name": "models/gemini-embedding-2",
+    "display_name": "Gemini Embedding 2",
+    "description": "Obtain a distributed representation of multimodal content.",
+    "supported_actions": [
+      "embedContent",
+      "countTextTokens",
+      "countTokens",
+      "asyncBatchEmbedContent"
+    ]
+  },
+  {
+    "name": "models/aqa",
+    "display_name": "Model that performs Attributed Question Answering.",
+    "description": "Model trained to return answers to questions that are grounded in provided sources, along with estimating answerable probability.",
+    "supported_actions": [
+      "generateAnswer"
+    ]
+  },
+  {
+    "name": "models/gemini-3.5-transcribe-live",
+    "display_name": "Gemini 3.5 Transcribe Live",
+    "description": "Gemini 3.5 Transcribe Live",
+    "supported_actions": [
+      "bidiGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-2.5-flash-native-audio-latest",
+    "display_name": "Gemini 2.5 Flash Native Audio Latest",
+    "description": "Latest release of Gemini 2.5 Flash Native Audio",
+    "supported_actions": [
+      "countTokens",
+      "bidiGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-2.5-flash-native-audio-preview-09-2025",
+    "display_name": "Gemini 2.5 Flash Native Audio Preview 09-2025",
+    "description": "Gemini 2.5 Flash Native Audio Preview 09-2025",
+    "supported_actions": [
+      "countTokens",
+      "bidiGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-2.5-flash-native-audio-preview-12-2025",
+    "display_name": "Gemini 2.5 Flash Native Audio Preview 12-2025",
+    "description": "Gemini 2.5 Flash Native Audio Preview 12-2025",
+    "supported_actions": [
+      "countTokens",
+      "bidiGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.1-flash-live-preview",
+    "display_name": "Gemini 3.1 Flash Live Preview",
+    "description": "Gemini 3.1 Flash Live Preview",
+    "supported_actions": [
+      "bidiGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.8-live",
+    "display_name": "Gemini 3.8 Live",
+    "description": "Gemini 3.8 Live",
+    "supported_actions": [
+      "bidiGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.8-live-extended-thinking",
+    "display_name": "Gemini 3.8 Live Extended Thinking",
+    "description": "Gemini 3.8 Live Extended Thinking",
+    "supported_actions": [
+      "bidiGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-robotics-er-2-streaming-preview",
+    "display_name": "Gemini Robotics-ER 2 Streaming Preview",
+    "description": "Gemini Robotics-ER 2 Streaming Preview",
+    "supported_actions": [
+      "bidiGenerateContent"
+    ]
+  },
+  {
+    "name": "models/gemini-3.5-live-translate-preview",
+    "display_name": "Gemini 3.5 Live Translate Preview",
+    "description": "Gemini 3.5 Live Translate Preview",
+    "supported_actions": [
+      "bidiGenerateContent"
+    ]
+  },
+  {
+    "name": "models/lyria-realtime-exp",
+    "display_name": "Lyria Realtime Experimental",
+    "description": "Lyria Realtime Experimental",
+    "supported_actions": [
+      "bidiGenerateMusic"
+    ]
+  }
+]

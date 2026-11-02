@@ -1,0 +1,22 @@
+EMPTY: TATAMOTORS.NS -> Returned empty DataFrame
+EMPTY: TATAMOTORS.BO -> Returned empty DataFrame
+EMPTY: 500570.BO -> Returned empty DataFrame
+EMPTY: TATAMTRDVR.NS -> Returned empty DataFrame
+EMPTY: TATAMTRDVR.BO -> Returned empty DataFrame
+EMPTY: TMP.F -> Returned empty DataFrame
+EMPTY: TTM -> Returned empty DataFrame
+EMPTY: ZOMATO.NS -> Returned empty DataFrame
+EMPTY: ZOMATO.BO -> Returned empty DataFrame
+EMPTY: 543320.BO -> Returned empty DataFrame
+SUCCESS: ETERNAL.NS -> Last Date: 2026-11-02, Close: 344.00, Volume: 19,039,750
+SUCCESS: ETERNAL.BO -> Last Date: 2026-11-02, Close: 343.70, Volume: 540,627
+Search 'Tata Motors': symbol=TMPV.NS, name=TATA MOTORS PASS VEH LTD, exchange=NSI
+Search 'Tata Motors': symbol=TMCV.NS, name=TATA MOTORS LIMITED, exchange=NSI
+Search 'Tata Motors': symbol=TMCV.BO, name=Tata Motors Limited, exchange=BSE
+Search 'Tata Motors': symbol=TMPV.BO, name=TATA MOTORS PASSENGER VEHICLES, exchange=BSE
+Search 'Tata Motors': symbol=TMCV-BL.NS, name=TATA MOTORS LIMITED, exchange=NSI
+Search 'Eternal': symbol=ETERNAL.NS, name=ETERNAL LIMITED, exchange=NSI
+Search 'Eternal': symbol=ETERNAL.BO, name=Eternal Limited, exchange=BSE
+Search 'Eternal': symbol=002183.SZ, name=EA, exchange=SHZ
+Search 'Eternal': symbol=1717.TW, name=ETERNAL MATERIALS CO LTD, exchange=TAI
+Search 'Eternal': symbol=7795.TW, name=ETERNAL PRECISION MECHANICS CO , exchange=TAI

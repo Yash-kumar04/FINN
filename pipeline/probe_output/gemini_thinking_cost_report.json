@@ -1,0 +1,30 @@
+{
+  "model_source": "env var GEMINI_MODEL or default",
+  "model_used": "gemini-3.5-flash",
+  "note_on_thinking_tokens": "total_tokens - prompt_tokens - candidates_tokens = hidden reasoning tokens billed as output",
+  "note_on_models_list": "gemini-2.5-flash appears in models.list() but returns 404 on generate_content. Always verify with a real call.",
+  "test_minimal_thinking": {
+    "test": "minimal_thinking_budget_0",
+    "model": "gemini-3.5-flash",
+    "prompt_tokens": 99,
+    "candidates_tokens": 73,
+    "total_tokens": 172,
+    "thinking_tokens": 0,
+    "latency_seconds": 2.09,
+    "response": "```json\n{\n  \"revenue_cr\": 21863,\n  \"ebitda_cr\": 666,\n  \"pbt_cr\": 532,\n  \"pat_cr\": 411,\n  \"period\": \"Q2 FY27\"\n}\n```"
+  },
+  "test_default_thinking": {
+    "test": "default_thinking",
+    "model": "gemini-3.5-flash",
+    "prompt_tokens": 99,
+    "candidates_tokens": 5,
+    "total_tokens": 295,
+    "thinking_tokens": 191,
+    "latency_seconds": 1.65,
+    "response": "```json\n{"
+  },
+  "cost_saving": {
+    "thinking_tokens_saved": 191,
+    "recommendation": "Use thinking_budget=0 for structured extraction (classification, table parsing). Use default/higher budget only for promised-vs-delivered and bull/bear synthesis."
+  }
+}
