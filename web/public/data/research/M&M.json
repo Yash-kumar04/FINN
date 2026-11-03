@@ -1,0 +1,81 @@
+{
+  "ticker": "M&M",
+  "company_name": "Mahindra & Mahindra Limited",
+  "as_of": "2026-11-02",
+  "sector": "Automotive & Farm Equipment",
+  "extraction_model": "gemini-3.5-flash",
+  "extracted_at_ist": "2026-11-03 17:09:36 IST",
+  "token_usage": {
+    "input": 32086,
+    "output": 884,
+    "thinking": 0,
+    "total": 32970
+  },
+  "verdict_rules": {
+    "Met": "Inside the promised range, or at most 5 percentage points above a stated floor (T_floor <= actual <= T_floor + 5.0)",
+    "Beat": "More than 5 percentage points above the top of the range or stated floor (actual > T_top + 5.0)",
+    "Missed": "Below the floor or range (actual < T_floor or actual < T_min)",
+    "Unclear": "Delivered metric differs from promised metric (revenue vs volume), or no comparable figure disclosed"
+  },
+  "audit_summary": {
+    "total_extracted": 8,
+    "kept": 3,
+    "dropped": 5
+  },
+  "promised_vs_delivered": [
+    {
+      "period": "FY27",
+      "transcript_period": "Aug 2026",
+      "call_date": "July 30, 2026",
+      "metric": "margin_pct",
+      "quote": "EBIT margins up to 14.4% and the promise has \nbeen to get to 15% by the end of this fiscal year.",
+      "page": 3,
+      "quote_page": "p.3",
+      "promise": "Tech Mahindra EBIT margin to reach 15% by the end of this fiscal year",
+      "promised": "Tech Mahindra EBIT margin to reach 15% by the end of this fiscal year",
+      "delivered": "No comparable figure disclosed",
+      "delivered_figure": "No comparable figure disclosed",
+      "delivered_source": "Next Concall / Results Filing for M&M",
+      "outcome": "Delivered metric differs from promised metric or figure not disclosed",
+      "verdict": "Unclear",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf",
+      "citation": "Concall July 30, 2026, p.3"
+    },
+    {
+      "period": "FY27",
+      "transcript_period": "Aug 2026",
+      "call_date": "July 30, 2026",
+      "metric": "margin_pct",
+      "quote": "We will come out with the next phase for Tech Mahindra as \nwe close this phase that we talked about, which is by end of FY27 we get to 15% EBIT margin",
+      "page": 4,
+      "quote_page": "p.4",
+      "promise": "Tech Mahindra EBIT margin to get to 15% by end of FY27",
+      "promised": "Tech Mahindra EBIT margin to get to 15% by end of FY27",
+      "delivered": "No comparable figure disclosed",
+      "delivered_figure": "No comparable figure disclosed",
+      "delivered_source": "Next Concall / Results Filing for M&M",
+      "outcome": "Delivered metric differs from promised metric or figure not disclosed",
+      "verdict": "Unclear",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f451beeb-32aa-45da-8e1a-417884693047.pdf",
+      "citation": "Concall July 30, 2026, p.4"
+    },
+    {
+      "period": "F27",
+      "transcript_period": "Aug 2025",
+      "call_date": "July 30, 2025",
+      "metric": "margin_pct",
+      "quote": "Tech Mahindra has its EBIT margin recovery on track at 11.1% this quarter with an F27 \ntarget of 15 %.",
+      "page": 3,
+      "quote_page": "p.3",
+      "promise": "Tech Mahindra EBIT margin recovery target for F27",
+      "promised": "Tech Mahindra EBIT margin recovery target for F27",
+      "delivered": "No comparable figure disclosed",
+      "delivered_figure": "No comparable figure disclosed",
+      "delivered_source": "Next Concall / Results Filing for M&M",
+      "outcome": "Delivered metric differs from promised metric or figure not disclosed",
+      "verdict": "Unclear",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3152798e-bca7-4df3-97e9-1078ff0ce061.pdf",
+      "citation": "Concall July 30, 2025, p.3"
+    }
+  ]
+}

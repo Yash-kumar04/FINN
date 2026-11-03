@@ -1,0 +1,318 @@
+{
+  "ticker": "KAYNES",
+  "company_name": "Kaynes Technology India Limited",
+  "as_of": "2026-11-02",
+  "sector": "Electronics Manufacturing Services / Defense",
+  "extraction_model": "gemini-3.5-flash",
+  "extracted_at_ist": "2026-11-03 17:08:49 IST",
+  "token_usage": {
+    "input": 19802,
+    "output": 778,
+    "thinking": 0,
+    "total": 20580
+  },
+  "verdict_rules": {
+    "Met": "Inside the promised range, or at most 5 percentage points above a stated floor (T_floor <= actual <= T_floor + 5.0)",
+    "Beat": "More than 5 percentage points above the top of the range or stated floor (actual > T_top + 5.0)",
+    "Missed": "Below the floor or range (actual < T_floor or actual < T_min)",
+    "Unclear": "Delivered metric differs from promised metric (revenue vs volume), or no comparable figure disclosed"
+  },
+  "audit_summary": {
+    "total_extracted": 7,
+    "kept": 6,
+    "dropped": 1
+  },
+  "promised_vs_delivered": [
+    {
+      "period": "Next 5 years",
+      "transcript_period": "May 2026",
+      "call_date": "May 14, 2026",
+      "metric": "revenue",
+      "quote": "In OSAT, the order outlook for both the current year and the medium term remains strong with \nrevenue visibility of over INR25,000 million over the next 5 years.",
+      "page": 4,
+      "quote_page": "p.4",
+      "promise": "OSAT revenue visibility of over INR25,000 million over the next 5 years.",
+      "promised": "OSAT revenue visibility of over INR25,000 million over the next 5 years.",
+      "delivered": "No comparable figure disclosed",
+      "delivered_figure": "No comparable figure disclosed",
+      "delivered_source": "Next Concall / Results Filing for KAYNES",
+      "outcome": "Delivered metric differs from promised metric or figure not disclosed",
+      "verdict": "Unclear",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c2aa16ac-08ab-430a-819a-833f94c09dde.pdf",
+      "citation": "Concall May 14, 2026, p.4",
+      "fact_id": "fact_guidance_1"
+    },
+    {
+      "period": "Coming years",
+      "transcript_period": "May 2026",
+      "call_date": "May 14, 2026",
+      "metric": "growth_pct",
+      "quote": "our goal is to steadily increase the contribution of NPD-led and value-added solutions to \nnearly 30% of the total revenue in the coming years.",
+      "page": 6,
+      "quote_page": "p.6",
+      "promise": "Increase the contribution of NPD-led and value-added solutions to nearly 30% of total revenue in the coming years.",
+      "promised": "Increase the contribution of NPD-led and value-added solutions to nearly 30% of total revenue in the coming years.",
+      "delivered": "No comparable figure disclosed",
+      "delivered_figure": "No comparable figure disclosed",
+      "delivered_source": "Next Concall / Results Filing for KAYNES",
+      "outcome": "Delivered metric differs from promised metric or figure not disclosed",
+      "verdict": "Unclear",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c2aa16ac-08ab-430a-819a-833f94c09dde.pdf",
+      "citation": "Concall May 14, 2026, p.6",
+      "fact_id": "fact_guidance_2"
+    },
+    {
+      "period": "Q1 FY27",
+      "transcript_period": "Aug 2026",
+      "call_date": "August 08, 2026",
+      "metric": "growth_pct",
+      "quote": "Our total revenue \nstood at INR946 crores, reflecting an year-on-year growth of 40%, which is largely driven by \nEMS business.",
+      "page": 3,
+      "quote_page": "p.3",
+      "promise": "Achieved 40% year-on-year revenue growth in Q1 FY27",
+      "promised": "Achieved 40% year-on-year revenue growth in Q1 FY27",
+      "delivered": "No comparable figure disclosed",
+      "delivered_figure": "No comparable figure disclosed",
+      "delivered_source": "Next Concall / Results Filing for KAYNES",
+      "outcome": "Delivered metric differs from promised metric or figure not disclosed",
+      "verdict": "Unclear",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e8d82234-f369-467f-a76f-75bb2747aaa1.pdf",
+      "citation": "Concall August 08, 2026, p.3",
+      "fact_id": "fact_guidance_3"
+    },
+    {
+      "period": "Q1 FY27",
+      "transcript_period": "Aug 2026",
+      "call_date": "August 08, 2026",
+      "metric": "margin_pct",
+      "quote": "EBITDA for the quarter was INR147.6 crores, translating into an EBITDA \nmargin of 15.6% and 31% year-on-year growth.",
+      "page": 3,
+      "quote_page": "p.3",
+      "promise": "Achieved EBITDA margin of 15.6% for Q1 FY27",
+      "promised": "Achieved EBITDA margin of 15.6% for Q1 FY27",
+      "delivered": "No comparable figure disclosed",
+      "delivered_figure": "No comparable figure disclosed",
+      "delivered_source": "Next Concall / Results Filing for KAYNES",
+      "outcome": "Delivered metric differs from promised metric or figure not disclosed",
+      "verdict": "Unclear",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e8d82234-f369-467f-a76f-75bb2747aaa1.pdf",
+      "citation": "Concall August 08, 2026, p.3",
+      "fact_id": "fact_guidance_4"
+    },
+    {
+      "period": "long term",
+      "transcript_period": "Nov 2025",
+      "call_date": "November 05, 2025",
+      "metric": "growth_pct",
+      "quote": "Globally, the PCB market is projected to cross USD100 billion by 2030, and India's domestic \nmarket alone is expected to grow at a 20% CAGR, driven by demand from EVs, industrial \nautomation, defense and telecom sector.",
+      "page": 4,
+      "quote_page": "p.4",
+      "promise": "India's domestic PCB market is expected to grow at a 20% CAGR",
+      "promised": "India's domestic PCB market is expected to grow at a 20% CAGR",
+      "delivered": "No comparable figure disclosed",
+      "delivered_figure": "No comparable figure disclosed",
+      "delivered_source": "Next Concall / Results Filing for KAYNES",
+      "outcome": "Delivered metric differs from promised metric or figure not disclosed",
+      "verdict": "Unclear",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=13fd5473-73b9-41c4-a782-70e6608354f9.pdf",
+      "citation": "Concall November 05, 2025, p.4",
+      "fact_id": "fact_guidance_5"
+    },
+    {
+      "period": "2030",
+      "transcript_period": "Nov 2025",
+      "call_date": "November 05, 2025",
+      "metric": "revenue",
+      "quote": "Globally, the PCB market is projected to cross USD100 billion by 2030, and India's domestic \nmarket alone is expected to grow at a 20% CAGR, driven by demand from EVs, industrial \nautomation, defense and telecom sector.",
+      "page": 4,
+      "quote_page": "p.4",
+      "promise": "Globally, the PCB market is projected to cross USD100 billion by 2030",
+      "promised": "Globally, the PCB market is projected to cross USD100 billion by 2030",
+      "delivered": "No comparable figure disclosed",
+      "delivered_figure": "No comparable figure disclosed",
+      "delivered_source": "Next Concall / Results Filing for KAYNES",
+      "outcome": "Delivered metric differs from promised metric or figure not disclosed",
+      "verdict": "Unclear",
+      "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=13fd5473-73b9-41c4-a782-70e6608354f9.pdf",
+      "citation": "Concall November 05, 2025, p.4",
+      "fact_id": "fact_guidance_6"
+    }
+  ],
+  "annual_report_facts": [
+    {
+      "fact_id": "fact_ar_biz_1",
+      "section": "business_snapshot",
+      "metric": "Industry Position & Nature of Operations",
+      "statement": "Kaynes Technology operates predominantly in the business segment of Electronics Manufacturing Services (EMS) providing integrated end-to-end design and manufacturing solutions.",
+      "value": "Electronics Manufacturing Services",
+      "check_token": "Electronics Manufacturing Services",
+      "page": 280,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7b3ec474-8dc9-46bc-bf3b-64d55d3b6c30.pdf"
+    },
+    {
+      "fact_id": "fact_ar_biz_2",
+      "section": "business_snapshot",
+      "metric": "Geographic Revenue Mix (Domestic vs Export)",
+      "statement": "Domestic revenue reached ₹32,752.70 Million (~90.3% of total revenue) while Outside India export revenue stood at ₹3,510.84 Million (~9.7%).",
+      "value": "₹32,752.70 Million",
+      "check_token": "32,752.70",
+      "page": 280,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7b3ec474-8dc9-46bc-bf3b-64d55d3b6c30.pdf"
+    },
+    {
+      "fact_id": "fact_ar_fin_1",
+      "section": "financial_snapshot",
+      "metric": "Consolidated Revenue (FY26)",
+      "statement": "FY 2025-26 Consolidated Revenue from Operations reached ₹36,263.54 Million, up 33.2% YoY from ₹27,217.52 Million in FY25.",
+      "value": "₹36,263.54 Million",
+      "check_token": "36,263.54",
+      "page": 239,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7b3ec474-8dc9-46bc-bf3b-64d55d3b6c30.pdf"
+    },
+    {
+      "fact_id": "fact_ar_fin_2",
+      "section": "financial_snapshot",
+      "metric": "Profit Before Tax (PBT FY26)",
+      "statement": "FY 2025-26 Consolidated Profit Before Tax stood at ₹5,043.14 Million, up from ₹3,716.24 Million in FY25.",
+      "value": "₹5,043.14 Million",
+      "check_token": "5,043.14",
+      "page": 239,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7b3ec474-8dc9-46bc-bf3b-64d55d3b6c30.pdf"
+    },
+    {
+      "fact_id": "fact_ar_fin_3",
+      "section": "financial_snapshot",
+      "metric": "Profit After Tax (PAT FY26)",
+      "statement": "FY 2025-26 Consolidated Profit After Tax (PAT) reached ₹3,638.90 Million (~10.0% net margin), up 24.0% YoY from ₹2,934.33 Million.",
+      "value": "₹3,638.90 Million",
+      "check_token": "3,638.90",
+      "page": 239,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7b3ec474-8dc9-46bc-bf3b-64d55d3b6c30.pdf"
+    },
+    {
+      "fact_id": "fact_ar_bs_1",
+      "section": "balance_sheet",
+      "metric": "Total Shareholders' Equity",
+      "statement": "Shareholders' Total Equity expanded to ₹47,624.88 Million as of 31st March 2026, up from ₹28,442.32 Million.",
+      "value": "₹47,624.88 Million",
+      "check_token": "47,624.88",
+      "page": 237,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7b3ec474-8dc9-46bc-bf3b-64d55d3b6c30.pdf"
+    },
+    {
+      "fact_id": "fact_ar_bs_2",
+      "section": "balance_sheet",
+      "metric": "Short-Term Borrowings",
+      "statement": "Consolidated Short-term borrowings stood at ₹5,379.41 Million as of 31st March 2026.",
+      "value": "₹5,379.41 Million",
+      "check_token": "5,379.41",
+      "page": 238,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7b3ec474-8dc9-46bc-bf3b-64d55d3b6c30.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cash_1",
+      "section": "cash_quality",
+      "metric": "Operating Cash Flow (CFO)",
+      "statement": "Net cash from operating activities was negative ₹6,004.04 Million (-₹600.4 Cr) due to large working capital absorption (Receivables increase of ₹10,238.66 Mn).",
+      "value": "-₹6,004.04 Million",
+      "check_token": "(6,004.04)",
+      "page": 240,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7b3ec474-8dc9-46bc-bf3b-64d55d3b6c30.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cont_1",
+      "section": "contingent_liabilities",
+      "metric": "Corporate Guarantees to Subsidiaries",
+      "statement": "Corporate Guarantees extended to Subsidiary Companies stood at ₹23,903.60 Million (₹2,390.4 Cr) as of 31st March 2026.",
+      "value": "₹23,903.60 Million",
+      "check_token": "23,903.60",
+      "page": 277,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7b3ec474-8dc9-46bc-bf3b-64d55d3b6c30.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cont_2",
+      "section": "contingent_liabilities",
+      "metric": "Tax & Performance Guarantees",
+      "statement": "Bank Guarantees for contractual performance of ₹1,905.95 Million, Income tax disputes of ₹130.19 Million, and GST disputes of ₹124.82 Million.",
+      "value": "₹1,905.95 Million",
+      "check_token": "1,905.95",
+      "page": 277,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7b3ec474-8dc9-46bc-bf3b-64d55d3b6c30.pdf"
+    }
+  ],
+  "narrative_vs_numbers": [
+    {
+      "topic": "Revenue Scale and Growth vs. Operating Cash Flow",
+      "management_narrative": "Management highlights strong revenue performance, such as total revenue reaching INR946 crores with 40% year-on-year growth driven by the EMS business, and FY 2025-26 consolidated revenue reaching ₹36,263.54 Million.",
+      "reported_numbers": "Despite top-line expansion, net cash from operating activities was negative ₹6,004.04 Million due to large working capital absorption, including a receivables increase of ₹10,238.66 Mn.",
+      "divergence_type": "Under Observation",
+      "analysis": "Rapid top-line growth is severely straining working capital, resulting in negative operating cash flows that diverge from reported profit and revenue growth metrics.",
+      "cited_fact_ids": [
+        "fact_guidance_3",
+        "fact_ar_fin_1",
+        "fact_ar_cash_1"
+      ]
+    },
+    {
+      "topic": "Geographic Revenue Mix vs. Global Market Ambitions",
+      "management_narrative": "Management targets global opportunities, pointing to a global PCB market projected to cross USD100 billion by 2030 alongside strong international OSAT order outlooks.",
+      "reported_numbers": "Domestic revenue reached ₹32,752.70 Million representing ~90.3% of total revenue, while Outside India export revenue stood at only ₹3,510.84 Million (~9.7%).",
+      "divergence_type": "Under Observation",
+      "analysis": "While global aspirations are highlighted, the current revenue mix remains heavily concentrated in the domestic market rather than diversified internationally.",
+      "cited_fact_ids": [
+        "fact_guidance_1",
+        "fact_guidance_6",
+        "fact_ar_biz_2"
+      ]
+    }
+  ],
+  "bull_case": [
+    {
+      "title": "Strong Top-Line Expansion and Profitability",
+      "argument": "FY 2025-26 Consolidated Revenue from Operations reached ₹36,263.54 Million, representing a robust 33.2% YoY increase from ₹27,217.52 Million in FY25, accompanied by a growing PAT of ₹3,638.90 Million.",
+      "cited_fact_ids": [
+        "fact_ar_fin_1",
+        "fact_ar_fin_3"
+      ]
+    },
+    {
+      "title": "Robust OSAT Order Visibility and Industry Tailwinds",
+      "argument": "The OSAT segment exhibits strong order visibility with over INR25,000 million secured over the next 5 years, supported by broader macroeconomic tailwinds such as India's domestic PCB market growing at a 20% CAGR.",
+      "cited_fact_ids": [
+        "fact_guidance_1",
+        "fact_guidance_5"
+      ]
+    },
+    {
+      "title": "Expansion of Shareholders' Equity",
+      "argument": "Total shareholders' equity has significantly expanded to ₹47,624.88 Million as of 31st March 2026, up from ₹28,442.32 Million, strengthening the balance sheet foundation.",
+      "cited_fact_ids": [
+        "fact_ar_bs_1"
+      ]
+    }
+  ],
+  "bear_case": [
+    {
+      "title": "Severe Negative Operating Cash Flow and Working Capital Strain",
+      "argument": "Net cash from operating activities was negative ₹6,004.04 Million (-₹600.4 Cr) driven by massive working capital absorption, specifically a receivables increase of ₹10,238.66 Mn.",
+      "cited_fact_ids": [
+        "fact_ar_cash_1"
+      ]
+    },
+    {
+      "title": "Substantial Contingent Liabilities via Corporate Guarantees",
+      "argument": "Corporate Guarantees extended to Subsidiary Companies stood at a significant ₹23,903.60 Million (₹2,390.4 Cr) as of 31st March 2026, exposing the parent entity to material contingent obligations.",
+      "cited_fact_ids": [
+        "fact_ar_cont_1"
+      ]
+    },
+    {
+      "title": "Short-Term Debt and Additional Dispute Exposures",
+      "argument": "Consolidated short-term borrowings stood at ₹5,379.41 Million as of 31st March 2026, compounded by contractual performance bank guarantees of ₹1,905.95 Million alongside ongoing income tax and GST disputes.",
+      "cited_fact_ids": [
+        "fact_ar_bs_2",
+        "fact_ar_cont_2"
+      ]
+    }
+  ]
+}

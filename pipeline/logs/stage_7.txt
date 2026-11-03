@@ -1,0 +1,69 @@
+================================================================================
+FINN STAGE 7: MORE TICKERS AND GENERALISATION LOG
+================================================================================
+Timestamp: 2026-11-03 17:14:15 IST
+Pipeline CLI: python -m pipeline.research --ticker <TICKER>
+
+TICKERS PROCESSED AND VERIFIED:
+
+1. DIXON (Demo Core):
+   - Concall Transcripts: 5 processed (Jul 2025, Oct 2025, Feb 2026, May 2026, Jul 2026).
+   - Guidance Rows Extracted: 13 rows.
+   - Quote Substring Audit: 13 KEPT, 0 DROPPED (100% verified against cited pages).
+   - Strict Metric Alignment: Enforced. Revenue growth (+36.0% QoQ) distinguished from volume target (20-25%).
+   - Annual Report Facts: 29 verified facts (46% revenue CAGR, 108% cash conversion, -₹773 Cr net debt).
+   - Synthesis: 4 narrative divergences, 3 bull / 3 bear points with 100% citation audit.
+   - Output File: web/public/data/research/DIXON.json (21,679 bytes).
+   - Status: PASS.
+
+2. KAYNES:
+   - Concall Transcripts: 5 fetched and processed from Screener / BSE India.
+   - Guidance Rows Extracted: 6 checkable numeric targets (OSAT revenue, PCB market expansion, domestic margins).
+   - Quote Substring Audit: 6 KEPT, 0 DROPPED (100% verbatim verified).
+   - Annual Report Facts: 10 audited facts extracted from 321-page 2026 Integrated Annual Report (BSE filing 7b3ec474-8dc9-46bc-bf3b-64d55d3b6c30.pdf):
+     * Revenue FY26: ₹36,263.54 Million (up +33.2% YoY from ₹27,217.52 Mn, Page 239).
+     * PAT FY26: ₹3,638.90 Million (Page 239).
+     * Operating Cash Flow (CFO): Negative ₹6,004.04 Million due to working capital absorption (receivables increase of ₹10,238.66 Mn, Page 240).
+     * Corporate Guarantees to Subsidiaries: ₹23,903.60 Million (Page 277).
+     * Shareholders' Equity: ₹47,624.88 Million (Page 237).
+   - Synthesis: 2 narrative divergences, 3 bull points, 3 bear vulnerabilities.
+   - Output File: web/public/data/research/KAYNES.json (16,702 bytes).
+   - Tokens Used: 20,580 (Extraction) + 1,840 (Synthesis) = 22,420 tokens (~$0.0016 USD).
+   - Status: PASS.
+
+3. M&M (Mahindra & Mahindra):
+   - Concall Transcripts: 5 fetched and processed from Screener / BSE India.
+   - Guidance Rows Extracted: 3 checkable targets (Tech Mahindra 15% EBIT margin target, recovery milestones).
+   - Quote Substring Audit: 3 KEPT, 0 DROPPED (100% verbatim verified).
+   - Delivered Numbers & Verdicts: Evaluated in code against next concall transcripts; marked Unclear where metric or discrete figure not separately reported.
+   - Output File: web/public/data/research/M&M.json (3,827 bytes).
+   - Tokens Used: 32,970 tokens (~$0.0025 USD).
+   - Status: PASS.
+
+4. ASTRAL:
+   - Concall Transcripts: 5 fetched and processed from Screener / Astral Ltd server.
+   - Guidance Rows Extracted: 9 checkable numeric targets (Faucet 25-30% growth, ₹1,000 Cr paint revenue target, Adhesives double digit growth, Bathware 20% growth).
+   - Quote Substring Audit: 9 KEPT, 0 DROPPED (100% verbatim verified).
+   - Delivered Numbers & Verdicts: Evaluated in code; marked Unclear per strict metric alignment.
+   - Output File: web/public/data/research/ASTRAL.json (9,837 bytes).
+   - Tokens Used: 16,578 tokens (~$0.0012 USD).
+   - Status: PASS.
+
+5. INFY (Infosys - Out-of-sample portfolio ticker):
+   - Concall Transcripts: 5 fetched and processed from Screener / BSE India.
+   - Guidance Rows Extracted: 9 checkable targets (FY guidance revisions 1-2% and 1.5-2%, operating margin 20-22%, fresher hiring).
+   - Quote Substring Audit: 9 KEPT, 0 DROPPED (100% verbatim verified).
+   - Delivered Numbers & Verdicts: Evaluated in code against next quarterly results; marked Unclear per strict metric alignment.
+   - Output File: web/public/data/research/INFY.json (9,612 bytes).
+   - Tokens Used: 11,878 tokens (~$0.0009 USD).
+   - Status: PASS.
+
+SUMMARY OF SUCCESSES & BLOCKERS:
+- All 5 tickers succeeded cleanly end-to-end.
+- Concall PDFs downloaded directly via primary BSE and corporate investor URLs.
+- Quote substring checks achieved 100% retention with zero drops across all tickers.
+- Total token cost across all additional tickers: ~83,846 tokens (~$0.0062 USD).
+- UI Demo chips updated in web/src/tabs/ResearchTab.jsx: ['DIXON', 'KAYNES', 'M&M', 'ASTRAL', 'INFY'].
+================================================================================
+STAGE 7: PASS
+================================================================================

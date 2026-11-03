@@ -82,3 +82,4 @@ def log_cost(stage: str, model: str, input_tokens: int, output_tokens: int, thin
         json.dump(data, f, indent=2, ensure_ascii=False)
 
     return entry
+

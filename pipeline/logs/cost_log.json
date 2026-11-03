@@ -1,10 +1,10 @@
 {
   "summary": {
-    "total_input_tokens": 116023,
-    "total_output_tokens": 16692,
+    "total_input_tokens": 292015,
+    "total_output_tokens": 28290,
     "total_thinking_tokens": 0,
-    "total_tokens": 132715,
-    "total_estimated_cost_usd": 0.007796
+    "total_tokens": 320305,
+    "total_estimated_cost_usd": 0.020651
   },
   "entries": [
     {
@@ -83,6 +83,281 @@
       "total_tokens": 4749,
       "estimated_cost_usd": 0.000398,
       "notes": "DIXON final synthesis: 4 divergences, 3 bull, 3 bear claims validated"
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:08:29 IST",
+      "stage": "Stage 1",
+      "model": "gemini-3.5-flash",
+      "input_tokens": 19093,
+      "output_tokens": 1502,
+      "thinking_tokens": 0,
+      "total_tokens": 20595,
+      "estimated_cost_usd": 0.001883,
+      "notes": "DIXON Promised vs Delivered guidance extraction (13 rows)"
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:08:43 IST",
+      "stage": "research_extract_KAYNES February 06, 2026",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 2154,
+      "output_tokens": 1,
+      "thinking_tokens": 0,
+      "total_tokens": 2155,
+      "estimated_cost_usd": 8.1e-05,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:08:45 IST",
+      "stage": "research_extract_KAYNES May 14, 2026",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 4159,
+      "output_tokens": 208,
+      "thinking_tokens": 0,
+      "total_tokens": 4367,
+      "estimated_cost_usd": 0.000187,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:08:47 IST",
+      "stage": "research_extract_KAYNES August 08, 2026",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 4939,
+      "output_tokens": 327,
+      "thinking_tokens": 0,
+      "total_tokens": 5266,
+      "estimated_cost_usd": 0.000234,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:08:48 IST",
+      "stage": "research_extract_KAYNES December 08, 2025",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 4603,
+      "output_tokens": 1,
+      "thinking_tokens": 0,
+      "total_tokens": 4604,
+      "estimated_cost_usd": 0.000173,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:08:49 IST",
+      "stage": "research_extract_KAYNES November 05, 2025",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 3947,
+      "output_tokens": 241,
+      "thinking_tokens": 0,
+      "total_tokens": 4188,
+      "estimated_cost_usd": 0.000184,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:08:49 IST",
+      "stage": "Stage 1",
+      "model": "gemini-3.5-flash",
+      "input_tokens": 19802,
+      "output_tokens": 778,
+      "thinking_tokens": 0,
+      "total_tokens": 20580,
+      "estimated_cost_usd": 0.001719,
+      "notes": "DIXON Promised vs Delivered guidance extraction (6 rows)"
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:09:29 IST",
+      "stage": "research_extract_M&M February 11, 2026",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 5463,
+      "output_tokens": 263,
+      "thinking_tokens": 0,
+      "total_tokens": 5726,
+      "estimated_cost_usd": 0.000244,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:09:32 IST",
+      "stage": "research_extract_M&M May 5, 2026",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 8167,
+      "output_tokens": 130,
+      "thinking_tokens": 0,
+      "total_tokens": 8297,
+      "estimated_cost_usd": 0.000326,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:09:33 IST",
+      "stage": "research_extract_M&M July 30, 2026",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 7709,
+      "output_tokens": 292,
+      "thinking_tokens": 0,
+      "total_tokens": 8001,
+      "estimated_cost_usd": 0.000333,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:09:34 IST",
+      "stage": "research_extract_M&M November 4, 2025",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 6387,
+      "output_tokens": 110,
+      "thinking_tokens": 0,
+      "total_tokens": 6497,
+      "estimated_cost_usd": 0.000256,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:09:36 IST",
+      "stage": "research_extract_M&M July 30, 2025",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 4360,
+      "output_tokens": 89,
+      "thinking_tokens": 0,
+      "total_tokens": 4449,
+      "estimated_cost_usd": 0.000177,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:09:36 IST",
+      "stage": "Stage 1",
+      "model": "gemini-3.5-flash",
+      "input_tokens": 32086,
+      "output_tokens": 884,
+      "thinking_tokens": 0,
+      "total_tokens": 32970,
+      "estimated_cost_usd": 0.002672,
+      "notes": "DIXON Promised vs Delivered guidance extraction (3 rows)"
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:09:59 IST",
+      "stage": "research_extract_ASTRAL May 2026",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 5738,
+      "output_tokens": 393,
+      "thinking_tokens": 0,
+      "total_tokens": 6131,
+      "estimated_cost_usd": 0.000274,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:10:04 IST",
+      "stage": "research_extract_ASTRAL August 12, 2026",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 2921,
+      "output_tokens": 184,
+      "thinking_tokens": 0,
+      "total_tokens": 3105,
+      "estimated_cost_usd": 0.000137,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:10:06 IST",
+      "stage": "research_extract_ASTRAL November 06, 2025",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 1900,
+      "output_tokens": 502,
+      "thinking_tokens": 0,
+      "total_tokens": 2402,
+      "estimated_cost_usd": 0.000147,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:10:09 IST",
+      "stage": "research_extract_ASTRAL August 12, 2025",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 4053,
+      "output_tokens": 887,
+      "thinking_tokens": 0,
+      "total_tokens": 4940,
+      "estimated_cost_usd": 0.000285,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:10:09 IST",
+      "stage": "Stage 1",
+      "model": "gemini-3.5-flash",
+      "input_tokens": 14612,
+      "output_tokens": 1966,
+      "thinking_tokens": 0,
+      "total_tokens": 16578,
+      "estimated_cost_usd": 0.001686,
+      "notes": "DIXON Promised vs Delivered guidance extraction (9 rows)"
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:10:26 IST",
+      "stage": "research_extract_INFY February 17, 2026",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 4533,
+      "output_tokens": 1,
+      "thinking_tokens": 0,
+      "total_tokens": 4534,
+      "estimated_cost_usd": 0.00017,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:10:32 IST",
+      "stage": "research_extract_INFY October 23, 2026",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 921,
+      "output_tokens": 168,
+      "thinking_tokens": 0,
+      "total_tokens": 1089,
+      "estimated_cost_usd": 6e-05,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:10:33 IST",
+      "stage": "research_extract_INFY July 23, 2026",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 1864,
+      "output_tokens": 202,
+      "thinking_tokens": 0,
+      "total_tokens": 2066,
+      "estimated_cost_usd": 0.0001,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:10:35 IST",
+      "stage": "research_extract_INFY April 23, 2026",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 2735,
+      "output_tokens": 251,
+      "thinking_tokens": 0,
+      "total_tokens": 2986,
+      "estimated_cost_usd": 0.00014,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:10:36 IST",
+      "stage": "research_extract_INFY January 14, 2026",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 1023,
+      "output_tokens": 180,
+      "thinking_tokens": 0,
+      "total_tokens": 1203,
+      "estimated_cost_usd": 6.5e-05,
+      "notes": ""
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:10:36 IST",
+      "stage": "Stage 1",
+      "model": "gemini-3.5-flash",
+      "input_tokens": 11076,
+      "output_tokens": 802,
+      "thinking_tokens": 0,
+      "total_tokens": 11878,
+      "estimated_cost_usd": 0.001071,
+      "notes": "DIXON Promised vs Delivered guidance extraction (9 rows)"
+    },
+    {
+      "timestamp_ist": "2026-11-03 17:13:42 IST",
+      "stage": "research_synthesis_KAYNES",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 1747,
+      "output_tokens": 1236,
+      "thinking_tokens": 0,
+      "total_tokens": 2983,
+      "estimated_cost_usd": 0.000251,
+      "notes": ""
     }
   ]
 }

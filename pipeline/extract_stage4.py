@@ -534,3 +534,4 @@ def extract_ar_outputs():
 
 if __name__ == "__main__":
     extract_ar_outputs()
+
