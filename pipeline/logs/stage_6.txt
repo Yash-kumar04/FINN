@@ -1,0 +1,59 @@
+================================================================================
+FINN STAGE 6: RESEARCH TAB UI VERIFICATION LOG
+================================================================================
+Timestamp: 2026-11-03 17:03:30 IST
+Target File: web/src/tabs/ResearchTab.jsx
+
+UI COMPONENTS IMPLEMENTED & VERIFIED:
+1. Header Counts:
+   - Interactive Verdict Cards: Met (1), Beat (0), Missed (0), Unclear (12).
+   - Click-to-filter capability with reset option.
+
+2. Hero Promised vs Delivered Scorecard:
+   - Displays period, call date, transcript date.
+   - Verdict pills with standardized color coding (Met, Beat, Missed, Unclear).
+   - Stated promises vs delivered actual figures with cited primary sources.
+   - Exact verbatim quote with page number.
+   - Strict metric alignment rule callout box explaining volume vs revenue distinction.
+
+3. Annual Report & Fundamental Reality:
+   - Business Snapshot: 23 manufacturing units (3.2M sq. ft.), 3 R&D centers.
+   - Segmental Revenue Mix: Mobile EMS (90.6%), Consumer Electronics (5.9%), Lighting (2.5%), Home Appliances (0.9%) with proportional visual progress bars and [p.106] citation links.
+   - 5-Year Trajectory Table: Revenue (FY22 ₹10,697 Cr to FY26 ₹48,873 Cr, +46.1% CAGR), EBITDA (+58.9% CAGR), PAT (+71.5% CAGR).
+   - Return Metrics: RoCE 44.8%, RoE 28.1%.
+   - Balance Sheet & Working Capital: Net cash surplus (-₹773 Cr net debt), Current ratio 1.37x, Inventory days 48.4, Debtor days 54.0, Payable days 75.6.
+   - Cash Flow Quality: CFO ₹1,782 Cr vs reported PAT ₹1,644 Cr (108.4% conversion), ₹714.8 Cr FCF.
+   - Contingent Liabilities: Disputed customs & excise (₹398.4 Cr), Direct tax & GST (₹118.0 Cr), Supplier guarantees (₹1,231.2 Cr).
+
+4. Narrative vs Numbers Divergence Cards:
+   - Mobile PLI Volume Expansion & Scale (Agrees)
+   - Refrigerator Division Growth Guidance (Under Observation)
+   - Operating Leverage and Profitability (Agrees)
+   - Q2 FY27 Volume Growth vs Revenue Growth (Under Observation)
+   - Includes management narrative, reported numbers, analysis, and cited fact chips.
+
+5. Bull vs Bear Thesis:
+   - Bull Case: 3 pillars (Exceptional Scale, Cash Conversion & Net Cash, Industry-Leading Return Metrics).
+   - Bear Case: 3 vulnerabilities (Customer Concentration 62%, Contingent Liabilities ₹398 Cr, Narrow 3.4% PAT Margin).
+
+6. Interactive Citation Detail Modal:
+   - Tapping any page reference [p.4, p.106, p.420, etc.] or fact chip opens a backdrop modal.
+   - Displays Audited Fact ID, primary statement/quote, extracted metric & value, and direct external link to the primary PDF filing.
+
+7. Ticker Navigation & States:
+   - Search bar with demo chips (DIXON, KAYNES, M&M, ASTRAL, INFY).
+   - Loading skeleton state.
+   - Processing state message.
+   - Unavailable state with instructions.
+
+PRODUCTION BUILD RESULT:
+vite v6.4.5 building for production...
+✓ 1583 modules transformed.
+dist/index.html                   0.80 kB │ gzip:  0.45 kB
+dist/assets/index-BGCRSzHt.css   20.53 kB │ gzip:  4.75 kB
+dist/assets/index-C9KMKY6t.js   213.09 kB │ gzip: 62.37 kB
+✓ built in 2.87s
+0 errors, 0 warnings.
+================================================================================
+STAGE 6: PASS
+================================================================================
