@@ -36,6 +36,7 @@ export default function BriefingTab({ onAlertsCountChange }) {
   const { data: ann, loading: annLoading, error: annError } = useSnapshot('announcements.json')
   const { data: prices } = useSnapshot('prices.json')
   const { data: resultsData } = useSnapshot('results.json')
+  const { data: mgmtData } = useSnapshot('management.json')
 
   // Persisted alert settings in localStorage
   const {
@@ -89,35 +90,47 @@ export default function BriefingTab({ onAlertsCountChange }) {
         const titleToUse = (isResults && verifiedHeadline) ? verifiedHeadline : ev.title
 
         let resultsObj = ev.results
-        if (res && isResults && !resultsObj && res.status === 'verified') {
-          resultsObj = {
-            period: res.period,
-            type: res.scope,
-            revenue: `₹${res.metrics.revenue.current_quarter.toLocaleString()} Cr`,
-            ebitda: `₹${res.metrics.ebitda.current_quarter.toLocaleString()} Cr`,
-            pbt: `₹${res.metrics.pbt.current_quarter.toFixed(2)} Cr`,
-            pat: `₹${res.metrics.pat.current_quarter.toFixed(2)} Cr`,
-            revenue_qoq_pct: res.metrics.revenue.qoq_pct,
-            revenue_yoy_pct: res.metrics.revenue.yoy_pct,
-            ebitda_qoq_pct: res.metrics.ebitda.qoq_pct,
-            ebitda_yoy_pct: res.metrics.ebitda.yoy_pct,
-            pbt_qoq_pct: res.metrics.pbt.qoq_pct,
-            pbt_yoy_pct: res.metrics.pbt.yoy_pct,
-            pat_qoq_pct: res.metrics.pat.qoq_pct,
-            pat_yoy_pct: res.metrics.pat.yoy_pct,
-            source_url: res.provenance?.source_url,
-            filing_page: res.provenance?.filing_pages?.[2] || 11,
-            status: res.status,
+        if (res && isResults && !resultsObj) {
+          if (res.status === 'verified') {
+            resultsObj = {
+              period: res.period,
+              type: res.scope,
+              revenue: res.metrics?.revenue?.current_quarter != null ? `₹${Number(res.metrics.revenue.current_quarter).toLocaleString()} Cr` : '—',
+              ebitda: res.metrics?.ebitda?.current_quarter != null ? `₹${Number(res.metrics.ebitda.current_quarter).toLocaleString()} Cr` : '—',
+              pbt: res.metrics?.pbt?.current_quarter != null ? `₹${Number(res.metrics.pbt.current_quarter).toFixed(2)} Cr` : '—',
+              pat: res.metrics?.pat?.current_quarter != null ? `₹${Number(res.metrics.pat.current_quarter).toFixed(2)} Cr` : '—',
+              revenue_qoq_pct: res.metrics?.revenue?.qoq_pct,
+              revenue_yoy_pct: res.metrics?.revenue?.yoy_pct,
+              ebitda_qoq_pct: res.metrics?.ebitda?.qoq_pct,
+              ebitda_yoy_pct: res.metrics?.ebitda?.yoy_pct,
+              pbt_qoq_pct: res.metrics?.pbt?.qoq_pct,
+              pbt_yoy_pct: res.metrics?.pbt?.yoy_pct,
+              pat_qoq_pct: res.metrics?.pat?.qoq_pct,
+              pat_yoy_pct: res.metrics?.pat?.yoy_pct,
+              source_url: res.provenance?.source_url,
+              filing_page: res.provenance?.filing_page || res.provenance?.filing_pages?.[2] || 1,
+              status: res.status,
+            }
+          } else {
+            resultsObj = {
+              status: 'unverified',
+              unverified_reason: res.unverified_reason || 'Criteria not met',
+              source_url: res.provenance?.source_url,
+              filing_page: res.provenance?.filing_page || 1,
+            }
           }
         }
+
+        const mgmtInfo = mgmtData?.[ev.event_id]
 
         return {
           ...ev,
           title: titleToUse,
           results: resultsObj,
+          management_change: mgmtInfo,
         }
       })
-  }, [ann, cutoff, resultsData])
+  }, [ann, cutoff, resultsData, mgmtData])
 
   // Tier split — use primary_category field
   const tier1 = events.filter(e => categoryMeta(e.primary_category).tier === 1)

@@ -157,25 +157,30 @@ export default function EventCard({ event, alertData, compact = false, minimal =
 }
 
 function ResultsStub({ results }) {
-  if (!results) {
+  if (!results || results.status === 'unverified') {
     return (
       <div className="mt-3 pt-3 border-t border-border/50">
-        <div className="grid grid-cols-4 gap-2 text-center">
-          {['Revenue', 'EBITDA', 'PBT', 'PAT'].map(k => (
-            <div key={k} className="flex flex-col gap-1">
-              <span className="text-[9px] text-muted uppercase tracking-wide">{k}</span>
-              <span className="font-mono text-xs text-muted">—</span>
-            </div>
-          ))}
+        <div className="flex items-center justify-between text-xs text-muted bg-surface/40 px-3 py-2 rounded border border-border/40">
+          <span className="flex items-center gap-1.5 font-medium">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 inline-block" />
+            <span className="line-clamp-1">Results: {results?.unverified_reason || 'Unverified'}</span>
+          </span>
+          {results?.source_url && (
+            <a
+              href={results.source_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-accent hover:underline font-mono text-[11px] shrink-0 ml-2"
+            >
+              <span>Filing PDF</span>
+              <ExternalLink size={10} />
+            </a>
+          )}
         </div>
-        <p className="text-[10px] text-muted mt-2 text-center italic">
-          Financial extraction pending (Step 5)
-        </p>
       </div>
     )
   }
 
-  // When Step 5 is done, results object has { revenue, ebitda, pbt, pat, qoq, yoy, ... }
   const fields = [
     { key: 'revenue', label: 'Revenue' },
     { key: 'ebitda',  label: 'EBITDA' },
@@ -230,25 +235,52 @@ function ResultsStub({ results }) {
 }
 
 function MgmtStub({ mgmt }) {
+  if (!mgmt) {
+    return null
+  }
+
+  const items = Array.isArray(mgmt) ? mgmt : [mgmt]
+
   return (
-    <div className="mt-3 pt-3 border-t border-border/50 text-xs text-muted">
-      {mgmt?.length > 0
-        ? mgmt.map((m, i) => (
-            <div key={i} className="flex items-center gap-2">
-              <span className={clsx('chip text-[9px]', m.type === 'outgoing' ? 'chip-other' : 'chip-mgmt')}>
-                {m.type}
-              </span>
-              <span className="text-white/70">{m.name}</span>
-              {m.role && <span className="text-muted">— {m.role}</span>}
-              {m.bio_source && (
-                <a href={m.bio_source} target="_blank" rel="noopener noreferrer" className="ml-auto text-accent">
-                  <ExternalLink size={10} />
-                </a>
-              )}
+    <div className="mt-3 pt-3 border-t border-border/50 flex flex-col gap-2">
+      {items.map((m, i) => (
+        <div key={i} className="flex flex-col gap-1 p-2.5 rounded bg-surface/50 border border-border/50">
+          <div className="flex items-baseline justify-between gap-2 flex-wrap">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="font-semibold text-white text-xs">{m.name || 'Management Change'}</span>
+              {m.role && <span className="chip chip-mgmt text-[9px]">{m.role}</span>}
             </div>
-          ))
-        : <span className="italic">Management details pending (Step 5)</span>
-      }
+            {m.effective_date && (
+              <span className="text-[10px] text-muted font-mono shrink-0">
+                Eff: {m.effective_date}
+              </span>
+            )}
+          </div>
+
+          {m.profile_text && (
+            <div className="mt-1 text-[11px] text-white/85 leading-relaxed bg-black/20 p-2.5 rounded border border-border/30">
+              <span className="text-[9px] font-mono text-accent uppercase tracking-wider block mb-1">
+                from the company filing:
+              </span>
+              <p className="line-clamp-4">{m.profile_text}</p>
+            </div>
+          )}
+
+          {m.source_url && m.source_url !== 'unavailable' && (
+            <div className="flex justify-end mt-1">
+              <a
+                href={m.source_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-[10px] text-accent hover:underline font-mono"
+              >
+                <span>Filing PDF{m.page_number ? ` (p.${m.page_number})` : ''}</span>
+                <ExternalLink size={10} />
+              </a>
+            </div>
+          )}
+        </div>
+      ))}
     </div>
   )
 }

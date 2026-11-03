@@ -1,0 +1,30 @@
+================================================================================
+STAGE 3: BRIEFING UI FIXES & VALIDATION REPORT
+================================================================================
+1. Alert Settings Panel:
+   - showSettings initialized to false (collapsed by default).
+   - Opens only when user taps Alerts button.
+   - Header As of date formatted as short 'As of 2 Nov' via formatShortAsOf().
+
+2. Verified Headlines in Alert Banners & Results Cards:
+   - For verified tickers in results.json, title replaced with:
+     '{period}: Rev Rs X Cr ({yoy}% YoY) · PAT Rs Y Cr ({yoy}% YoY)'
+   - Unverified tickers keep their original filing title.
+
+3. Results Card (EventCard.jsx):
+   - 4 metrics (Revenue, EBITDA, PBT, PAT) with QoQ and YoY pills.
+   - Filing PDF link with page number.
+   - Unverified states show explicit status chip and reason with PDF link.
+
+4. Management Card (EventCard.jsx):
+   - Displays name, role chip, effective date.
+   - Profile text rendered inside dedicated box labelled: 'from the company filing:'.
+   - Filing PDF link with page number.
+
+5. Event Ranking & Grouping:
+   - Exact existing events and ranking preserved.
+   - Tier 1 / Tier 2 / Tier 3 grouping preserved.
+
+6. Vite Production Build:
+   - npm run build succeeded with 0 errors.
+================================================================================
