@@ -1,0 +1,30 @@
+﻿====================================================================================================
+STAGE 5: NARRATIVE VS NUMBERS, GUIDANCE SUMMARY, BULL VS BEAR
+====================================================================================================
+Loaded 42 verified facts with IDs across Annual Report and Concalls.
+Calling synthesis model: gemini-3.5-flash-lite...
+
+----------------------------------------------------------------------------------------------------
+STRICT IN-CODE FACT CITATION AUDIT
+----------------------------------------------------------------------------------------------------
+ACCEPTED divergence 'Mobile PLI Volume Expansion & Scale' citing ['fact_ar_biz_2', 'fact_ar_biz_4', 'fact_ar_traj_1']
+ACCEPTED divergence 'Refrigerator Division Growth Guidance' citing ['fact_ar_biz_5', 'fact_guidance_2']
+ACCEPTED divergence 'Operating Leverage and Profitability' citing ['fact_ar_fin_3', 'fact_ar_traj_2']
+ACCEPTED divergence 'Q2 FY27 Volume Growth vs Revenue Growth' citing ['fact_guidance_13']
+ACCEPTED bull argument 'Exceptional Scale and Revenue CAGR' citing ['fact_ar_fin_1', 'fact_ar_traj_1']
+ACCEPTED bull argument 'Strong Cash Generation and Net Cash Balance Sheet' citing ['fact_ar_bs_2', 'fact_ar_cash_1', 'fact_ar_cash_3']
+ACCEPTED bull argument 'Industry-Leading Return Metrics' citing ['fact_ar_fin_4', 'fact_ar_fin_5']
+ACCEPTED bear argument 'High Customer Concentration Risk' citing ['fact_ar_biz_6']
+ACCEPTED bear argument 'Substantial Contingent Liabilities and Commitments' citing ['fact_ar_cont_1', 'fact_ar_cont_2', 'fact_ar_cont_3', 'fact_ar_cont_4']
+ACCEPTED bear argument 'Extremely Narrow Operating and PAT Margins' citing ['fact_ar_fin_2', 'fact_ar_fin_3']
+
+Successfully attached Stage 5 synthesis to web\public\data\research\DIXON.json
+
+====================================================================================================
+STAGE 5 TOKEN USAGE REPORT
+====================================================================================================
+Input Tokens:    2,797
+Output Tokens:   1,952
+Thinking Tokens: 0
+Total Tokens:    4,749
+====================================================================================================

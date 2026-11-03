@@ -1,10 +1,10 @@
 {
   "summary": {
-    "total_input_tokens": 113226,
-    "total_output_tokens": 14740,
+    "total_input_tokens": 116023,
+    "total_output_tokens": 16692,
     "total_thinking_tokens": 0,
-    "total_tokens": 127966,
-    "total_estimated_cost_usd": 0.007398
+    "total_tokens": 132715,
+    "total_estimated_cost_usd": 0.007796
   },
   "entries": [
     {
@@ -72,6 +72,17 @@
       "total_tokens": 0,
       "estimated_cost_usd": 0.0,
       "notes": "Extracted and verified 29 Annual Report facts with exact page substring verification"
+    },
+    {
+      "timestamp_ist": "2026-11-03 16:58:06 IST",
+      "stage": "Stage 5",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 2797,
+      "output_tokens": 1952,
+      "thinking_tokens": 0,
+      "total_tokens": 4749,
+      "estimated_cost_usd": 0.000398,
+      "notes": "DIXON final synthesis: 4 divergences, 3 bull, 3 bear claims validated"
     }
   ]
 }
