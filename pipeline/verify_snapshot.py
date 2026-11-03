@@ -70,10 +70,49 @@ def main():
     if len(tickers_list) < 19:
         fail(f"Expected 19 tickers, found {len(tickers_list)}")
 
-    # 3. Select 3 random tickers
+    # 3. Comprehensive verification across ALL 19 tickers:
+    #    a) Fail if any bar is after as_of_date (2026-11-02)
+    #    b) Recompute volume_ratio independently from bars[-21:-1] and assert exact match with stored metrics
+    print(">>> Verifying all 19 tickers for strict as_of cutoff and volume ratio integrity...")
+    for sym in tickers_list:
+        snap_ticker = prices_data["tickers"][sym]
+        snap_bars = snap_ticker["bars"]
+        if not snap_bars:
+            continue
+        
+        # Check no bar is after snapshot_as_of
+        for b in snap_bars:
+            if b["date"] > snapshot_as_of:
+                fail(f"ILLEGAL BAR DETECTED: {sym} has bar date '{b['date']}' which is AFTER as_of '{snapshot_as_of}'!")
+
+        # Check last bar is not provisional
+        if snap_bars[-1].get("provisional", False):
+            fail(f"{sym} latest bar '{snap_bars[-1]['date']}' is marked provisional!")
+
+        # Independently recompute volume ratio
+        if len(snap_bars) >= 21:
+            baseline_bars = snap_bars[-21:-1]
+            if len(baseline_bars) != 20:
+                fail(f"{sym} has {len(baseline_bars)} baseline bars; expected exactly 20.")
+            
+            calc_baseline_mean = sum(b["volume"] for b in baseline_bars) / 20.0
+            last_vol = snap_bars[-1]["volume"]
+            calc_ratio = last_vol / calc_baseline_mean if calc_baseline_mean > 0 else 1.0
+
+            stored_mean = snap_ticker["metrics"].get("volume_20d_avg", 0.0)
+            stored_ratio = snap_ticker["metrics"].get("volume_ratio", 0.0)
+
+            if abs(calc_baseline_mean - stored_mean) > 0.1:
+                fail(f"Volume baseline mean mismatch for {sym}: calc {calc_baseline_mean:.2f} != stored {stored_mean:.2f}")
+            if abs(calc_ratio - stored_ratio) > 0.001:
+                fail(f"Volume ratio mismatch for {sym}: calc {calc_ratio:.4f} != stored {stored_ratio:.4f}")
+    
+    print(f"✅ All {len(tickers_list)} tickers verified: ZERO bars after {snapshot_as_of}, all volume ratios match.\n")
+
+    # 4. Select 3 random tickers for live independent verification
     random.seed(2026)
     sampled_tickers = random.sample(tickers_list, 3)
-    print(f"Randomly selected 3 tickers for independent live probe: {sampled_tickers}\n")
+    print(f"Randomly selected 3 tickers for live independent probe: {sampled_tickers}\n")
 
     # Prime NSE session independently with browser headers
     nse = requests.Session()
@@ -132,6 +171,17 @@ def main():
         if vol_diff_pct > 0.005:
             fail(f"Volume mismatch for {sym}: snapshot {snap_last_bar['volume']} != live {live_vol} (diff {vol_diff_pct*100:.2f}%)")
         print("    ✅ Prices Check: Match on Date, Close, Volume.")
+
+        # Independent live volume ratio recomputation
+        if target_idx >= 20:
+            live_baseline = live_hist.iloc[target_idx-20:target_idx]["Volume"]
+            live_avg_vol = float(live_baseline.mean())
+            live_vol_ratio = live_vol / live_avg_vol if live_avg_vol > 0 else 1.0
+            snap_ratio = snap_ticker["metrics"]["volume_ratio"]
+            print(f"    Live Vol 20d Avg: {live_avg_vol:,.2f} | Live Vol Ratio: {live_vol_ratio:.4f} [Snapshot: {snap_ratio:.4f}]")
+            if abs(snap_ratio - live_vol_ratio) > 0.01:
+                fail(f"Live volume ratio mismatch for {sym}: snapshot {snap_ratio} != live {live_vol_ratio}")
+            print("    ✅ Volume Ratio Check: Independent live computation matches snapshot.")
 
         # Independent NSE announcements check
         print(f"    [NSE] Querying live filings for {sym}...")

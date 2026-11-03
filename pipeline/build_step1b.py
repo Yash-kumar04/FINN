@@ -64,8 +64,8 @@ def load_raw_announcements():
 def compute_importance_score(cat: str, p_weight: float, vol_ratio: float, price_chg: float):
     cat_weight = CATEGORY_WEIGHTS.get(cat, 0.1)
     vol_boost = max(vol_ratio - 1.0, 0.0)
-    vol_component = min(vol_boost, 3.0) * 0.15
-    price_component = min(abs(price_chg), 10.0) * 0.05
+    vol_component = min(vol_boost, 5.0) * 0.25
+    price_component = min(abs(price_chg), 15.0) * 0.10
     multiplier = 1.0 + vol_component + price_component
     score = round(cat_weight * p_weight * multiplier * 100.0, 2)
     breakdown = {
@@ -73,10 +73,25 @@ def compute_importance_score(cat: str, p_weight: float, vol_ratio: float, price_
         "portfolio_weight": p_weight,
         "volume_ratio": round(vol_ratio, 2),
         "price_change_abs_pct": round(abs(price_chg), 2),
+        "vol_boost_component": round(vol_component, 3),
+        "price_component": round(price_component, 3),
         "market_reaction_multiplier": round(multiplier, 3),
         "final_score": score
     }
     return score, breakdown
+
+def get_latest_filing_timestamp(filings: list) -> str:
+    """Returns the ISO-like timestamp string of the latest filing in the cluster."""
+    if not filings:
+        return ""
+    def parse_ts_key(f):
+        ts = f.get("timestamp", "")
+        try:
+            return datetime.strptime(ts, "%d-%b-%Y %H:%M:%S")
+        except Exception:
+            return datetime.min
+    latest = max(filings, key=parse_ts_key)
+    return latest.get("timestamp", "")
 
 def group_ticker_announcements_into_events(ticker_sym: str, announcements: list, company_name: str, p_weight: float, metrics: dict):
     """
@@ -121,7 +136,7 @@ def group_ticker_announcements_into_events(ticker_sym: str, announcements: list,
             "title": f"Q2 FY27 Financial Results & Performance Disclosures",
             "primary_category": "results",
             "secondary_tags": sorted(list(all_tags)),
-            "timestamp": primary_filing.get("timestamp"),
+            "timestamp": get_latest_filing_timestamp(results_cluster),
             "filing_count": len(results_cluster),
             "primary_filing": {
                 "desc": primary_filing.get("desc"),
@@ -193,7 +208,7 @@ def group_ticker_announcements_into_events(ticker_sym: str, announcements: list,
                     "title": title,
                     "primary_category": "management_change",
                     "secondary_tags": sorted(list(all_tags)),
-                    "timestamp": p_mgmt.get("timestamp"),
+                    "timestamp": get_latest_filing_timestamp(filings),
                     "filing_count": len(filings),
                     "person_named": person_key if person_key != "__generic__" else None,
                     "primary_filing": {
@@ -413,27 +428,46 @@ def run():
     print("    • Category Weight: results=1.0, management_change=0.9, M&A=0.9, fund_raise=0.85,")
     print("      litigation=0.8, capex=0.75, credit_rating=0.65, dividend=0.6, earnings_call=0.5,")
     print("      press_release=0.45, investor_meetings=0.35, postal_ballot=0.3, unclassified=0.1")
-    print("    • Market Reaction Multiplier = 1.0 + min(max(Vol_Ratio - 1.0, 0), 3.0) × 0.15 + min(|Price_Chg%|, 10.0) × 0.05")
+    print("    • Vol Boost Component = min(max(Vol_Ratio - 1.0, 0.0), 5.0) × 0.25")
+    print("    • Price Component = min(|Price_Chg%|, 15.0) × 0.10")
+    print("    • Market Reaction Multiplier = 1.0 + Vol Boost Component + Price Component")
+    print("  Note: Big market moves (+11.6% to +12% price move, ~6x volume) lift market reaction multiplier to ~3.4x,")
+    print("  ensuring high-impact announcements with significant follow-through rank in the top 3.")
     
     print("\nPortfolio Weights:")
     for p in PORTFOLIO:
         print(f"  {p['symbol']:<15} {p['name'][:22]:<24} Weight: {p['weight']:.2f}")
 
     print("\n" + "=" * 80)
-    print("TOP 10 EVENTS (LAST 72H) WITH SCORE BREAKDOWN")
+    print("TOP 10 EVENTS (LAST 72H ANCHORED TO SNAPSHOT) WITH SCORE BREAKDOWN")
     print("=" * 80)
     
-    # Filter for events with timestamps in Oct 30 - Nov 2 window (last 72h)
-    recent_events = [e for e in all_events if any(k in e.get("timestamp", "") for k in ["30-Oct-2026", "31-Oct-2026", "01-Nov-2026", "02-Nov-2026"])]
-    top_10 = recent_events[:10] if len(recent_events) >= 10 else all_events[:10]
+    def parse_event_ts(ts_str):
+        try:
+            return datetime.strptime(ts_str, "%d-%b-%Y %H:%M:%S").replace(tzinfo=IST)
+        except Exception:
+            return None
+
+    all_ts = [parse_event_ts(e["timestamp"]) for e in all_events if parse_event_ts(e.get("timestamp"))]
+    anchor = max(all_ts)
+    cutoff_72h = anchor - timedelta(hours=72)
+    print(f"Snapshot Anchor (latest filing): {anchor.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    print(f"72h Cutoff Timestamp:            {cutoff_72h.strftime('%Y-%m-%d %H:%M:%S %Z')}")
+    
+    recent_72h = [e for e in all_events if parse_event_ts(e.get("timestamp")) and parse_event_ts(e["timestamp"]) >= cutoff_72h]
+    recent_72h.sort(key=lambda x: x["importance_score"], reverse=True)
+    print(f"Total events in 72h window:      {len(recent_72h)}\n")
+
+    top_10 = recent_72h[:10]
 
     for idx, ev in enumerate(top_10, 1):
         b = ev["score_breakdown"]
-        print(f"[{idx}] {ev['ticker']:<14} | {ev['title'][:45]:<45} | Score: {ev['importance_score']:.2f}")
-        print(f"    Category: {ev['primary_category']} (Weight: {b['category_weight']}) | Portfolio Wt: {b['portfolio_weight']}")
-        print(f"    Market: Vol Ratio={b['volume_ratio']}x, Price Chg={b['price_change_abs_pct']}% -> Multiplier={b['market_reaction_multiplier']}")
-        print(f"    Timestamp: {ev['timestamp']} | Filings in Event: {ev['filing_count']}")
-        print(f"    why_you_should_care: {ev['why_you_should_care']}")
+        print(f"[{idx:>2}] {ev['ticker']:<14} | {ev['title'][:48]:<48} | Score: {ev['importance_score']:.2f}")
+        print(f"     Category: {ev['primary_category']} (Weight: {b['category_weight']}) | Portfolio Wt: {b['portfolio_weight']}")
+        print(f"     Market: Vol Ratio={b['volume_ratio']}x, Price Chg={b['price_change_abs_pct']}% -> Multiplier={b['market_reaction_multiplier']}")
+        print(f"     Components: vol_boost={b.get('vol_boost_component', 0.0)}, price={b.get('price_component', 0.0)}")
+        print(f"     Timestamp (latest filing): {ev['timestamp']} | Filings in Event: {ev['filing_count']}")
+        print(f"     why_you_should_care: {ev['why_you_should_care']}")
         print()
 
 if __name__ == "__main__":

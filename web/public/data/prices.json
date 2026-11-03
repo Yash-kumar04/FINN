@@ -2,8 +2,8 @@
   "dataset": "portfolio_prices",
   "provenance": {
     "source": "yfinance",
-    "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-    "as_of_date": "2026-11-03",
+    "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+    "as_of_date": "2026-11-02",
     "target_bar_count": 60,
     "portfolio_size": 19
   },
@@ -22,20 +22,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 1293.199951171875,
-        "last_volume": 23278308,
-        "prev_close": 1300.0,
-        "price_change_pct": -0.5230806790865384,
-        "volume_20d_avg": 18670991.6,
-        "volume_ratio": 1.2467633481234064,
-        "is_provisional": true
+        "last_close": 1300.0,
+        "last_volume": 88121121,
+        "prev_close": 1164.9000244140625,
+        "price_change_pct": 11.597559683621087,
+        "volume_20d_avg": 15103496.6,
+        "volume_ratio": 5.83448477751834,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 1285.0,
+          "high": 1325.199951171875,
+          "low": 1281.199951171875,
+          "close": 1325.0,
+          "adj_close": 1325.0,
+          "volume": 20342297,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 1320.0,
@@ -625,16 +635,6 @@
           "adj_close": 1300.0,
           "volume": 88121121,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 1287.9000244140625,
-          "high": 1307.0,
-          "low": 1282.0,
-          "close": 1293.199951171875,
-          "adj_close": 1293.199951171875,
-          "volume": 23278308,
-          "provisional": true
         }
       ]
     },
@@ -647,20 +647,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 3951.89990234375,
-        "last_volume": 625650,
-        "prev_close": 3939.89990234375,
-        "price_change_pct": 0.3045762658300403,
-        "volume_20d_avg": 2091743.55,
-        "volume_ratio": 0.2991045436712354,
-        "is_provisional": true
+        "last_close": 3939.89990234375,
+        "last_volume": 2056829,
+        "prev_close": 3871.699951171875,
+        "price_change_pct": 1.7614988772885782,
+        "volume_20d_avg": 2099948.7,
+        "volume_ratio": 0.9794663079150456,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 4056.0,
+          "high": 4070.0,
+          "low": 4045.0,
+          "close": 4061.800048828125,
+          "adj_close": 4061.800048828125,
+          "volume": 1401341,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 4040.10009765625,
@@ -1250,16 +1260,6 @@
           "adj_close": 3939.89990234375,
           "volume": 2056829,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 3958.89990234375,
-          "high": 3964.0,
-          "low": 3922.699951171875,
-          "close": 3951.89990234375,
-          "adj_close": 3951.89990234375,
-          "volume": 625650,
-          "provisional": true
         }
       ]
     },
@@ -1272,20 +1272,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 718.2000122070312,
-        "last_volume": 13508482,
-        "prev_close": 700.0,
-        "price_change_pct": 2.600001743861607,
-        "volume_20d_avg": 30063313.95,
-        "volume_ratio": 0.44933442874816537,
-        "is_provisional": true
+        "last_close": 700.0,
+        "last_volume": 21480587,
+        "prev_close": 692.7999877929688,
+        "price_change_pct": 1.039262750273438,
+        "volume_20d_avg": 30858777.45,
+        "volume_ratio": 0.6960932601689961,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 739.0,
+          "high": 740.5,
+          "low": 733.5499877929688,
+          "close": 734.2999877929688,
+          "adj_close": 734.2999877929688,
+          "volume": 44772122,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 733.0,
@@ -1875,16 +1885,6 @@
           "adj_close": 700.0,
           "volume": 21480587,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 708.0,
-          "high": 721.2999877929688,
-          "low": 706.0499877929688,
-          "close": 718.2000122070312,
-          "adj_close": 718.2000122070312,
-          "volume": 13508482,
-          "provisional": true
         }
       ]
     },
@@ -1897,20 +1897,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 1409.9000244140625,
-        "last_volume": 5188651,
-        "prev_close": 1387.4000244140625,
-        "price_change_pct": 1.6217384751382267,
-        "volume_20d_avg": 12360736.85,
-        "volume_ratio": 0.41976874542070686,
-        "is_provisional": true
+        "last_close": 1387.4000244140625,
+        "last_volume": 9043608,
+        "prev_close": 1398.0,
+        "price_change_pct": -0.7582242908395923,
+        "volume_20d_avg": 12566731.2,
+        "volume_ratio": 0.7196468083919867,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 1460.0,
+          "high": 1460.0,
+          "low": 1448.300048828125,
+          "close": 1457.5,
+          "adj_close": 1457.5,
+          "volume": 14954726,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 1451.0,
@@ -2500,16 +2510,6 @@
           "adj_close": 1387.4000244140625,
           "volume": 9043608,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 1403.0,
-          "high": 1410.0,
-          "low": 1395.5,
-          "close": 1409.9000244140625,
-          "adj_close": 1409.9000244140625,
-          "volume": 5188651,
-          "provisional": true
         }
       ]
     },
@@ -2522,20 +2522,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 458.45001220703125,
-        "last_volume": 4728143,
-        "prev_close": 458.3500061035156,
-        "price_change_pct": 0.02181871979577092,
-        "volume_20d_avg": 24919055.85,
-        "volume_ratio": 0.1897400538953405,
-        "is_provisional": true
+        "last_close": 458.3500061035156,
+        "last_volume": 21126880,
+        "prev_close": 461.6000061035156,
+        "price_change_pct": -0.7040727809850104,
+        "volume_20d_avg": 27694574.2,
+        "volume_ratio": 0.7628526745863455,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 397.25,
+          "high": 398.79998779296875,
+          "low": 393.75,
+          "close": 394.0,
+          "adj_close": 394.0,
+          "volume": 10378024,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 393.0,
@@ -3125,16 +3135,6 @@
           "adj_close": 458.3500061035156,
           "volume": 21126880,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 460.0,
-          "high": 460.20001220703125,
-          "low": 455.3999938964844,
-          "close": 458.45001220703125,
-          "adj_close": 458.45001220703125,
-          "volume": 4728143,
-          "provisional": true
         }
       ]
     },
@@ -3147,20 +3147,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 2499.5,
-        "last_volume": 592603,
-        "prev_close": 2501.699951171875,
-        "price_change_pct": -0.0879382505821481,
-        "volume_20d_avg": 5945812.75,
-        "volume_ratio": 0.09966728266038986,
-        "is_provisional": true
+        "last_close": 2501.699951171875,
+        "last_volume": 2817192,
+        "prev_close": 2502.60009765625,
+        "price_change_pct": -0.035968450781169975,
+        "volume_20d_avg": 5976378.2,
+        "volume_ratio": 0.4713878382060894,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 2417.0,
+          "high": 2434.5,
+          "low": 2368.5,
+          "close": 2373.0,
+          "adj_close": 2360.45166015625,
+          "volume": 2729141,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 2375.0,
@@ -3750,16 +3760,6 @@
           "adj_close": 2501.699951171875,
           "volume": 2817192,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 2520.0,
-          "high": 2532.0,
-          "low": 2494.300048828125,
-          "close": 2499.5,
-          "adj_close": 2499.5,
-          "volume": 592603,
-          "provisional": true
         }
       ]
     },
@@ -3772,20 +3772,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 1145.300048828125,
-        "last_volume": 2671631,
-        "prev_close": 1161.0,
-        "price_change_pct": -1.3522783093776918,
-        "volume_20d_avg": 16717113.65,
-        "volume_ratio": 0.15981413155015547,
-        "is_provisional": true
+        "last_close": 1161.0,
+        "last_volume": 12918064,
+        "prev_close": 1185.0,
+        "price_change_pct": -2.0253164556962027,
+        "volume_20d_avg": 16829532.75,
+        "volume_ratio": 0.7675830453462827,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 1174.0999755859375,
+          "high": 1185.800048828125,
+          "low": 1163.0,
+          "close": 1165.0,
+          "adj_close": 1138.910400390625,
+          "volume": 8521064,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 1160.0,
@@ -4375,16 +4385,6 @@
           "adj_close": 1135.0,
           "volume": 12918064,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 1155.699951171875,
-          "high": 1162.0,
-          "low": 1143.5,
-          "close": 1145.300048828125,
-          "adj_close": 1145.300048828125,
-          "volume": 2671631,
-          "provisional": true
         }
       ]
     },
@@ -4397,20 +4397,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 11745.0,
-        "last_volume": 78912,
-        "prev_close": 11672.0,
-        "price_change_pct": 0.6254283755997259,
-        "volume_20d_avg": 468013.5,
-        "volume_ratio": 0.16861052085036007,
-        "is_provisional": true
+        "last_close": 11672.0,
+        "last_volume": 414092,
+        "prev_close": 11397.0,
+        "price_change_pct": 2.4129156795647977,
+        "volume_20d_avg": 491599.9,
+        "volume_ratio": 0.8423354032415384,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 14181.0,
+          "high": 14181.0,
+          "low": 13985.0,
+          "close": 14080.0,
+          "adj_close": 13940.0,
+          "volume": 333510,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 13811.0,
@@ -5000,16 +5010,6 @@
           "adj_close": 11672.0,
           "volume": 414092,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 11751.0,
-          "high": 11769.0,
-          "low": 11675.0,
-          "close": 11745.0,
-          "adj_close": 11745.0,
-          "volume": 78912,
-          "provisional": true
         }
       ]
     },
@@ -5022,20 +5022,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 2901.5,
-        "last_volume": 775865,
-        "prev_close": 2868.800048828125,
-        "price_change_pct": 1.139847692948576,
-        "volume_20d_avg": 2298659.75,
-        "volume_ratio": 0.33752929288469075,
-        "is_provisional": true
+        "last_close": 2868.800048828125,
+        "last_volume": 2157890,
+        "prev_close": 2840.300048828125,
+        "price_change_pct": 1.003415114954449,
+        "volume_20d_avg": 2463431.3,
+        "volume_ratio": 0.8759692222795091,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 3449.0,
+          "high": 3449.0,
+          "low": 3406.0,
+          "close": 3406.0,
+          "adj_close": 3406.0,
+          "volume": 1656879,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 3405.0,
@@ -5625,16 +5635,6 @@
           "adj_close": 2868.800048828125,
           "volume": 2157890,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 2910.800048828125,
-          "high": 2910.800048828125,
-          "low": 2861.0,
-          "close": 2901.5,
-          "adj_close": 2901.5,
-          "volume": 775865,
-          "provisional": true
         }
       ]
     },
@@ -5647,20 +5647,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-10-30"
       },
       "metrics": {
-        "last_close": 10426.0,
-        "last_volume": 128618,
-        "prev_close": 10350.0,
-        "price_change_pct": 0.7342995169082126,
-        "volume_20d_avg": 353822.55,
-        "volume_ratio": 0.3635099006550035,
-        "is_provisional": true
+        "last_close": 10350.0,
+        "last_volume": 382424,
+        "prev_close": 10383.0,
+        "price_change_pct": -0.31782721756717713,
+        "volume_20d_avg": 350386.95,
+        "volume_ratio": 1.0914333424803635,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-05",
+          "open": 11665.0,
+          "high": 11800.0,
+          "low": 11580.0,
+          "close": 11800.0,
+          "adj_close": 11800.0,
+          "volume": 382721,
+          "provisional": false
+        },
         {
           "date": "2026-08-06",
           "open": 11748.0,
@@ -6250,16 +6260,6 @@
           "adj_close": 10350.0,
           "volume": 382424,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 10470.0,
-          "high": 10470.0,
-          "low": 10309.0,
-          "close": 10426.0,
-          "adj_close": 10426.0,
-          "volume": 128618,
-          "provisional": true
         }
       ]
     },
@@ -6272,20 +6272,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 12219.0,
-        "last_volume": 223671,
-        "prev_close": 12319.0,
-        "price_change_pct": -0.8117542008279892,
-        "volume_20d_avg": 342815.95,
-        "volume_ratio": 0.652452139405999,
-        "is_provisional": true
+        "last_close": 12319.0,
+        "last_volume": 1631850,
+        "prev_close": 11000.0,
+        "price_change_pct": 11.99090909090909,
+        "volume_20d_avg": 274164.95,
+        "volume_ratio": 5.952073742467809,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 14310.0,
+          "high": 14445.0,
+          "low": 14137.0,
+          "close": 14200.0,
+          "adj_close": 14189.0810546875,
+          "volume": 207079,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 14200.0,
@@ -6875,16 +6885,6 @@
           "adj_close": 12319.0,
           "volume": 1631850,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 12342.0,
-          "high": 12498.0,
-          "low": 12182.0,
-          "close": 12219.0,
-          "adj_close": 12219.0,
-          "volume": 223671,
-          "provisional": true
         }
       ]
     },
@@ -6897,20 +6897,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 3238.0,
-        "last_volume": 125795,
-        "prev_close": 3210.0,
-        "price_change_pct": 0.8722741433021807,
-        "volume_20d_avg": 737921.8,
-        "volume_ratio": 0.17047199310279218,
-        "is_provisional": true
+        "last_close": 3210.0,
+        "last_volume": 468350,
+        "prev_close": 3131.0,
+        "price_change_pct": 2.523155541360588,
+        "volume_20d_avg": 762718.35,
+        "volume_ratio": 0.6140536673858705,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 3900.0,
+          "high": 3928.5,
+          "low": 3822.0,
+          "close": 3830.0,
+          "adj_close": 3830.0,
+          "volume": 942467,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 3830.0,
@@ -7500,16 +7510,6 @@
           "adj_close": 3210.0,
           "volume": 468350,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 3234.800048828125,
-          "high": 3275.10009765625,
-          "low": 3210.300048828125,
-          "close": 3238.0,
-          "adj_close": 3238.0,
-          "volume": 125795,
-          "provisional": true
         }
       ]
     },
@@ -7522,20 +7522,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-10-30"
       },
       "metrics": {
-        "last_close": 7929.0,
-        "last_volume": 78213,
-        "prev_close": 7787.0,
-        "price_change_pct": 1.8235520739694362,
-        "volume_20d_avg": 454554.3,
-        "volume_ratio": 0.17206525161020367,
-        "is_provisional": true
+        "last_close": 7787.0,
+        "last_volume": 346386,
+        "prev_close": 7745.0,
+        "price_change_pct": 0.5422853453841188,
+        "volume_20d_avg": 461971.2,
+        "volume_ratio": 0.7497999875316903,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-05",
+          "open": 9200.0,
+          "high": 9305.0,
+          "low": 9179.0,
+          "close": 9200.0,
+          "adj_close": 9200.0,
+          "volume": 208166,
+          "provisional": false
+        },
         {
           "date": "2026-08-06",
           "open": 9200.0,
@@ -8125,16 +8135,6 @@
           "adj_close": 7787.0,
           "volume": 346386,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 7946.0,
-          "high": 7963.0,
-          "low": 7870.0,
-          "close": 7929.0,
-          "adj_close": 7929.0,
-          "volume": 78213,
-          "provisional": true
         }
       ]
     },
@@ -8147,20 +8147,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 4943.10009765625,
-        "last_volume": 318797,
-        "prev_close": 4855.0,
-        "price_change_pct": 1.8146261103244077,
-        "volume_20d_avg": 681886.45,
-        "volume_ratio": 0.4675221219016744,
-        "is_provisional": true
+        "last_close": 4855.0,
+        "last_volume": 584497,
+        "prev_close": 4853.7001953125,
+        "price_change_pct": 0.026779665722973515,
+        "volume_20d_avg": 689654.8,
+        "volume_ratio": 0.8475211076613981,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 4695.2998046875,
+          "high": 4950.0,
+          "low": 4685.39990234375,
+          "close": 4920.0,
+          "adj_close": 4910.05029296875,
+          "volume": 4796689,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 4925.0,
@@ -8750,16 +8760,6 @@
           "adj_close": 4855.0,
           "volume": 584497,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 4868.0,
-          "high": 4956.89990234375,
-          "low": 4835.2001953125,
-          "close": 4943.10009765625,
-          "adj_close": 4943.10009765625,
-          "volume": 318797,
-          "provisional": true
         }
       ]
     },
@@ -8772,20 +8772,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 380.1499938964844,
-        "last_volume": 3405011,
-        "prev_close": 376.5,
-        "price_change_pct": 0.9694538901684927,
-        "volume_20d_avg": 10336994.3,
-        "volume_ratio": 0.3294004912046822,
-        "is_provisional": true
+        "last_close": 376.5,
+        "last_volume": 13874346,
+        "prev_close": 369.8999938964844,
+        "price_change_pct": 1.7842676973286515,
+        "volume_20d_avg": 10155784.45,
+        "volume_ratio": 1.366152075037394,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 389.6499938964844,
+          "high": 400.8999938964844,
+          "low": 388.6499938964844,
+          "close": 399.20001220703125,
+          "adj_close": 398.6588134765625,
+          "volume": 17574744,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 401.0,
@@ -9375,16 +9385,6 @@
           "adj_close": 376.5,
           "volume": 13874346,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 379.0,
-          "high": 381.95001220703125,
-          "low": 374.04998779296875,
-          "close": 380.1499938964844,
-          "adj_close": 380.1499938964844,
-          "volume": 3405011,
-          "provisional": true
         }
       ]
     },
@@ -9397,20 +9397,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 3033.699951171875,
-        "last_volume": 379950,
-        "prev_close": 3046.39990234375,
-        "price_change_pct": -0.4168839147514508,
-        "volume_20d_avg": 1333991.9,
-        "volume_ratio": 0.28482181938286133,
-        "is_provisional": true
+        "last_close": 3046.39990234375,
+        "last_volume": 995547,
+        "prev_close": 3017.300048828125,
+        "price_change_pct": 0.9644335347731477,
+        "volume_20d_avg": 1329060.5,
+        "volume_ratio": 0.7490607086735329,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 3120.0,
+          "high": 3244.5,
+          "low": 3046.199951171875,
+          "close": 3107.10009765625,
+          "adj_close": 3107.10009765625,
+          "volume": 4403351,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 3106.5,
@@ -10000,16 +10010,6 @@
           "adj_close": 3046.39990234375,
           "volume": 995547,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 3043.0,
-          "high": 3063.300048828125,
-          "low": 3013.5,
-          "close": 3033.699951171875,
-          "adj_close": 3033.699951171875,
-          "volume": 379950,
-          "provisional": true
         }
       ]
     },
@@ -10022,20 +10022,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 4479.2001953125,
-        "last_volume": 199100,
-        "prev_close": 4476.2998046875,
-        "price_change_pct": 0.0647943782041311,
-        "volume_20d_avg": 801410.3,
-        "volume_ratio": 0.24843703655917573,
-        "is_provisional": true
+        "last_close": 4476.2998046875,
+        "last_volume": 603203,
+        "prev_close": 4436.5,
+        "price_change_pct": 0.897099170235546,
+        "volume_20d_avg": 805955.05,
+        "volume_ratio": 0.7484325583666235,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 4883.89990234375,
+          "high": 5005.0,
+          "low": 4883.89990234375,
+          "close": 4998.0,
+          "adj_close": 4998.0,
+          "volume": 1283840,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 4978.10009765625,
@@ -10625,16 +10635,6 @@
           "adj_close": 4476.2998046875,
           "volume": 603203,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 4503.0,
-          "high": 4524.89990234375,
-          "low": 4455.0,
-          "close": 4479.2001953125,
-          "adj_close": 4479.2001953125,
-          "volume": 199100,
-          "provisional": true
         }
       ]
     },
@@ -10647,20 +10647,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 1765.4000244140625,
-        "last_volume": 397480,
-        "prev_close": 1770.0,
-        "price_change_pct": -0.2598856263241525,
-        "volume_20d_avg": 1691180.4,
-        "volume_ratio": 0.23503110608424743,
-        "is_provisional": true
+        "last_close": 1770.0,
+        "last_volume": 3457791,
+        "prev_close": 1777.699951171875,
+        "price_change_pct": -0.43314121524271443,
+        "volume_20d_avg": 1634025.85,
+        "volume_ratio": 2.116117685653504,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 1930.0,
+          "high": 1965.9000244140625,
+          "low": 1930.0,
+          "close": 1951.0,
+          "adj_close": 1951.0,
+          "volume": 1864891,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 1955.0,
@@ -11250,16 +11260,6 @@
           "adj_close": 1770.0,
           "volume": 3457791,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 1766.0999755859375,
-          "high": 1770.0,
-          "low": 1747.0,
-          "close": 1765.4000244140625,
-          "adj_close": 1765.4000244140625,
-          "volume": 397480,
-          "provisional": true
         }
       ]
     },
@@ -11272,20 +11272,30 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
-        "as_of_date": "2026-11-03"
+        "fetched_at_ist": "2026-11-03T11:03:57.243557+05:30",
+        "as_of_date": "2026-11-02"
       },
       "metrics": {
-        "last_close": 1322.699951171875,
-        "last_volume": 1589403,
-        "prev_close": 1252.0,
-        "price_change_pct": 5.646960956220048,
-        "volume_20d_avg": 952676.8,
-        "volume_ratio": 1.6683548922362756,
-        "is_provisional": true
+        "last_close": 1252.0,
+        "last_volume": 2677103,
+        "prev_close": 1263.0,
+        "price_change_pct": -0.870942201108472,
+        "volume_20d_avg": 885040.75,
+        "volume_ratio": 3.0248358620775373,
+        "is_provisional": false
       },
       "bar_count": 60,
       "bars": [
+        {
+          "date": "2026-08-06",
+          "open": 1327.800048828125,
+          "high": 1341.9000244140625,
+          "low": 1325.0999755859375,
+          "close": 1331.0,
+          "adj_close": 1331.0,
+          "volume": 817532,
+          "provisional": false
+        },
         {
           "date": "2026-08-07",
           "open": 1331.0,
@@ -11875,16 +11885,6 @@
           "adj_close": 1252.0,
           "volume": 2677103,
           "provisional": false
-        },
-        {
-          "date": "2026-11-03",
-          "open": 1264.0,
-          "high": 1323.0,
-          "low": 1260.300048828125,
-          "close": 1322.699951171875,
-          "adj_close": 1322.699951171875,
-          "volume": 1589403,
-          "provisional": true
         }
       ]
     }

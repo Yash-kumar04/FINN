@@ -131,7 +131,11 @@ def fetch_all_prices():
             # Clean any remaining NaNs
             hist = hist.dropna(subset=["Close"])
 
-            # Take the last 60 trading days
+            # Rule: prices.json must end at the last COMPLETED session (2026-11-02).
+            # Drop any subsequent in-progress session bar (e.g. 2026-11-03 intra-day).
+            hist = hist[hist.index.strftime('%Y-%m-%d') <= '2026-11-02']
+
+            # Take the last 60 completed trading days
             hist_60 = hist.tail(TARGET_BAR_COUNT)
             bars = []
 
@@ -148,18 +152,18 @@ def fetch_all_prices():
                     "provisional": False
                 })
 
-            # Check if last bar is provisional
+            # Check if last bar is provisional (only if date is today and before 16:00 IST)
             last_bar = bars[-1]
             if is_bar_provisional(now_ist, last_bar["date"]):
                 last_bar["provisional"] = True
 
             as_of_date = last_bar["date"]
 
-            # Calculate 20-day moving average volume (PRIOR 20 sessions, excluding the latest bar)
+            # Calculate 20-day moving average volume (PRIOR 20 sessions, strictly before 2026-11-02)
             vol_20d = [b["volume"] for b in bars[-21:-1]]
             avg_vol_20d = sum(vol_20d) / len(vol_20d) if vol_20d else last_bar["volume"]
 
-            # Calculate 1-day price and volume changes
+            # Calculate 1-day price and volume changes (2026-11-02 vs 2026-10-30)
             if len(bars) >= 2:
                 prev_bar = bars[-2]
                 price_change_pct = ((last_bar["close"] - prev_bar["close"]) / prev_bar["close"]) * 100.0
