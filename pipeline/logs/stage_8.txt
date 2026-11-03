@@ -1,0 +1,46 @@
+================================================================================
+FINN STAGE 8: BACKEND (PIPELINE/API.PY, FASTAPI) LOG
+================================================================================
+Timestamp: 2026-11-03 17:16:55 IST
+Implementation: pipeline/api.py
+Dependencies: requirements.txt
+Frontend Proxy: web/vercel.json
+
+BACKEND VERIFICATION:
+1. Endpoints Implemented:
+   - GET /health -> {"status": "ok"}
+   - GET /api/health -> {"status": "ok"}
+   - GET /research/{ticker} & GET /api/research/{ticker}:
+     * Cache hit: Returns cached web/public/data/research/{ticker}.json immediately (HTTP 200).
+     * Cache miss: Enqueues background pipeline worker and returns {"status": "processing"} (HTTP 202).
+     * Pipeline failure / blocked sources: Returns {"status": "unavailable", "reason": "<error>"} (HTTP 503).
+   - GET / -> {"service": "FINN Financial Intelligence API", "status": "running"}
+
+2. CORS Configuration:
+   - Configured with CORSMiddleware supporting localhost, Vercel deployments, and custom frontends.
+
+3. Live Server Test Results:
+   - Tested locally on http://127.0.0.1:8000 via Uvicorn.
+   - GET /health -> HTTP 200 {"status": "ok"}
+   - GET /api/research/DIXON -> HTTP 200 ("Dixon Technologies (India) Limited", 13 promises)
+   - GET /research/KAYNES -> HTTP 200 (6 promises)
+   - GET /research/TCS (unseen ticker) -> HTTP 202 {"status": "processing", "message": "Triggered background pipeline job"}
+
+4. Dependencies:
+   - requirements.txt generated with pinned versions:
+     * fastapi==0.162.0
+     * uvicorn==0.54.0
+     * pydantic==2.14.2
+     * requests==2.32.4
+     * beautifulsoup4==4.13.4
+     * PyMuPDF==1.28.0
+     * google-genai==2.34.0
+     * python-dotenv==1.2.1
+     * pytz==2025.2
+
+5. Frontend Deployment Proxy:
+   - web/vercel.json configured with rewrite:
+     {"source": "/api/(.*)", "destination": "https://finn-api.onrender.com/api/$1"}
+================================================================================
+STAGE 8: PASS
+================================================================================
