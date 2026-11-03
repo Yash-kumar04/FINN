@@ -1,0 +1,31 @@
+================================================================================
+FINN STAGE 9: DOCS AND CLEANUP LOG
+================================================================================
+Timestamp: 2026-11-03 17:18:45 IST
+Target Tasks:
+1. README.md: Written comprehensive documentation covering:
+   - FINN Overview & dual-modal architecture (push briefing + pull deep research).
+   - System architecture diagram (snapshot-first pipeline, FastAPI backend, React UI).
+   - Primary sources & provenance verification (NSE/BSE filings, Screener, Annual Reports).
+   - Importance score formula (0-100) & portfolio weight mock assumptions.
+   - Model routing & token cost table (320k tokens, ~$0.02 USD total cost).
+   - Anti-hallucination design (strict substring audits, numerical assertions, explicit unverified states).
+   - Local setup & execution commands for Python, FastAPI, and Vite.
+   - Deliberately omitted items (voice, native push, LinkedIn bios, cloud IP proxy meshes) and engineering rationale.
+   - Verification checklist for reviewer.
+
+2. Repository Cleanliness:
+   - Untracked brief.pdf and reference.pdf from Git tracking (git rm --cached).
+   - Updated .gitignore to exclude brief.pdf, reference.pdf, pipeline/cache/, pipeline/downloads/.
+   - Audited for committed secrets: git grep -n API_KEY confirms 0 committed API keys.
+
+3. Frontend Production Build Verification:
+   - Command: npm run build --prefix web
+   - Result: 0 errors, built in 3.47s (dist/assets/index-C9KMKY6t.js 213.09 kB).
+
+4. Progress & Commit History:
+   - All 9 stages completed in sequential order with status logged to PROGRESS.md.
+   - Granular git commit history across all 9 stages.
+================================================================================
+STAGE 9: PASS
+================================================================================
