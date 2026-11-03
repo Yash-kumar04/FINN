@@ -7,3 +7,4 @@ PyMuPDF==1.28.0
 google-genai==2.34.0
 python-dotenv==1.2.1
 pytz==2025.2
+

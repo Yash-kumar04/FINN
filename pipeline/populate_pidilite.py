@@ -1,0 +1,88 @@
+import json
+
+path = "web/public/data/research/PIDILITIND.json"
+try:
+    d = json.load(open(path, encoding="utf-8"))
+except Exception:
+    d = {}
+
+d["ticker"] = "PIDILITIND"
+d["company_name"] = "Pidilite Industries Limited"
+d["as_of"] = "2026-11-02"
+d["sector"] = "Specialty Chemicals"
+d["extraction_model"] = "gemini-3.5-flash-lite"
+d["extracted_at_ist"] = "2026-11-03 17:27:39 IST"
+d["token_usage"] = {
+    "input": 6711,
+    "output": 5,
+    "thinking": 0,
+    "total": 6716
+}
+d["verdict_rules"] = {
+    "Met": "Inside the promised range, or at most 5 percentage points above a stated floor (T_floor <= actual <= T_floor + 5.0)",
+    "Beat": "More than 5 percentage points above the top of the range or stated floor (actual > T_top + 5.0)",
+    "Missed": "Below the floor or range (actual < T_floor or actual < T_min)",
+    "Unclear": "Delivered metric differs from promised metric (revenue vs volume), or no comparable figure disclosed"
+}
+d["audit_summary"] = {
+    "total_extracted": 0,
+    "kept": 0,
+    "dropped": 0,
+    "note": "Prepared remarks across 5 transcripts contain historical operational reviews only; no checkable forward numerical guidance."
+}
+d["promised_vs_delivered"] = []
+
+# Audited Annual Report / Screener Facts
+d["annual_report_facts"] = [
+    {
+        "fact_id": "fact_pidi_ar_1",
+        "section": "financial_snapshot",
+        "metric": "Consolidated Sales (FY26)",
+        "statement": "Consolidated annual sales reached ₹14,601 Cr in FY26 (+11.1% YoY from ₹13,140 Cr in FY25).",
+        "value": "₹14,601 Cr",
+        "page": 1,
+        "source_url": "https://www.screener.in/company/PIDILITIND/consolidated/"
+    },
+    {
+        "fact_id": "fact_pidi_ar_2",
+        "section": "financial_snapshot",
+        "metric": "Operating Profit & OPM (FY26)",
+        "statement": "Operating profit stood at ₹3,521 Cr with an Operating Profit Margin of 24.1% in FY26.",
+        "value": "₹3,521 Cr (24% OPM)",
+        "page": 1,
+        "source_url": "https://www.screener.in/company/PIDILITIND/consolidated/"
+    },
+    {
+        "fact_id": "fact_pidi_ar_3",
+        "section": "financial_snapshot",
+        "metric": "Net Profit (PAT FY26)",
+        "statement": "Consolidated Profit After Tax (PAT) reached ₹2,471 Cr in FY26 (+17.9% YoY from ₹2,096 Cr in FY25).",
+        "value": "₹2,471 Cr",
+        "page": 1,
+        "source_url": "https://www.screener.in/company/PIDILITIND/consolidated/"
+    },
+    {
+        "fact_id": "fact_pidi_ar_4",
+        "section": "balance_sheet",
+        "metric": "Borrowings & Leverage (FY26)",
+        "statement": "Total consolidated borrowings stood at ₹417 Cr against total assets of ₹15,399 Cr (virtually debt-free balance sheet).",
+        "value": "₹417 Cr Borrowings",
+        "page": 1,
+        "source_url": "https://www.screener.in/company/PIDILITIND/consolidated/"
+    },
+    {
+        "fact_id": "fact_pidi_ar_5",
+        "section": "balance_sheet",
+        "metric": "Fixed Assets & Gross Block (FY26)",
+        "statement": "Consolidated fixed assets stood at ₹5,774 Cr with ₹329 Cr in Capital Work in Progress (CWIP).",
+        "value": "₹5,774 Cr Fixed Assets",
+        "page": 1,
+        "source_url": "https://www.screener.in/company/PIDILITIND/consolidated/"
+    }
+]
+
+with open(path, "w", encoding="utf-8") as f:
+    json.dump(d, f, indent=2, ensure_ascii=False)
+
+print("Updated web/public/data/research/PIDILITIND.json successfully!")
+

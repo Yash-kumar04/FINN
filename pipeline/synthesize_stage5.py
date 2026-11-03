@@ -105,19 +105,33 @@ Return ONLY valid JSON matching this structure.
 """
 
     client = get_gemini_client()
-    model = "gemini-3.5-flash-lite"
-    print(f"Calling synthesis model: {model}...")
+    # Strongest available Gemini models in preference order
+    candidate_models = ["gemini-3-flash-preview", "gemini-3.5-flash", "gemini-3.5-flash-lite"]
+    model = None
+    resp = None
 
     config = types.GenerateContentConfig(
         temperature=0.1,
         response_mime_type="application/json"
     )
 
-    resp = client.models.generate_content(
-        model=model,
-        contents=prompt,
-        config=config
-    )
+    for cand in candidate_models:
+        try:
+            print(f"Trying synthesis model: {cand}...")
+            resp = client.models.generate_content(
+                model=cand,
+                contents=prompt,
+                config=config
+            )
+            model = cand
+            print(f"Successfully generated synthesis with {model}!")
+            break
+        except Exception as e:
+            err_line = str(e).split("\n")[0]
+            print(f"Model {cand} unavailable ({err_line[:60]}), trying next...")
+
+    if not resp:
+        raise RuntimeError("All candidate models failed to generate content!")
 
     tokens = {
         "input": getattr(resp.usage_metadata, "prompt_token_count", 0) or 0,
@@ -128,6 +142,13 @@ Return ONLY valid JSON matching this structure.
     clean_text = re.sub(r"^```json\s*", "", resp.text.strip())
     clean_text = re.sub(r"\s*```$", "", clean_text)
     synthesis = json.loads(clean_text)
+
+    if isinstance(synthesis, list):
+        merged = {}
+        for item in synthesis:
+            if isinstance(item, dict):
+                merged.update(item)
+        synthesis = merged
 
     # STRICT IN-CODE VALIDATION OF FACT CITATIONS
     print("\n" + "-" * 100)

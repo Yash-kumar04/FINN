@@ -106,19 +106,21 @@ $$\text{Importance Score} = \min(100, \; (\text{Base Tier Score} + \text{Portfol
 
 All model invocations are tracked in `pipeline/logs/cost_log.json` with input, output, and thinking tokens logged separately:
 
-| Component | Model Routed | Prompt Strategy | Tokens (In / Out / Think) | Est. Cost (USD) |
+| Component / Stage | Model Routed | Prompt Strategy | Tokens (In / Out / Think) | Est. Cost (USD) |
 |---|---|---|---|---|
-| DIXON Guidance Extraction | `gemini-3.5-flash-lite` | Minimal thinking, JSON schema | 19,093 / 1,502 / 0 | $0.00188 |
-| Q2 Results (17 Portfolio Cos) | Rules/Regex + Flash Lite | Structured table mapping | 28,180 / 3,958 / 0 | $0.00165 |
-| Management PDF Profiles | Rules + Flash Lite | Exact quote & designation | 28,931 / 4,057 / 0 | $0.00171 |
-| DIXON Synthesis (Bull/Bear) | `gemini-3.5-flash-lite` | Feed restricted to 42 fact IDs | 2,860 / 920 / 0 | $0.00037 |
-| KAYNES Pipeline & Synthesis | `gemini-3.5-flash-lite` | Zero thinking, fact audit | 22,420 / 1,180 / 0 | $0.00155 |
-| M&M Concall Pipeline | `gemini-3.5-flash-lite` | Minimal thinking extraction | 32,970 / 884 / 0 | $0.00251 |
-| ASTRAL Concall Pipeline | `gemini-3.5-flash-lite` | Minimal thinking extraction | 16,578 / 1,966 / 0 | $0.00122 |
-| INFY Concall Pipeline | `gemini-3.5-flash-lite` | Minimal thinking extraction | 11,878 / 802 / 0 | $0.00089 |
-| **Total Pipeline Operations** | — | — | **320,305 total tokens** | **$0.02065 USD** |
+| Stage 1: DIXON Guidance | `gemini-3.5-flash-lite` | Minimal thinking, JSON schema | 138,355 / 10,484 / 0 | $0.01352 |
+| Stage 2: Q2 Results & Mgmt | Rules/Regex + Flash Lite | Structured table mapping | 94,133 / 13,238 / 0 | $0.00551 |
+| Stage 4: DIXON Annual Report | Rules / PyMuPDF regex | Verified page extraction | 0 / 0 / 0 | $0.00000 |
+| Stage 5: DIXON Synthesis | `gemini-3-flash-preview` | Feed restricted to 42 fact IDs | 2,841 / 1,898 / 0 | $0.00041 |
+| KAYNES Concalls & Synthesis | `gemini-3.5-flash-lite` | Zero thinking, fact audit | 21,549 / 2,019 / 0 | $0.00109 |
+| M&M Concall Pipeline | `gemini-3.5-flash-lite` | Minimal thinking extraction | 32,086 / 884 / 0 | $0.00135 |
+| ASTRAL Concall Pipeline | `gemini-3.5-flash-lite` | Minimal thinking extraction | 14,612 / 1,966 / 0 | $0.00084 |
+| INFY Concall Pipeline | `gemini-3.5-flash-lite` | Minimal thinking extraction | 11,076 / 802 / 0 | $0.00057 |
+| PIDILITIND Concall Pipeline | `gemini-3.5-flash-lite` | Minimal thinking extraction | 6,711 / 5 / 0 | $0.00027 |
+| HCLTECH Concall Pipeline | `gemini-3.5-flash-lite` | Minimal thinking extraction | 15,882 / 3,040 / 0 | $0.00105 |
+| **Total Pipeline Operations** | — | — | **376,330 total tokens** | **$0.02535 USD** |
 
-*Note: Free-tier routing preferentially selects `gemini-3.5-flash-lite` with minimal thinking to bypass standard flash request-per-day quotas while maintaining sub-second inference.*
+*Note: Free-tier routing routes high-volume extraction to `gemini-3.5-flash-lite` (zero thinking) and synthesis to `gemini-3-flash-preview` (strongest model with active quota) to ensure zero 429 quota failures.*
 
 ---
 
@@ -195,3 +197,4 @@ Reviewers can verify all primary claims and code integrity by hand:
 - [x] **Kaynes Negative CFO**: Kaynes FY26 CFO of -₹600.4 Cr verified on Annual Report p.240.
 - [x] **Clean Production Build**: Run `npm run build --prefix web` (builds in ~3.0s with 0 errors).
 - [x] **Git Cleanliness**: All 9 challenge stages committed sequentially to `main` with detailed progress logs.
+

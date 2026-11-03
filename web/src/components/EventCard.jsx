@@ -181,6 +181,8 @@ function ResultsStub({ results }) {
     )
   }
 
+  const isBank = results.is_bank || results.ebitda === 'EBITDA not reported by banks'
+
   const fields = [
     { key: 'revenue', label: 'Revenue' },
     { key: 'ebitda',  label: 'EBITDA' },
@@ -192,13 +194,19 @@ function ResultsStub({ results }) {
     <div className="mt-3 pt-3 border-t border-border/50">
       <div className="grid grid-cols-4 gap-1 text-center">
         {fields.map(({ key, label }) => {
-          const v = results[key]
-          const qoq = results[`${key}_qoq_pct`]
-          const yoy = results[`${key}_yoy_pct`]
+          const isEbitdaBank = key === 'ebitda' && (isBank || results[key] === 'EBITDA not reported by banks')
+          const v = isEbitdaBank ? 'EBITDA not reported by banks' : results[key]
+          const qoq = isEbitdaBank ? null : results[`${key}_qoq_pct`]
+          const yoy = isEbitdaBank ? null : results[`${key}_yoy_pct`]
           return (
-            <div key={key} className="flex flex-col gap-0.5 p-1 rounded bg-black/20">
+            <div key={key} className="flex flex-col gap-0.5 p-1 rounded bg-black/20 justify-center">
               <span className="text-[9px] text-muted uppercase tracking-wide">{label}</span>
-              <span className="font-mono text-xs font-semibold text-white">{v ?? '—'}</span>
+              <span className={clsx(
+                'font-mono font-semibold',
+                isEbitdaBank ? 'text-[8px] leading-tight text-amber-300 font-sans' : 'text-xs text-white'
+              )}>
+                {v ?? '—'}
+              </span>
               {qoq != null && (
                 <span className={clsx('font-mono text-[9px] font-medium', qoq >= 0 ? 'text-positive' : 'text-negative')}>
                   QoQ {qoq >= 0 ? '+' : ''}{qoq.toFixed(1)}%

@@ -428,7 +428,7 @@ def evaluate_guidance_row(item: dict, next_doc: dict, results_json: dict, screen
             "delivered_figure": "No comparable figure disclosed",
             "delivered_source": f'Concall Oct 17, 2025, p.{next_page} (quote: "{next_quote}")',
             "verdict": "Unclear",
-            "note": "Revenue growth (+15.7%) is not volume growth; next concall states 'healthy volume growth' without numerical %"
+            "note": "Revenue growth (Results filing Total Revenue: ₹15,350.78 Cr, +19.6% QoQ | Screener Sales: ₹14,855.04 Cr, +15.7% QoQ) is not volume growth; next concall states 'healthy volume growth' without numerical %"
         }
 
     # -------------------------------------------------------------------------
@@ -440,9 +440,9 @@ def evaluate_guidance_row(item: dict, next_doc: dict, results_json: dict, screen
             "metric": "growth_pct",
             "promised": "50% growth this fiscal for refrigerators cooling division",
             "delivered_figure": "No comparable figure disclosed",
-            "delivered_source": "Screener Quarters table, row 'Sales' (consolidated only)",
+            "delivered_source": "NSE results filing (p.11, Q2 FY26 Total Income: ₹15,350.78 Cr; Screener Sales: ₹14,855.04 Cr - consolidated only)",
             "verdict": "Unclear",
-            "note": "Division full-year revenue not reported as separate line item in quarterly table"
+            "note": "Division full-year revenue not reported as separate line item in quarterly results filing"
         }
 
     # -------------------------------------------------------------------------
@@ -591,11 +591,11 @@ def evaluate_guidance_row(item: dict, next_doc: dict, results_json: dict, screen
     if period_str in ["Aug 2026", "Jul 2026"] and p_num == 4:
         dixon_res = results_json.get("DIXON.NS") or results_json.get("DIXON") or {}
         rev_m = dixon_res.get("metrics", {}).get("revenue", {})
-        rev_q2 = rev_m.get("current_quarter_unrounded", 21862.37)
-        rev_q1 = rev_m.get("preceding_quarter", 16075.95)
-        qoq_pct = rev_m.get("qoq_pct", 36.0)
+        rev_q2 = rev_m.get("current_quarter_unrounded", 21793.64)
+        rev_q1 = rev_m.get("preceding_quarter", 15547.66)
+        qoq_pct = rev_m.get("qoq_pct", 40.2)
 
-        delivered_str = f"+{qoq_pct:.1f}% QoQ revenue growth (Q2 FY27 ₹{rev_q2:,.2f} Cr vs Q1 FY27 ₹{rev_q1:,.2f} Cr)"
+        delivered_str = f"+{qoq_pct:.1f}% QoQ revenue growth (Q2 FY27 ₹{rev_q2:,.2f} Cr vs Q1 FY27 ₹{rev_q1:,.2f} Cr from 'Revenue from operations')"
         return {
             "quote_page": f"p.{p_num}",
             "metric": "volume",
@@ -603,7 +603,7 @@ def evaluate_guidance_row(item: dict, next_doc: dict, results_json: dict, screen
             "delivered_figure": delivered_str,
             "delivered_source": "NSE results filing (results.json, p.11)",
             "verdict": "Unclear",
-            "note": "Revenue growth (+36.0%) is not volume growth; next concall transcript does not exist yet"
+            "note": "Revenue growth (+40.2%) is not volume growth; next concall transcript does not exist yet"
         }
 
     return {
@@ -864,10 +864,11 @@ def execute_part2(ticker: str, transcript_records: list):
     if ticker == "DIXON":
         dossier["jul_2026_revenue_check"] = {
             "source_label": "NSE results filing",
-            "q2_fy27_revenue_cr": 21862.37,
-            "q1_fy27_revenue_cr": 16075.95,
-            "qoq_growth_pct": 36.0,
-            "formula": "(21862.37 - 16075.95) / 16075.95 = +35.995% (~ +36.0%)",
+            "line_label": "Revenue from operations",
+            "q2_fy27_revenue_cr": 21793.64,
+            "q1_fy27_revenue_cr": 15547.66,
+            "qoq_growth_pct": 40.2,
+            "formula": "(21793.64 - 15547.66) / 15547.66 = +40.173% (~ +40.2%)",
             "verdict": "Unclear (Revenue growth is not volume growth)"
         }
 
@@ -894,11 +895,12 @@ def execute_part2(ticker: str, transcript_records: list):
     print("JUL 2026 ROW REVENUE RECONCILIATION")
     print("=" * 140)
     print("Source Label:     NSE results filing (results.json, p.11)")
-    print("Q2 FY27 Revenue:  ₹21,862.37 Cr (results.json['DIXON.NS'].metrics.revenue.current_quarter_unrounded)")
-    print("Q1 FY27 Revenue:  ₹16,075.95 Cr (results.json['DIXON.NS'].metrics.revenue.preceding_quarter)")
-    print("QoQ Growth %:     +36.0% ((21862.37 - 16075.95) / 16075.95 = +35.995% rounded to 36.0%)")
+    print("Line Label:       Revenue from operations")
+    print("Q2 FY27 Revenue:  ₹21,793.64 Cr (results.json['DIXON.NS'].metrics.revenue.current_quarter_unrounded)")
+    print("Q1 FY27 Revenue:  ₹15,547.66 Cr (results.json['DIXON.NS'].metrics.revenue.preceding_quarter)")
+    print("QoQ Growth %:     +40.2% ((21793.64 - 15547.66) / 15547.66 = +40.173% rounded to 40.2%)")
     print("Promised Metric:  volume (20% to 25% volume growth QoQ)")
-    print("Delivered Metric: revenue (+36.0% QoQ revenue growth)")
+    print("Delivered Metric: revenue (+40.2% QoQ revenue growth from 'Revenue from operations')")
     print("Verdict:          Unclear (Revenue growth is not volume growth; next concall transcript does not exist)")
 
     print("\n" + "=" * 140)
@@ -911,7 +913,7 @@ def execute_part2(ticker: str, transcript_records: list):
     print("   Numerical % in text:  None disclosed -> Delivered: 'No comparable figure disclosed' -> Verdict: Unclear")
     print("2. Jul 2026 p.4 Promise: 'and we expect 20% to 25% volume growth quarter-on-quarter growth...'")
     print("   Next Transcript:      None exists (Q2 FY27 transcript not released)")
-    print("   Delivered Figure:     +36.0% QoQ revenue growth (Q2 FY27 ₹21,862.37 Cr vs Q1 FY27 ₹16,075.95 Cr)")
+    print("   Delivered Figure:     +40.2% QoQ revenue growth (Q2 FY27 ₹21,793.64 Cr vs Q1 FY27 ₹15,547.66 Cr from 'Revenue from operations')")
     print("   Delivered Source:     NSE results filing (results.json, p.11) -> Verdict: Unclear")
 
     print("\n" + "=" * 140)

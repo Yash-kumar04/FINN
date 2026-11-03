@@ -19,7 +19,7 @@ import {
 } from 'lucide-react'
 import clsx from 'clsx'
 
-const DEMO_TICKERS = ['DIXON', 'KAYNES', 'M&M', 'ASTRAL', 'INFY']
+const DEMO_TICKERS = ['DIXON', 'PIDILITIND', 'KAYNES', 'M&M', 'ASTRAL', 'INFY']
 
 export default function ResearchTab() {
   const [query, setQuery] = useState('DIXON')
@@ -308,15 +308,25 @@ function ResearchDossier({ data, onOpenCitation }) {
         )}
 
         {/* Promise Cards List */}
-        <div className="flex flex-col gap-3">
-          {filteredPromises.map((item, idx) => (
-            <PromiseCard
-              key={item.fact_id || idx}
-              item={item}
-              onOpenCitation={() => onOpenCitation(item)}
-            />
-          ))}
-        </div>
+        {promises.length === 0 ? (
+          <div className="p-5 rounded-xl bg-card border border-border flex flex-col items-center justify-center text-center gap-2 py-8">
+            <FileText size={24} className="text-muted/60" />
+            <p className="text-xs font-semibold text-white">No numeric guidance in prepared remarks</p>
+            <p className="text-[11px] text-muted max-w-sm">
+              Management reviewed historical performance only and did not state checkable numeric guidance (growth %, margin %, revenue, capex) in prepared remarks across concalls.
+            </p>
+          </div>
+        ) : (
+          <div className="flex flex-col gap-3">
+            {filteredPromises.map((item, idx) => (
+              <PromiseCard
+                key={item.fact_id || idx}
+                item={item}
+                onOpenCitation={() => onOpenCitation(item)}
+              />
+            ))}
+          </div>
+        )}
 
         {/* Show More / Show Less Button */}
         {promises.length > 5 && (
@@ -359,10 +369,48 @@ function ResearchDossier({ data, onOpenCitation }) {
               Annual Report & Fundamental Reality
             </h2>
           </div>
-          <span className="text-[10px] text-muted font-mono">FY 2025-26 Report</span>
+          <span className="text-[10px] text-muted font-mono">{data.as_of ? `As of ${data.as_of}` : 'FY 2025-26 Report'}</span>
         </div>
 
-        {/* Business Snapshot & Segment Mix */}
+        {/* Audited Annual Report Facts & Provenance */}
+        {data.annual_report_facts && data.annual_report_facts.length > 0 && (
+          <div className="p-4 rounded-xl bg-card border border-border flex flex-col gap-3">
+            <div className="flex items-center justify-between text-xs font-semibold text-white">
+              <div className="flex items-center gap-2">
+                <FileText size={14} className="text-accent" />
+                <span>Audited Annual Report Facts ({data.annual_report_facts.length} Verified)</span>
+              </div>
+              <span className="text-[10px] text-muted font-mono">Primary Source</span>
+            </div>
+            <div className="flex flex-col gap-2">
+              {data.annual_report_facts.map((fact, idx) => (
+                <div key={fact.fact_id || idx} className="p-2.5 rounded-lg bg-surface border border-border/60 flex flex-col gap-1 text-xs">
+                  <div className="flex items-center justify-between">
+                    <span className="font-semibold text-white/90">{fact.metric}</span>
+                    <button
+                      onClick={() => onOpenCitation(fact)}
+                      className="text-[10px] text-accent hover:underline font-mono"
+                    >
+                      [p.{fact.page || 1}]
+                    </button>
+                  </div>
+                  <p className="text-[11px] text-muted leading-relaxed">
+                    {fact.statement}
+                  </p>
+                  {fact.value && (
+                    <div className="text-[10px] font-mono text-positive/90 mt-0.5">
+                      Extracted: <span className="font-semibold">{fact.value}</span>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {data.ticker === 'DIXON' && (
+          <>
+            {/* Business Snapshot & Segment Mix */}
         <div className="p-4 rounded-xl bg-card border border-border flex flex-col gap-3">
           <div className="flex items-center gap-2 text-xs font-semibold text-white">
             <Building2 size={14} className="text-accent" />
@@ -582,6 +630,8 @@ function ResearchDossier({ data, onOpenCitation }) {
             </div>
           </div>
         </div>
+          </>
+        )}
       </section>
 
       {/* SECTION 3: NARRATIVE VS NUMBERS DIVERGENCES */}

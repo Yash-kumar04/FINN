@@ -4,7 +4,7 @@
   "as_of": "2026-11-02",
   "sector": "Consumer Electronics / EMS",
   "extraction_model": "gemini-3.5-flash",
-  "extracted_at_ist": "2026-11-03 17:08:29 IST",
+  "extracted_at_ist": "2026-11-03 16:33:02 IST",
   "token_usage": {
     "input": 19093,
     "output": 1502,
@@ -16,6 +16,15 @@
     "Beat": "More than 5 percentage points above the top of the range or stated floor (actual > T_top + 5.0)",
     "Missed": "Below the floor or range (actual < T_floor or actual < T_min)",
     "Unclear": "Delivered metric differs from promised metric (revenue vs volume), or no comparable figure disclosed"
+  },
+  "jul_2026_revenue_check": {
+    "source_label": "NSE results filing",
+    "line_label": "Revenue from operations",
+    "q2_fy27_revenue_cr": 21793.64,
+    "q1_fy27_revenue_cr": 15547.66,
+    "qoq_growth_pct": 40.2,
+    "formula": "(21793.64 - 15547.66) / 15547.66 = +40.173% (~ +40.2%)",
+    "verdict": "Unclear (Revenue growth is not volume growth)"
   },
   "audit_summary": {
     "total_extracted": 13,
@@ -36,10 +45,13 @@
       "delivered": "No comparable figure disclosed",
       "delivered_figure": "No comparable figure disclosed",
       "delivered_source": "Concall Oct 17, 2025, p.5 (quote: \"healthy volume growth across the various \nsmartphone brands\")",
-      "outcome": "Revenue growth (+15.7%) is not volume growth; next concall states 'healthy volume growth' without numerical %",
+      "outcome": "Revenue growth (Results filing Total Revenue: ₹15,350.78 Cr, +19.6% QoQ | Screener Sales: ₹14,855.04 Cr, +15.7% QoQ) is not volume growth; next concall states healthy volume growth without numerical %",
       "verdict": "Unclear",
       "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fe83e870-4ca3-462a-addd-5c85ec513959.pdf",
-      "citation": "Concall July 22, 2025, p.4"
+      "citation": "Concall July 22, 2025, p.4",
+      "fact_id": "fact_guidance_1",
+      "results_filing_q2_fy26_revenue_cr": 15350.78,
+      "screener_sales_q2_fy26_cr": 14855.04
     },
     {
       "period": "FY26",
@@ -53,11 +65,12 @@
       "promised": "50% growth this fiscal for refrigerators cooling division",
       "delivered": "No comparable figure disclosed",
       "delivered_figure": "No comparable figure disclosed",
-      "delivered_source": "Screener Quarters table, row 'Sales' (consolidated only)",
+      "delivered_source": "NSE results filing (p.11, Q2 FY26 Total Income: ₹15,350.78 Cr; Screener Sales: ₹14,855.04 Cr - consolidated only)",
       "outcome": "Division full-year revenue not reported as separate line item in quarterly table",
       "verdict": "Unclear",
       "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fe83e870-4ca3-462a-addd-5c85ec513959.pdf",
-      "citation": "Concall July 22, 2025, p.5"
+      "citation": "Concall July 22, 2025, p.5",
+      "fact_id": "fact_guidance_2"
     },
     {
       "period": "Medium to long-term",
@@ -75,7 +88,8 @@
       "outcome": "Divisional component margin not disclosed separately in quarterly tables",
       "verdict": "Unclear",
       "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95dbb3ac-5662-4cd9-a145-78effb6c373c.pdf",
-      "citation": "Concall October 17, 2025, p.4"
+      "citation": "Concall October 17, 2025, p.4",
+      "fact_id": "fact_guidance_3"
     },
     {
       "period": "Next 2 to 3 years",
@@ -93,7 +107,8 @@
       "outcome": "Multi-year projection over 2-3 years; not comparable to quarterly line",
       "verdict": "Unclear",
       "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95dbb3ac-5662-4cd9-a145-78effb6c373c.pdf",
-      "citation": "Concall October 17, 2025, p.4"
+      "citation": "Concall October 17, 2025, p.4",
+      "fact_id": "fact_guidance_4"
     },
     {
       "period": "Next 2 to 3 years",
@@ -111,7 +126,8 @@
       "outcome": "Divisional component margin not disclosed separately in quarterly tables",
       "verdict": "Unclear",
       "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95dbb3ac-5662-4cd9-a145-78effb6c373c.pdf",
-      "citation": "Concall October 17, 2025, p.4"
+      "citation": "Concall October 17, 2025, p.4",
+      "fact_id": "fact_guidance_5"
     },
     {
       "period": "Next 2 to 3 years",
@@ -129,7 +145,8 @@
       "outcome": "Multi-year annualized volume target",
       "verdict": "Unclear",
       "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95dbb3ac-5662-4cd9-a145-78effb6c373c.pdf",
-      "citation": "Concall October 17, 2025, p.4"
+      "citation": "Concall October 17, 2025, p.4",
+      "fact_id": "fact_guidance_6"
     },
     {
       "period": "Next 3 years",
@@ -147,7 +164,8 @@
       "outcome": "3-year cumulative capex commitment",
       "verdict": "Unclear",
       "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95dbb3ac-5662-4cd9-a145-78effb6c373c.pdf",
-      "citation": "Concall October 17, 2025, p.4"
+      "citation": "Concall October 17, 2025, p.4",
+      "fact_id": "fact_guidance_7"
     },
     {
       "period": "Q4 FY26 / Q1 FY27",
@@ -165,7 +183,8 @@
       "outcome": "No discrete monthly volume disclosed for this customer in subsequent call",
       "verdict": "Unclear",
       "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95dbb3ac-5662-4cd9-a145-78effb6c373c.pdf",
-      "citation": "Concall October 17, 2025, p.7"
+      "citation": "Concall October 17, 2025, p.7",
+      "fact_id": "fact_guidance_8"
     },
     {
       "period": "next fiscal",
@@ -183,7 +202,8 @@
       "outcome": "Annualized capacity target scheduled across FY27",
       "verdict": "Unclear",
       "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ad6e72f1-b5f8-4a75-8e45-f2e88c7525e0.pdf",
-      "citation": "Concall January 29, 2026, p.5"
+      "citation": "Concall January 29, 2026, p.5",
+      "fact_id": "fact_guidance_9"
     },
     {
       "period": "FY27",
@@ -197,11 +217,12 @@
       "promised": "We expect this vertical to deliver high double-digit revenue growth in the current fiscal.",
       "delivered": "No comparable figure disclosed",
       "delivered_figure": "No comparable figure disclosed",
-      "delivered_source": "Next Concall / Results Filing for DIXON",
-      "outcome": "Delivered metric differs from promised metric or figure not disclosed",
+      "delivered_source": "Screener Quarters table",
+      "outcome": "Guidance not directly reconcilable with standard quarterly lines",
       "verdict": "Unclear",
       "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38b72f07-55a6-4503-91fd-ed3b2c209e96.pdf",
-      "citation": "Concall May 12, 2026, p.5"
+      "citation": "Concall May 12, 2026, p.5",
+      "fact_id": "fact_guidance_10"
     },
     {
       "period": "FY27",
@@ -219,7 +240,8 @@
       "outcome": "Full-year fiscal FY27 currently active",
       "verdict": "Unclear",
       "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38b72f07-55a6-4503-91fd-ed3b2c209e96.pdf",
-      "citation": "Concall May 12, 2026, p.5"
+      "citation": "Concall May 12, 2026, p.5",
+      "fact_id": "fact_guidance_11"
     },
     {
       "period": "FY27",
@@ -237,7 +259,8 @@
       "outcome": "Full-year fiscal FY27 currently active",
       "verdict": "Unclear",
       "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38b72f07-55a6-4503-91fd-ed3b2c209e96.pdf",
-      "citation": "Concall May 12, 2026, p.6"
+      "citation": "Concall May 12, 2026, p.6",
+      "fact_id": "fact_guidance_12"
     },
     {
       "period": "Q2 FY27",
@@ -249,153 +272,1181 @@
       "quote_page": "p.4",
       "promise": "20% to 25% volume growth QoQ in Q2 FY27",
       "promised": "20% to 25% volume growth QoQ in Q2 FY27",
-      "delivered": "+36.0% QoQ revenue growth (Q2 FY27 ₹21,862.37 Cr vs Q1 FY27 ₹16,075.95 Cr)",
-      "delivered_figure": "+36.0% QoQ revenue growth (Q2 FY27 ₹21,862.37 Cr vs Q1 FY27 ₹16,075.95 Cr)",
+      "delivered": "+40.2% QoQ revenue growth (Q2 FY27 ₹21,793.64 Cr vs Q1 FY27 ₹15,547.66 Cr from 'Revenue from operations')",
+      "delivered_figure": "+40.2% QoQ revenue growth (Q2 FY27 ₹21,793.64 Cr vs Q1 FY27 ₹15,547.66 Cr from 'Revenue from operations')",
       "delivered_source": "NSE results filing (results.json, p.11)",
-      "outcome": "Revenue growth (+36.0%) is not volume growth; next concall transcript does not exist yet",
+      "outcome": "Delivered metric is revenue (+40.2%), not volume",
       "verdict": "Unclear",
       "source_url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7ce2ca16-3043-48f4-97f9-a62a6a086c2f.pdf",
-      "citation": "Concall July 31, 2026, p.4"
+      "citation": "Concall July 31, 2026, p.4",
+      "fact_id": "fact_guidance_13",
+      "statement": "Q2 FY27 (p.4): Promised '20% to 25% volume growth QoQ in Q2 FY27', Delivered '+40.2% QoQ revenue growth (Q2 FY27 ₹21,793.64 Cr vs Q1 FY27 ₹15,547.66 Cr from 'Revenue from operations')', Verdict: Unclear. (Delivered metric is revenue (+40.2%), not volume)"
     }
   ],
-  "jul_2026_revenue_check": {
-    "source_label": "NSE results filing",
-    "q2_fy27_revenue_cr": 21862.37,
-    "q1_fy27_revenue_cr": 16075.95,
-    "qoq_growth_pct": 36.0,
-    "formula": "(21862.37 - 16075.95) / 16075.95 = +35.995% (~ +36.0%)",
-    "verdict": "Unclear (Revenue growth is not volume growth)"
+  "annual_report_provenance": {
+    "report_title": "Dixon Technologies (India) Limited Integrated Annual Report 2025-26",
+    "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf",
+    "total_pages": 520,
+    "fetched_at_ist": "2026-11-03 16:56:21 IST"
   },
+  "business_snapshot": {
+    "overview": "India's leading Electronic Manufacturing Services (EMS) provider, delivering end-to-end design, engineering, and large-scale manufacturing to global and domestic brands as OEM and ODM.",
+    "facilities": 30,
+    "rd_centres": 5,
+    "employees": "26,000+",
+    "source_page": 76,
+    "segments_breakdown": [
+      {
+        "segment": "Mobile Phones & Other EMS",
+        "revenue_million": 442570,
+        "share_pct": 90.56,
+        "page": 106
+      },
+      {
+        "segment": "Consumer Electronics & Refrigerators",
+        "revenue_million": 28920,
+        "share_pct": 5.92,
+        "page": 106
+      },
+      {
+        "segment": "Home Appliances, Lighting & Others",
+        "revenue_million": 17238,
+        "share_pct": 3.52,
+        "page": 106
+      }
+    ],
+    "customer_concentration": "Top 3 customers account for approximately 62% of total revenue (p.497)",
+    "facts": [
+      {
+        "fact_id": "fact_ar_biz_1",
+        "section": "business_snapshot",
+        "metric": "Industry Position",
+        "statement": "Dixon is one of India's leading Electronic Manufacturing Services (EMS) providers with 30 manufacturing facilities and 5 R&D centres across India.",
+        "value": "30 manufacturing facilities",
+        "check_token": "30",
+        "page": 76,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_biz_2",
+        "section": "business_snapshot",
+        "metric": "Workforce Scale",
+        "statement": "Dixon operates with over 26,000+ employees across diverse electronics business verticals.",
+        "value": "26,000+ employees",
+        "check_token": "26,000+",
+        "page": 76,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_biz_3",
+        "section": "business_snapshot",
+        "metric": "Consolidated Group Revenue",
+        "statement": "Total revenue of ₹4,88,728 Million (₹48,872.8 Cr) on a consolidated basis for FY 2025-26.",
+        "value": "₹4,88,728 Million",
+        "check_token": "4,88,728",
+        "page": 76,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_biz_4",
+        "section": "segments",
+        "metric": "Mobile Phones & EMS Revenue",
+        "statement": "Mobile Phones and Other EMS division revenue was ₹4,42,570 Million (~90.56% of total revenue).",
+        "value": "₹4,42,570 Million",
+        "check_token": "4,42,570",
+        "page": 106,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_biz_5",
+        "section": "segments",
+        "metric": "Consumer Electronics & Refrigerator Revenue",
+        "statement": "Consumer Electronics & Refrigerator division revenue was ₹28,920 Million (~5.92% of total revenue).",
+        "value": "₹28,920 Million",
+        "check_token": "28,920",
+        "page": 106,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_biz_6",
+        "section": "segments",
+        "metric": "Customer Concentration",
+        "statement": "Revenue from three customers of the Company represented approximately 62% of total revenue.",
+        "value": "62%",
+        "check_token": "62%",
+        "page": 497,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      }
+    ]
+  },
+  "financial_snapshot": {
+    "fiscal_year": "FY 2025-26",
+    "revenue_cr": 48872.8,
+    "ebitda_cr": 2579.6,
+    "ebitda_margin_pct": 5.3,
+    "pat_cr": 1644.3,
+    "pat_margin_pct": 3.4,
+    "roce_pct": 44.8,
+    "roe_pct": 28.1,
+    "source_page": 106,
+    "facts": [
+      {
+        "fact_id": "fact_ar_fin_1",
+        "section": "financial_snapshot",
+        "metric": "Total Revenue (FY26)",
+        "statement": "FY 2025-26 Total Consolidated Revenue reached ₹4,88,728 Million (up 25.8% YoY from ₹3,88,601 Million).",
+        "value": "₹4,88,728 Million",
+        "check_token": "4,88,728",
+        "page": 106,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_fin_2",
+        "section": "financial_snapshot",
+        "metric": "EBITDA (FY26)",
+        "statement": "FY 2025-26 Consolidated EBITDA stood at ₹25,796 Million (EBITDA margin of 5.3%).",
+        "value": "₹25,796 Million",
+        "check_token": "25,796",
+        "page": 106,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_fin_3",
+        "section": "financial_snapshot",
+        "metric": "Profit After Tax (PAT FY26)",
+        "statement": "FY 2025-26 Consolidated Profit After Tax (PAT) stood at ₹16,443 Million (PAT margin of 3.4%).",
+        "value": "₹16,443 Million",
+        "check_token": "16,443",
+        "page": 106,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_fin_4",
+        "section": "financial_snapshot",
+        "metric": "Return on Capital Employed (RoCE)",
+        "statement": "Consolidated RoCE remained industry-leading at 44.8% for FY 2025-26.",
+        "value": "44.8%",
+        "check_token": "44.8",
+        "page": 106,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_fin_5",
+        "section": "financial_snapshot",
+        "metric": "Return on Equity (RoE)",
+        "statement": "Consolidated RoE stood at 28.1% for FY 2025-26.",
+        "value": "28.1%",
+        "check_token": "28.1",
+        "page": 106,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      }
+    ]
+  },
+  "trajectory_5yr": {
+    "cagr_revenue_pct": 46.1,
+    "cagr_pat_pct": 71.5,
+    "table": [
+      {
+        "year": "FY22 (Mar 2022)",
+        "sales_cr": 10697,
+        "ebitda_cr": 384,
+        "opm_pct": 3.6,
+        "pat_cr": 190,
+        "eps": 32.05
+      },
+      {
+        "year": "FY23 (Mar 2023)",
+        "sales_cr": 12192,
+        "ebitda_cr": 519,
+        "opm_pct": 4.3,
+        "pat_cr": 255,
+        "eps": 42.9
+      },
+      {
+        "year": "FY24 (Mar 2024)",
+        "sales_cr": 17691,
+        "ebitda_cr": 705,
+        "opm_pct": 4.0,
+        "pat_cr": 375,
+        "eps": 61.47
+      },
+      {
+        "year": "FY25 (Mar 2025)",
+        "sales_cr": 38860,
+        "ebitda_cr": 1515,
+        "opm_pct": 3.9,
+        "pat_cr": 1233,
+        "eps": 181.87
+      },
+      {
+        "year": "FY26 (Mar 2026)",
+        "sales_cr": 48873,
+        "ebitda_cr": 1873,
+        "opm_pct": 3.8,
+        "pat_cr": 1644,
+        "eps": 236.61
+      }
+    ],
+    "source": "Screener Annual P&L table & Annual Report Page 106",
+    "facts": [
+      {
+        "fact_id": "fact_ar_traj_1",
+        "section": "trajectory",
+        "metric": "5-Year Revenue CAGR",
+        "statement": "Revenue scaled from ₹10,697 Cr in FY22 to ₹48,873 Cr in FY26 (~46% CAGR), propelled by mobile PLI volume expansion.",
+        "value": "₹48,873 Cr",
+        "check_token": "4,88,728",
+        "page": 106,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_traj_2",
+        "section": "trajectory",
+        "metric": "5-Year PAT Scalability",
+        "statement": "Net profit (PAT) increased from ₹190 Cr in FY22 to ₹1,644 Cr in FY26 (~72% CAGR), demonstrating operating leverage.",
+        "value": "₹1,644 Cr",
+        "check_token": "16,443",
+        "page": 106,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      }
+    ]
+  },
+  "balance_sheet": {
+    "net_worth_million": 46767,
+    "net_debt_million": -7730,
+    "debt_equity_ratio": -0.17,
+    "current_ratio": 1.37,
+    "debtor_days": 54.0,
+    "inventory_days": 48.4,
+    "payable_days": 75.6,
+    "cash_conversion_cycle_days": 26.8,
+    "source_pages": [
+      106,
+      405
+    ],
+    "facts": [
+      {
+        "fact_id": "fact_ar_bs_1",
+        "section": "balance_sheet",
+        "metric": "Net Worth",
+        "statement": "Shareholders' Net Worth rose to ₹46,767 Million as of 31st March, 2026.",
+        "value": "₹46,767 Million",
+        "check_token": "46,767",
+        "page": 106,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_bs_2",
+        "section": "balance_sheet",
+        "metric": "Net Debt Status",
+        "statement": "Company maintained net cash surplus with Net Debt of negative ₹7,730 Million (Net Debt/Equity -0.17x).",
+        "value": "-₹7,730 Million",
+        "check_token": "7,730",
+        "page": 106,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_bs_3",
+        "section": "balance_sheet",
+        "metric": "Current Ratio",
+        "statement": "Current assets of ₹1,19,668 Lakhs against current liabilities of ₹87,217 Lakhs yielding a Current Ratio of 1.37.",
+        "value": "1.37",
+        "check_token": "1.37",
+        "page": 405,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_bs_4",
+        "section": "working_capital",
+        "metric": "Inventory Turnover & Days",
+        "statement": "Inventory turnover ratio of 7.54 times, translating to approximately 48.4 inventory days.",
+        "value": "7.54 times",
+        "check_token": "7.54",
+        "page": 405,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_bs_5",
+        "section": "working_capital",
+        "metric": "Trade Receivables Turnover & Days",
+        "statement": "Trade receivables turnover ratio of 6.76 times, translating to debtor days of approximately 54.0 days.",
+        "value": "6.76 times",
+        "check_token": "6.76",
+        "page": 405,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_bs_6",
+        "section": "working_capital",
+        "metric": "Trade Payables Turnover & Days",
+        "statement": "Trade payables turnover ratio of 4.83 times, translating to payable days of approximately 75.6 days.",
+        "value": "4.83 times",
+        "check_token": "4.83",
+        "page": 405,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      }
+    ]
+  },
+  "cash_quality": {
+    "cfo_cr": 1782.29,
+    "pat_cr": 1644.3,
+    "capex_cr": 1067.51,
+    "free_cash_flow_cr": 714.78,
+    "cash_conversion_pct": 108.4,
+    "quality_assessment": "High (Operating cash flow covers 108% of net profit, self-funding capex with positive FCF)",
+    "source_pages": [
+      420,
+      421
+    ],
+    "facts": [
+      {
+        "fact_id": "fact_ar_cash_1",
+        "section": "cash_quality",
+        "metric": "Cash Flow from Operations (CFO)",
+        "statement": "Consolidated Cash Flow from Operations for FY26 stood at ₹1,78,229 Lakhs (₹1,782.29 Cr), up 55.0% YoY.",
+        "value": "₹1,78,229 Lakhs",
+        "check_token": "1,78,229",
+        "page": 420,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_cash_2",
+        "section": "cash_quality",
+        "metric": "Capital Expenditure (Capex)",
+        "statement": "Capital expenditure on property, plant & equipment including CWIP was ₹1,06,751 Lakhs (₹1,067.51 Cr).",
+        "value": "₹1,06,751 Lakhs",
+        "check_token": "1,06,751",
+        "page": 421,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_cash_3",
+        "section": "cash_quality",
+        "metric": "Cash Conversion Ratio",
+        "statement": "CFO of ₹1,782.29 Cr exceeded reported PAT of ₹1,644.3 Cr, representing an excellent cash conversion ratio of 108.4%.",
+        "value": "108.4%",
+        "check_token": "1,78,229",
+        "page": 420,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      }
+    ],
+    "pat_scope": "Consolidated Total Profit for the year (including Non-Controlling Interest)",
+    "pat_page": 419,
+    "cfo_page": 420,
+    "pat_attributable_to_owners_cr": 1438.64
+  },
+  "contingent_liabilities": {
+    "total_disputed_taxes_cr": 516.38,
+    "disputed_customs_excise_cr": 398.41,
+    "disputed_income_tax_cr": 94.43,
+    "disputed_gst_cr": 23.54,
+    "outstanding_lc_cr": 663.24,
+    "corporate_guarantees_cr": 567.93,
+    "dri_search_matter": "Search by Directorate of Revenue Intelligence (DRI) regarding imported goods classification interpretation; show cause notice received.",
+    "source_pages": [
+      474,
+      475
+    ],
+    "facts": [
+      {
+        "fact_id": "fact_ar_cont_1",
+        "section": "contingent_liabilities",
+        "metric": "Disputed Customs & Excise Claims",
+        "statement": "Disputed excise, custom duty, and service tax liabilities of ₹39,841 Lakhs (₹398.41 Cr), up from ₹8,716 Lakhs.",
+        "value": "₹39,841 Lakhs",
+        "check_token": "39,841",
+        "page": 474,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_cont_2",
+        "section": "contingent_liabilities",
+        "metric": "Disputed Direct & GST Taxes",
+        "statement": "Disputed income tax matters of ₹9,443 Lakhs and disputed GST matters of ₹2,354 Lakhs.",
+        "value": "₹9,443 Lakhs / ₹2,354 Lakhs",
+        "check_token": "9,443",
+        "page": 474,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_cont_3",
+        "section": "contingent_liabilities",
+        "metric": "Corporate Guarantees to Suppliers",
+        "statement": "Corporate guarantees of ₹56,793 Lakhs provided to two suppliers on behalf of subsidiaries for business purposes.",
+        "value": "₹56,793 Lakhs",
+        "check_token": "56,793",
+        "page": 475,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_cont_4",
+        "section": "contingent_liabilities",
+        "metric": "Outstanding Letters of Credit",
+        "statement": "Contingent liability under outstanding letters of credit of ₹66,324 Lakhs (₹663.24 Cr).",
+        "value": "₹66,324 Lakhs",
+        "check_token": "66,324",
+        "page": 475,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      }
+    ]
+  },
+  "related_party_transactions": {
+    "jv_investment_cr": 142.8,
+    "lighting_business_sale_cr": 140.3,
+    "services_and_ppe_cr": 7.78,
+    "key_entities": [
+      "Lightanium Technologies Private Limited",
+      "Rexxam Dixon Electronics Private Limited",
+      "Dixon Technologies Solutions Private Limited"
+    ],
+    "source_pages": [
+      497,
+      498,
+      499
+    ],
+    "facts": [
+      {
+        "fact_id": "fact_ar_rpt_1",
+        "section": "related_party_transactions",
+        "metric": "Investment in JV Lightanium",
+        "statement": "Investment in equity shares of joint venture Lightanium Technologies Private Limited of ₹14,280 Lakhs (₹142.80 Cr).",
+        "value": "₹14,280 Lakhs",
+        "check_token": "14,280",
+        "page": 498,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_rpt_2",
+        "section": "related_party_transactions",
+        "metric": "Lighting Business Divestment",
+        "statement": "Sale of lighting business undertaking (including shares of DTSPL) to Lightanium Technologies for ₹14,030 Lakhs.",
+        "value": "₹14,030 Lakhs",
+        "check_token": "14,030",
+        "page": 498,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      },
+      {
+        "fact_id": "fact_ar_rpt_3",
+        "section": "related_party_transactions",
+        "metric": "JV Services & Job Work",
+        "statement": "Sale of services to Rexxam Dixon Electronics of ₹452 Lakhs and PPE sale of ₹326 Lakhs.",
+        "value": "₹452 Lakhs",
+        "check_token": "452",
+        "page": 498,
+        "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+      }
+    ]
+  },
+  "all_verified_facts": [
+    {
+      "fact_id": "fact_ar_biz_1",
+      "section": "business_snapshot",
+      "metric": "Industry Position",
+      "statement": "Dixon is one of India's leading Electronic Manufacturing Services (EMS) providers with 30 manufacturing facilities and 5 R&D centres across India.",
+      "value": "30 manufacturing facilities",
+      "check_token": "30",
+      "page": 76,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_biz_2",
+      "section": "business_snapshot",
+      "metric": "Workforce Scale",
+      "statement": "Dixon operates with over 26,000+ employees across diverse electronics business verticals.",
+      "value": "26,000+ employees",
+      "check_token": "26,000+",
+      "page": 76,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_biz_3",
+      "section": "business_snapshot",
+      "metric": "Consolidated Group Revenue",
+      "statement": "Total revenue of ₹4,88,728 Million (₹48,872.8 Cr) on a consolidated basis for FY 2025-26.",
+      "value": "₹4,88,728 Million",
+      "check_token": "4,88,728",
+      "page": 76,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_biz_4",
+      "section": "segments",
+      "metric": "Mobile Phones & EMS Revenue",
+      "statement": "Mobile Phones and Other EMS division revenue was ₹4,42,570 Million (~90.56% of total revenue).",
+      "value": "₹4,42,570 Million",
+      "check_token": "4,42,570",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_biz_5",
+      "section": "segments",
+      "metric": "Consumer Electronics & Refrigerator Revenue",
+      "statement": "Consumer Electronics & Refrigerator division revenue was ₹28,920 Million (~5.92% of total revenue).",
+      "value": "₹28,920 Million",
+      "check_token": "28,920",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_biz_6",
+      "section": "segments",
+      "metric": "Customer Concentration",
+      "statement": "Revenue from three customers of the Company represented approximately 62% of total revenue.",
+      "value": "62%",
+      "check_token": "62%",
+      "page": 497,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_fin_1",
+      "section": "financial_snapshot",
+      "metric": "Total Revenue (FY26)",
+      "statement": "FY 2025-26 Total Consolidated Revenue reached ₹4,88,728 Million (up 25.8% YoY from ₹3,88,601 Million).",
+      "value": "₹4,88,728 Million",
+      "check_token": "4,88,728",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_fin_2",
+      "section": "financial_snapshot",
+      "metric": "EBITDA (FY26)",
+      "statement": "FY 2025-26 Consolidated EBITDA stood at ₹25,796 Million (EBITDA margin of 5.3%).",
+      "value": "₹25,796 Million",
+      "check_token": "25,796",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_fin_3",
+      "section": "financial_snapshot",
+      "metric": "Profit After Tax (PAT FY26)",
+      "statement": "FY 2025-26 Consolidated Profit After Tax (PAT) stood at ₹16,443 Million (PAT margin of 3.4%).",
+      "value": "₹16,443 Million",
+      "check_token": "16,443",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_fin_4",
+      "section": "financial_snapshot",
+      "metric": "Return on Capital Employed (RoCE)",
+      "statement": "Consolidated RoCE remained industry-leading at 44.8% for FY 2025-26.",
+      "value": "44.8%",
+      "check_token": "44.8",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_fin_5",
+      "section": "financial_snapshot",
+      "metric": "Return on Equity (RoE)",
+      "statement": "Consolidated RoE stood at 28.1% for FY 2025-26.",
+      "value": "28.1%",
+      "check_token": "28.1",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_traj_1",
+      "section": "trajectory",
+      "metric": "5-Year Revenue CAGR",
+      "statement": "Revenue scaled from ₹10,697 Cr in FY22 to ₹48,873 Cr in FY26 (~46% CAGR), propelled by mobile PLI volume expansion.",
+      "value": "₹48,873 Cr",
+      "check_token": "4,88,728",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_traj_2",
+      "section": "trajectory",
+      "metric": "5-Year PAT Scalability",
+      "statement": "Net profit (PAT) increased from ₹190 Cr in FY22 to ₹1,644 Cr in FY26 (~72% CAGR), demonstrating operating leverage.",
+      "value": "₹1,644 Cr",
+      "check_token": "16,443",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_bs_1",
+      "section": "balance_sheet",
+      "metric": "Net Worth",
+      "statement": "Shareholders' Net Worth rose to ₹46,767 Million as of 31st March, 2026.",
+      "value": "₹46,767 Million",
+      "check_token": "46,767",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_bs_2",
+      "section": "balance_sheet",
+      "metric": "Net Debt Status",
+      "statement": "Company maintained net cash surplus with Net Debt of negative ₹7,730 Million (Net Debt/Equity -0.17x).",
+      "value": "-₹7,730 Million",
+      "check_token": "7,730",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_bs_3",
+      "section": "balance_sheet",
+      "metric": "Current Ratio",
+      "statement": "Current assets of ₹1,19,668 Lakhs against current liabilities of ₹87,217 Lakhs yielding a Current Ratio of 1.37.",
+      "value": "1.37",
+      "check_token": "1.37",
+      "page": 405,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_bs_4",
+      "section": "working_capital",
+      "metric": "Inventory Turnover & Days",
+      "statement": "Inventory turnover ratio of 7.54 times, translating to approximately 48.4 inventory days.",
+      "value": "7.54 times",
+      "check_token": "7.54",
+      "page": 405,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_bs_5",
+      "section": "working_capital",
+      "metric": "Trade Receivables Turnover & Days",
+      "statement": "Trade receivables turnover ratio of 6.76 times, translating to debtor days of approximately 54.0 days.",
+      "value": "6.76 times",
+      "check_token": "6.76",
+      "page": 405,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_bs_6",
+      "section": "working_capital",
+      "metric": "Trade Payables Turnover & Days",
+      "statement": "Trade payables turnover ratio of 4.83 times, translating to payable days of approximately 75.6 days.",
+      "value": "4.83 times",
+      "check_token": "4.83",
+      "page": 405,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cash_1",
+      "section": "cash_quality",
+      "metric": "Cash Flow from Operations (CFO)",
+      "statement": "Consolidated Cash Flow from Operations for FY26 stood at ₹1,78,229 Lakhs (₹1,782.29 Cr), up 55.0% YoY.",
+      "value": "₹1,78,229 Lakhs",
+      "check_token": "1,78,229",
+      "page": 420,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cash_2",
+      "section": "cash_quality",
+      "metric": "Capital Expenditure (Capex)",
+      "statement": "Capital expenditure on property, plant & equipment including CWIP was ₹1,06,751 Lakhs (₹1,067.51 Cr).",
+      "value": "₹1,06,751 Lakhs",
+      "check_token": "1,06,751",
+      "page": 421,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cash_3",
+      "section": "cash_quality",
+      "metric": "Cash Conversion Ratio",
+      "statement": "CFO of ₹1,782.29 Cr exceeded reported PAT of ₹1,644.3 Cr, representing an excellent cash conversion ratio of 108.4%.",
+      "value": "108.4%",
+      "check_token": "1,78,229",
+      "page": 420,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cont_1",
+      "section": "contingent_liabilities",
+      "metric": "Disputed Customs & Excise Claims",
+      "statement": "Disputed excise, custom duty, and service tax liabilities of ₹39,841 Lakhs (₹398.41 Cr), up from ₹8,716 Lakhs.",
+      "value": "₹39,841 Lakhs",
+      "check_token": "39,841",
+      "page": 474,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cont_2",
+      "section": "contingent_liabilities",
+      "metric": "Disputed Direct & GST Taxes",
+      "statement": "Disputed income tax matters of ₹9,443 Lakhs and disputed GST matters of ₹2,354 Lakhs.",
+      "value": "₹9,443 Lakhs / ₹2,354 Lakhs",
+      "check_token": "9,443",
+      "page": 474,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cont_3",
+      "section": "contingent_liabilities",
+      "metric": "Corporate Guarantees to Suppliers",
+      "statement": "Corporate guarantees of ₹56,793 Lakhs provided to two suppliers on behalf of subsidiaries for business purposes.",
+      "value": "₹56,793 Lakhs",
+      "check_token": "56,793",
+      "page": 475,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cont_4",
+      "section": "contingent_liabilities",
+      "metric": "Outstanding Letters of Credit",
+      "statement": "Contingent liability under outstanding letters of credit of ₹66,324 Lakhs (₹663.24 Cr).",
+      "value": "₹66,324 Lakhs",
+      "check_token": "66,324",
+      "page": 475,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_rpt_1",
+      "section": "related_party_transactions",
+      "metric": "Investment in JV Lightanium",
+      "statement": "Investment in equity shares of joint venture Lightanium Technologies Private Limited of ₹14,280 Lakhs (₹142.80 Cr).",
+      "value": "₹14,280 Lakhs",
+      "check_token": "14,280",
+      "page": 498,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_rpt_2",
+      "section": "related_party_transactions",
+      "metric": "Lighting Business Divestment",
+      "statement": "Sale of lighting business undertaking (including shares of DTSPL) to Lightanium Technologies for ₹14,030 Lakhs.",
+      "value": "₹14,030 Lakhs",
+      "check_token": "14,030",
+      "page": 498,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_rpt_3",
+      "section": "related_party_transactions",
+      "metric": "JV Services & Job Work",
+      "statement": "Sale of services to Rexxam Dixon Electronics of ₹452 Lakhs and PPE sale of ₹326 Lakhs.",
+      "value": "₹452 Lakhs",
+      "check_token": "452",
+      "page": 498,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    }
+  ],
   "narrative_vs_numbers": [
     {
-      "topic": "Mobile PLI Volume Expansion & Scale",
-      "management_narrative": "Management attributes top-line scaling to mobile PLI volume expansion across diverse electronics business verticals.",
-      "reported_numbers": "Total revenue reached ₹4,88,728 Million, with Mobile Phones and Other EMS generating ₹4,42,570 Million (~90.56% of total revenue).",
-      "divergence_type": "Agrees",
-      "analysis": "The reported segmental revenue breakdown confirms that the Mobile Phones and Other EMS division forms the vast majority of total sales. This aligns directly with management's stated narrative on the primary driver of corporate scale.",
-      "cited_fact_ids": [
-        "fact_ar_biz_2",
-        "fact_ar_biz_4",
-        "fact_ar_traj_1"
-      ]
-    },
-    {
-      "topic": "Refrigerator Division Growth Guidance",
-      "management_narrative": "Management promised 50% growth this fiscal for the refrigerators cooling division.",
-      "reported_numbers": "Consumer Electronics & Refrigerator division revenue was ₹28,920 Million (~5.92% of total revenue), but no comparable standalone FY growth figure is disclosed as a separate line item in quarterly tables.",
-      "divergence_type": "Under Observation",
-      "analysis": "Because the refrigerator business is clubbed under the Consumer Electronics & Refrigerator division in reported metrics, exact verification of the standalone 50% growth target remains unclear from available line items. Further granular disclosure is required to evaluate performance accurately.",
-      "cited_fact_ids": [
-        "fact_ar_biz_5",
-        "fact_guidance_2"
-      ]
-    },
-    {
       "topic": "Operating Leverage and Profitability",
-      "management_narrative": "Management highlighted robust operational leverage resulting from rapid scaling across business verticals.",
-      "reported_numbers": "Net profit (PAT) increased from ₹190 Cr in FY22 to ₹1,644 Cr in FY26 (~72% CAGR), with Consolidated PAT standing at ₹16,443 Million (PAT margin of 3.4%) for FY 2025-26.",
+      "management_narrative": "Management claims that scaling volumes, particularly in the mobile PLI segment, is driving significant operating leverage.",
+      "reported_numbers": "Revenue grew at a 46% CAGR from FY22 to FY26, while Net Profit (PAT) grew at a 72% CAGR over the same period.",
       "divergence_type": "Agrees",
-      "analysis": "The multi-year net profit growth trajectory and substantial FY 2025-26 earnings provide empirical validation of operating leverage. Profitability is expanding rapidly alongside revenue scale.",
+      "analysis": "The significantly higher growth rate of PAT relative to revenue confirms that the company is successfully extracting operating efficiencies as it scales. This is further supported by a high RoCE of 44.8% in FY26.",
       "cited_fact_ids": [
-        "fact_ar_fin_3",
-        "fact_ar_traj_2"
+        "fact_ar_traj_1",
+        "fact_ar_traj_2",
+        "fact_ar_fin_4"
       ]
     },
     {
-      "topic": "Q2 FY27 Volume Growth vs Revenue Growth",
-      "management_narrative": "Management promised 20% to 25% volume growth QoQ in Q2 FY27.",
-      "reported_numbers": "Delivered +36.0% QoQ revenue growth (Q2 FY27 ₹21,862.37 Cr vs Q1 FY27 ₹16,075.95 Cr), but explicit discrete volume growth figures were not separately detailed.",
-      "divergence_type": "Under Observation",
-      "analysis": "Revenue growth cannot be directly conflated with physical volume growth due to potential shifts in product mix and realizations. Therefore, the specific volume growth target remains technically unverified by reported numbers.",
+      "topic": "Cash Flow and Working Capital Efficiency",
+      "management_narrative": "The company emphasizes maintaining a lean balance sheet and efficient cash management while scaling.",
+      "reported_numbers": "Cash Flow from Operations (CFO) reached ₹1,782.29 Cr in FY26, representing a 108.4% conversion of reported PAT.",
+      "divergence_type": "Agrees",
+      "analysis": "The fact that CFO exceeds PAT demonstrates high-quality earnings and disciplined working capital management. This efficiency allowed the company to maintain a net cash surplus despite significant capex of ₹1,067.51 Cr.",
       "cited_fact_ids": [
+        "fact_ar_cash_1",
+        "fact_ar_cash_3",
+        "fact_ar_cash_2",
+        "fact_ar_bs_2"
+      ]
+    },
+    {
+      "topic": "Volume-Based Guidance Transparency",
+      "management_narrative": "Management frequently provides specific volume-based guidance (e.g., 15% QoQ volume growth or 0.5 million units/month for new ODM customers).",
+      "reported_numbers": "Audited and quarterly filings report revenue growth (e.g., +19.6% QoQ in Q2 FY26) but do not disclose discrete unit volume figures.",
+      "divergence_type": "Under Observation",
+      "analysis": "There is a reporting gap between management's volume-centric promises and the revenue-centric statutory disclosures. This makes it difficult for analysts to verify if growth is driven by unit volume increases or changes in average selling price/product mix.",
+      "cited_fact_ids": [
+        "fact_guidance_1",
+        "fact_guidance_8",
         "fact_guidance_13"
+      ]
+    },
+    {
+      "topic": "Revenue Diversification",
+      "management_narrative": "Management highlights growth across diverse electronics verticals including refrigerators, lighting, and camera modules.",
+      "reported_numbers": "Mobile Phones and Other EMS division accounted for ~90.56% of total revenue in FY26.",
+      "divergence_type": "Diverges",
+      "analysis": "While management discusses multiple growth engines, the financial reality is a heavy and increasing reliance on the Mobile/EMS segment. Other divisions like Consumer Electronics & Refrigerators remain a small fraction (5.92%) of the total business.",
+      "cited_fact_ids": [
+        "fact_ar_biz_4",
+        "fact_ar_biz_5"
       ]
     }
   ],
   "guidance_summary": {
-    "summary_text": "Management provides forward-looking targets across multiple operational metrics, including quarterly volume expansion, segment-specific revenue trajectories, divisional margins, and multi-year capital commitments. However, tracking performance against these qualitative and quantitative guidelines presents challenges due to differences between reported financial line items (such as consolidated revenue blocks and clubbed divisions) and specific unit or component targets.",
-    "key_metrics_guided": [
-      "QoQ and annualized volume growth rates for mobile and camera modules",
-      "Segment-specific revenue growth multipliers (e.g., refrigerator division and lighting JV targets)",
-      "Multi-year cumulative capex commitments and divisional EBITDA margins"
-    ],
-    "metric_alignment_note": "Volume promises must not be conflated with revenue growth because top-line expansion includes realisations, product mix shifts, and component pricing dynamics that do not track 1:1 with physical unit volumes.",
+    "summary_text": "Management maintains an aggressive guidance posture, frequently projecting high double-digit growth and specific unit volume targets for new verticals like camera modules and ODM smartphones. However, the track record for verification is currently 'Unclear' because many targets are multi-year (FY27 and beyond) or rely on internal volume metrics that are not reconciled in standard financial reporting. While revenue growth has been robust, the lack of granular divisional margin and volume data prevents a definitive verdict on guidance accuracy.",
+    "key_metrics_guided": "Quarterly and annual unit volumes, divisional revenue growth (3x for specific segments), multi-year capex commitments (₹3,000 Cr), and component-level EBITDA margins.",
+    "metric_alignment_note": "Investors must not conflate reported revenue growth with management's volume guidance; for instance, a 19.6% revenue increase does not automatically confirm a 15% volume growth target without disclosed unit data.",
     "cited_fact_ids": [
       "fact_guidance_1",
-      "fact_guidance_2",
       "fact_guidance_3",
-      "fact_guidance_4",
-      "fact_guidance_5",
-      "fact_guidance_6",
       "fact_guidance_7",
-      "fact_guidance_8",
-      "fact_guidance_9",
-      "fact_guidance_10",
       "fact_guidance_11",
-      "fact_guidance_12",
       "fact_guidance_13"
     ]
   },
   "bull_case": [
     {
-      "title": "Exceptional Scale and Revenue CAGR",
-      "argument": "Dixon has demonstrated extraordinary top-line velocity, scaling total consolidated revenue to ₹4,88,728 Million in FY 2025-26 (a 25.8% YoY increase) and achieving a ~46% CAGR from FY22 to FY26, propelled heavily by mobile PLI volume expansion.",
-      "cited_fact_ids": [
-        "fact_ar_fin_1",
-        "fact_ar_traj_1"
-      ]
-    },
-    {
-      "title": "Strong Cash Generation and Net Cash Balance Sheet",
-      "argument": "The company exhibits exceptional capital efficiency, reporting a Cash Flow from Operations of ₹1,78,229 Lakhs for FY26 (up 55.0% YoY) which exceeds reported PAT, yielding a strong cash conversion ratio of 108.4%. Furthermore, Dixon maintains a net cash surplus with a Net Debt of negative ₹7,730 Million.",
-      "cited_fact_ids": [
-        "fact_ar_bs_2",
-        "fact_ar_cash_1",
-        "fact_ar_cash_3"
-      ]
-    },
-    {
-      "title": "Industry-Leading Return Metrics",
-      "argument": "Dixon delivers superior capital allocation efficiency with an industry-leading Consolidated RoCE of 44.8% and a robust Consolidated RoE of 28.1% for FY 2025-26.",
+      "title": "Exceptional Capital Efficiency",
+      "argument": "Dixon maintains an industry-leading RoCE of 44.8% and an RoE of 28.1%, demonstrating superior capital allocation. The company operates with a net cash surplus (Net Debt/Equity of -0.17x), providing a strong cushion for its ₹3,000 Cr capex plans.",
       "cited_fact_ids": [
         "fact_ar_fin_4",
-        "fact_ar_fin_5"
+        "fact_ar_fin_5",
+        "fact_ar_bs_2",
+        "fact_guidance_7"
+      ]
+    },
+    {
+      "title": "Strong Cash Conversion Cycle",
+      "argument": "The company exhibits high earnings quality with a cash conversion ratio of 108.4% (CFO/PAT). Efficient working capital is evidenced by an inventory turnover of 7.54x and the ability to leverage trade payables (75.6 days) against receivables (54.0 days).",
+      "cited_fact_ids": [
+        "fact_ar_cash_3",
+        "fact_ar_bs_4",
+        "fact_ar_bs_5",
+        "fact_ar_bs_6"
+      ]
+    },
+    {
+      "title": "Proven Scalability via PLI",
+      "argument": "Dixon has successfully utilized the mobile PLI scheme to scale revenue from ~₹10,697 Cr to ~₹48,873 Cr in just four years. This 46% CAGR is backed by a massive infrastructure of 30 manufacturing facilities and 26,000+ employees.",
+      "cited_fact_ids": [
+        "fact_ar_traj_1",
+        "fact_ar_biz_1",
+        "fact_ar_biz_2"
       ]
     }
   ],
   "bear_case": [
     {
-      "title": "High Customer Concentration Risk",
-      "argument": "Revenue is heavily dependent on a very small client base, with just three customers representing approximately 62% of the company's total consolidated revenue, creating significant enterprise vulnerability if any major client alters procurement strategies.",
+      "title": "Extreme Customer Concentration",
+      "argument": "The business model is highly dependent on a few key relationships, with just three customers accounting for approximately 62% of the total consolidated revenue. Any loss or reduction in orders from these entities would be material.",
       "cited_fact_ids": [
+        "fact_ar_rpt_1",
         "fact_ar_biz_6"
       ]
     },
     {
-      "title": "Substantial Contingent Liabilities and Commitments",
-      "argument": "Dixon carries large off-balance-sheet exposures and legal risks, including disputed excise, custom duty, and service tax liabilities of ₹39,841 Lakhs, disputed income tax and GST matters, corporate guarantees of ₹56,793 Lakhs provided on behalf of subsidiaries, and outstanding letters of credit of ₹66,324 Lakhs.",
-      "cited_fact_ids": [
-        "fact_ar_cont_1",
-        "fact_ar_cont_2",
-        "fact_ar_cont_3",
-        "fact_ar_cont_4"
-      ]
-    },
-    {
-      "title": "Extremely Narrow Operating and PAT Margins",
-      "argument": "While absolute scale is impressive, the business operates on thin margins inherent to large-scale EMS manufacturing, recording a consolidated EBITDA margin of 5.3% and a PAT margin of just 3.4% for FY 2025-26, leaving little room for error against cost inflations.",
+      "title": "Thin Margin Profile",
+      "argument": "Despite massive scale, the company operates on very thin margins, with a consolidated PAT margin of only 3.4% and EBITDA margin of 5.3%. This leaves the company vulnerable to even minor cost fluctuations or pricing pressures.",
       "cited_fact_ids": [
         "fact_ar_fin_2",
         "fact_ar_fin_3"
       ]
+    },
+    {
+      "title": "Rising Contingent Liabilities",
+      "argument": "There is a significant increase in disputed tax and duty liabilities, which jumped from ₹8,716 Lakhs to ₹39,841 Lakhs. Total contingent exposures, including letters of credit (₹663.24 Cr) and corporate guarantees (₹567.93 Cr), represent a substantial potential drain on net worth.",
+      "cited_fact_ids": [
+        "fact_ar_cont_1",
+        "fact_ar_cont_3",
+        "fact_ar_cont_4"
+      ]
     }
   ],
   "synthesis_metadata": {
-    "model": "gemini-3.5-flash-lite",
-    "synthesized_at_ist": "2026-11-03 16:58:06 IST",
+    "model": "gemini-3-flash-preview",
+    "synthesized_at_ist": "2026-11-03 17:53:31 IST",
     "total_facts_considered": 42,
     "total_divergences": 4,
     "total_bull_arguments": 3,
     "total_bear_arguments": 3
-  }
+  },
+  "annual_report_facts": [
+    {
+      "fact_id": "fact_ar_biz_1",
+      "section": "business_snapshot",
+      "metric": "Industry Position",
+      "statement": "Dixon is one of India's leading Electronic Manufacturing Services (EMS) providers with 30 manufacturing facilities and 5 R&D centres across India.",
+      "value": "30 manufacturing facilities",
+      "check_token": "30",
+      "page": 76,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_biz_2",
+      "section": "business_snapshot",
+      "metric": "Workforce Scale",
+      "statement": "Dixon operates with over 26,000+ employees across diverse electronics business verticals.",
+      "value": "26,000+ employees",
+      "check_token": "26,000+",
+      "page": 76,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_biz_3",
+      "section": "business_snapshot",
+      "metric": "Consolidated Group Revenue",
+      "statement": "Total revenue of ₹4,88,728 Million (₹48,872.8 Cr) on a consolidated basis for FY 2025-26.",
+      "value": "₹4,88,728 Million",
+      "check_token": "4,88,728",
+      "page": 76,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_biz_4",
+      "section": "segments",
+      "metric": "Mobile Phones & EMS Revenue",
+      "statement": "Mobile Phones and Other EMS division revenue was ₹4,42,570 Million (~90.56% of total revenue).",
+      "value": "₹4,42,570 Million",
+      "check_token": "4,42,570",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_biz_5",
+      "section": "segments",
+      "metric": "Consumer Electronics & Refrigerator Revenue",
+      "statement": "Consumer Electronics & Refrigerator division revenue was ₹28,920 Million (~5.92% of total revenue).",
+      "value": "₹28,920 Million",
+      "check_token": "28,920",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_biz_6",
+      "section": "segments",
+      "metric": "Customer Concentration",
+      "statement": "Revenue from three customers of the Company represented approximately 62% of total revenue.",
+      "value": "62%",
+      "check_token": "62%",
+      "page": 497,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_fin_1",
+      "section": "financial_snapshot",
+      "metric": "Total Revenue (FY26)",
+      "statement": "FY 2025-26 Total Consolidated Revenue reached ₹4,88,728 Million (up 25.8% YoY from ₹3,88,601 Million).",
+      "value": "₹4,88,728 Million",
+      "check_token": "4,88,728",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_fin_2",
+      "section": "financial_snapshot",
+      "metric": "EBITDA (FY26)",
+      "statement": "FY 2025-26 Consolidated EBITDA stood at ₹25,796 Million (EBITDA margin of 5.3%).",
+      "value": "₹25,796 Million",
+      "check_token": "25,796",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_fin_3",
+      "section": "financial_snapshot",
+      "metric": "Profit After Tax (PAT FY26)",
+      "statement": "FY 2025-26 Consolidated Profit After Tax (PAT) stood at ₹16,443 Million (PAT margin of 3.4%).",
+      "value": "₹16,443 Million",
+      "check_token": "16,443",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_fin_4",
+      "section": "financial_snapshot",
+      "metric": "Return on Capital Employed (RoCE)",
+      "statement": "Consolidated RoCE remained industry-leading at 44.8% for FY 2025-26.",
+      "value": "44.8%",
+      "check_token": "44.8",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_fin_5",
+      "section": "financial_snapshot",
+      "metric": "Return on Equity (RoE)",
+      "statement": "Consolidated RoE stood at 28.1% for FY 2025-26.",
+      "value": "28.1%",
+      "check_token": "28.1",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_traj_1",
+      "section": "trajectory",
+      "metric": "5-Year Revenue CAGR",
+      "statement": "Revenue scaled from ₹10,697 Cr in FY22 to ₹48,873 Cr in FY26 (~46% CAGR), propelled by mobile PLI volume expansion.",
+      "value": "₹48,873 Cr",
+      "check_token": "4,88,728",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_traj_2",
+      "section": "trajectory",
+      "metric": "5-Year PAT Scalability",
+      "statement": "Net profit (PAT) increased from ₹190 Cr in FY22 to ₹1,644 Cr in FY26 (~72% CAGR), demonstrating operating leverage.",
+      "value": "₹1,644 Cr",
+      "check_token": "16,443",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_bs_1",
+      "section": "balance_sheet",
+      "metric": "Net Worth",
+      "statement": "Shareholders' Net Worth rose to ₹46,767 Million as of 31st March, 2026.",
+      "value": "₹46,767 Million",
+      "check_token": "46,767",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_bs_2",
+      "section": "balance_sheet",
+      "metric": "Net Debt Status",
+      "statement": "Company maintained net cash surplus with Net Debt of negative ₹7,730 Million (Net Debt/Equity -0.17x).",
+      "value": "-₹7,730 Million",
+      "check_token": "7,730",
+      "page": 106,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_bs_3",
+      "section": "balance_sheet",
+      "metric": "Current Ratio",
+      "statement": "Current assets of ₹1,19,668 Lakhs against current liabilities of ₹87,217 Lakhs yielding a Current Ratio of 1.37.",
+      "value": "1.37",
+      "check_token": "1.37",
+      "page": 405,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_bs_4",
+      "section": "working_capital",
+      "metric": "Inventory Turnover & Days",
+      "statement": "Inventory turnover ratio of 7.54 times, translating to approximately 48.4 inventory days.",
+      "value": "7.54 times",
+      "check_token": "7.54",
+      "page": 405,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_bs_5",
+      "section": "working_capital",
+      "metric": "Trade Receivables Turnover & Days",
+      "statement": "Trade receivables turnover ratio of 6.76 times, translating to debtor days of approximately 54.0 days.",
+      "value": "6.76 times",
+      "check_token": "6.76",
+      "page": 405,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_bs_6",
+      "section": "working_capital",
+      "metric": "Trade Payables Turnover & Days",
+      "statement": "Trade payables turnover ratio of 4.83 times, translating to payable days of approximately 75.6 days.",
+      "value": "4.83 times",
+      "check_token": "4.83",
+      "page": 405,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cash_1",
+      "section": "cash_quality",
+      "metric": "Cash Flow from Operations (CFO)",
+      "statement": "Consolidated Cash Flow from Operations for FY26 stood at ₹1,78,229 Lakhs (₹1,782.29 Cr), up 55.0% YoY.",
+      "value": "₹1,78,229 Lakhs",
+      "check_token": "1,78,229",
+      "page": 420,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cash_2",
+      "section": "cash_quality",
+      "metric": "Capital Expenditure (Capex)",
+      "statement": "Capital expenditure on property, plant & equipment including CWIP was ₹1,06,751 Lakhs (₹1,067.51 Cr).",
+      "value": "₹1,06,751 Lakhs",
+      "check_token": "1,06,751",
+      "page": 421,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cash_3",
+      "section": "cash_quality",
+      "metric": "Cash Conversion Ratio",
+      "statement": "CFO of ₹1,782.29 Cr exceeded reported PAT of ₹1,644.3 Cr, representing an excellent cash conversion ratio of 108.4%.",
+      "value": "108.4%",
+      "check_token": "1,78,229",
+      "page": 420,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cont_1",
+      "section": "contingent_liabilities",
+      "metric": "Disputed Customs & Excise Claims",
+      "statement": "Disputed excise, custom duty, and service tax liabilities of ₹39,841 Lakhs (₹398.41 Cr), up from ₹8,716 Lakhs.",
+      "value": "₹39,841 Lakhs",
+      "check_token": "39,841",
+      "page": 474,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cont_2",
+      "section": "contingent_liabilities",
+      "metric": "Disputed Direct & GST Taxes",
+      "statement": "Disputed income tax matters of ₹9,443 Lakhs and disputed GST matters of ₹2,354 Lakhs.",
+      "value": "₹9,443 Lakhs / ₹2,354 Lakhs",
+      "check_token": "9,443",
+      "page": 474,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cont_3",
+      "section": "contingent_liabilities",
+      "metric": "Corporate Guarantees to Suppliers",
+      "statement": "Corporate guarantees of ₹56,793 Lakhs provided to two suppliers on behalf of subsidiaries for business purposes.",
+      "value": "₹56,793 Lakhs",
+      "check_token": "56,793",
+      "page": 475,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_cont_4",
+      "section": "contingent_liabilities",
+      "metric": "Outstanding Letters of Credit",
+      "statement": "Contingent liability under outstanding letters of credit of ₹66,324 Lakhs (₹663.24 Cr).",
+      "value": "₹66,324 Lakhs",
+      "check_token": "66,324",
+      "page": 475,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_rpt_1",
+      "section": "related_party_transactions",
+      "metric": "Investment in JV Lightanium",
+      "statement": "Investment in equity shares of joint venture Lightanium Technologies Private Limited of ₹14,280 Lakhs (₹142.80 Cr).",
+      "value": "₹14,280 Lakhs",
+      "check_token": "14,280",
+      "page": 498,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_rpt_2",
+      "section": "related_party_transactions",
+      "metric": "Lighting Business Divestment",
+      "statement": "Sale of lighting business undertaking (including shares of DTSPL) to Lightanium Technologies for ₹14,030 Lakhs.",
+      "value": "₹14,030 Lakhs",
+      "check_token": "14,030",
+      "page": 498,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    },
+    {
+      "fact_id": "fact_ar_rpt_3",
+      "section": "related_party_transactions",
+      "metric": "JV Services & Job Work",
+      "statement": "Sale of services to Rexxam Dixon Electronics of ₹452 Lakhs and PPE sale of ₹326 Lakhs.",
+      "value": "₹452 Lakhs",
+      "check_token": "452",
+      "page": 498,
+      "source_url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5ef88e3c-352d-4223-a8ec-bdd7d3aa31c1.pdf"
+    }
+  ]
 }

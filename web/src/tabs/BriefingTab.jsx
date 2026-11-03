@@ -92,17 +92,21 @@ export default function BriefingTab({ onAlertsCountChange }) {
         let resultsObj = ev.results
         if (res && isResults && !resultsObj) {
           if (res.status === 'verified') {
+            const isBank = res.is_bank || ['HDFCBANK.NS', 'ICICIBANK.NS', 'KOTAKBANK.NS'].includes(ev.ticker)
             resultsObj = {
               period: res.period,
               type: res.scope,
+              is_bank: isBank,
               revenue: res.metrics?.revenue?.current_quarter != null ? `₹${Number(res.metrics.revenue.current_quarter).toLocaleString()} Cr` : '—',
-              ebitda: res.metrics?.ebitda?.current_quarter != null ? `₹${Number(res.metrics.ebitda.current_quarter).toLocaleString()} Cr` : '—',
+              ebitda: isBank
+                ? 'EBITDA not reported by banks'
+                : (res.metrics?.ebitda?.current_quarter != null ? `₹${Number(res.metrics.ebitda.current_quarter).toLocaleString()} Cr` : '—'),
               pbt: res.metrics?.pbt?.current_quarter != null ? `₹${Number(res.metrics.pbt.current_quarter).toFixed(2)} Cr` : '—',
               pat: res.metrics?.pat?.current_quarter != null ? `₹${Number(res.metrics.pat.current_quarter).toFixed(2)} Cr` : '—',
               revenue_qoq_pct: res.metrics?.revenue?.qoq_pct,
               revenue_yoy_pct: res.metrics?.revenue?.yoy_pct,
-              ebitda_qoq_pct: res.metrics?.ebitda?.qoq_pct,
-              ebitda_yoy_pct: res.metrics?.ebitda?.yoy_pct,
+              ebitda_qoq_pct: isBank ? null : res.metrics?.ebitda?.qoq_pct,
+              ebitda_yoy_pct: isBank ? null : res.metrics?.ebitda?.yoy_pct,
               pbt_qoq_pct: res.metrics?.pbt?.qoq_pct,
               pbt_yoy_pct: res.metrics?.pbt?.yoy_pct,
               pat_qoq_pct: res.metrics?.pat?.qoq_pct,
