@@ -30,7 +30,7 @@ export default function EventCard({ event, alertData, compact = false, minimal =
 
   if (minimal) {
     return (
-      <div className="flex items-center gap-2 px-3 py-2 rounded bg-card/50 text-xs text-muted">
+      <div id={event.event_id} className="flex items-center gap-2 px-3 py-2 rounded bg-card/50 text-xs text-muted scroll-mt-20">
         <span className={clsx('chip text-[9px]', meta.chip)}>{meta.label}</span>
         <span className="font-medium text-white/70">{symbol}</span>
         <span className="flex-1 truncate">{title}</span>
@@ -41,7 +41,7 @@ export default function EventCard({ event, alertData, compact = false, minimal =
 
   if (compact) {
     return (
-      <div className="flex items-start gap-3 px-3 py-2.5 rounded-lg bg-card border border-border">
+      <div id={event.event_id} className="flex items-start gap-3 px-3 py-2.5 rounded-lg bg-card border border-border scroll-mt-20">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
             <span className={clsx('chip text-[10px]', meta.chip)}>{meta.label}</span>
@@ -64,7 +64,7 @@ export default function EventCard({ event, alertData, compact = false, minimal =
 
   // Rich card for Tier 1
   return (
-    <div className="rounded-xl bg-card border border-border overflow-hidden">
+    <div id={event.event_id} className="rounded-xl bg-card border border-border overflow-hidden scroll-mt-20">
       <div className="px-4 pt-4 pb-3">
         <div className="flex items-start justify-between gap-2">
           <div className="flex-1 min-w-0">

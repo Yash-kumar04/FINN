@@ -1,8 +1,25 @@
-import { useState, useMemo } from 'react'
-import { SlidersHorizontal, ChevronDown, ChevronUp, AlertTriangle, TrendingDown, TrendingUp, Flame } from 'lucide-react'
+import { useState, useMemo, useEffect } from 'react'
+import {
+  SlidersHorizontal,
+  ChevronDown,
+  ChevronUp,
+  AlertTriangle,
+  TrendingDown,
+  TrendingUp,
+  Flame,
+  RotateCcw,
+  Bell,
+  Check,
+} from 'lucide-react'
 import clsx from 'clsx'
 import { useSnapshot } from '../hooks/useSnapshot.js'
 import { useAlerts } from '../hooks/useAlerts.js'
+import {
+  useAlertSettings,
+  ALERT_CATEGORIES,
+  DEFAULT_ALERT_SETTINGS,
+  computeFiredAlerts,
+} from '../hooks/useAlertSettings.js'
 import { categoryMeta, timeAgo, fmtPct, fmtScore } from '../utils/format.js'
 import EventCard from '../components/EventCard.jsx'
 import AlertBanner from '../components/AlertBanner.jsx'
@@ -14,16 +31,26 @@ const WINDOWS = [
   { label: '30D', hours: 720 },
 ]
 
-export default function BriefingTab() {
+export default function BriefingTab({ onAlertsCountChange }) {
   const { data: ann, loading: annLoading, error: annError } = useSnapshot('announcements.json')
   const { data: prices } = useSnapshot('prices.json')
   const { data: resultsData } = useSnapshot('results.json')
 
-  const [windowIdx, setWindowIdx]   = useState(0)
-  const [priceThr, setPriceThr]     = useState(3)
-  const [volThr, setVolThr]         = useState(2.0)
-  const [showSliders, setShowSliders] = useState(false)
+  // Persisted alert settings in localStorage
+  const {
+    priceThr,
+    volThr,
+    categories: alertCategories,
+    setPriceThr,
+    setVolThr,
+    toggleCategory,
+    resetToDefaults,
+  } = useAlertSettings()
+
+  const [windowIdx, setWindowIdx] = useState(0)
+  const [showSettings, setShowSettings] = useState(false)
   const [expandedRoutine, setExpandedRoutine] = useState(false)
+  const [dismissedAlerts, setDismissedAlerts] = useState(() => new Set())
 
   const alerts = useAlerts(prices, priceThr, volThr)
 
@@ -48,7 +75,6 @@ export default function BriefingTab() {
     if (!ann?.events) return []
     return ann.events
       .filter(ev => {
-        // timestamp is like "30-Oct-2026 19:40:11" — parse it
         const ts = ev.timestamp
         if (!ts) return true
         const parsed = new Date(ts.replace(/-/g, ' '))
@@ -77,8 +103,8 @@ export default function BriefingTab() {
               pat_yoy_pct: res.metrics.pat.yoy_pct,
               source_url: res.provenance?.source_url,
               filing_page: res.provenance?.filing_pages?.[2] || 11,
-              status: res.status
-            }
+              status: res.status,
+            },
           }
         }
         return ev
@@ -90,11 +116,38 @@ export default function BriefingTab() {
   const tier2 = events.filter(e => categoryMeta(e.primary_category).tier === 2)
   const tier3 = events.filter(e => categoryMeta(e.primary_category).tier === 3)
 
-  // Alerts that fired — events use `ticker` field like "RELIANCE.NS"
-  const firedPriceAlerts = [...alerts.entries()]
-    .filter(([k, v]) => v.priceAlert && k.includes('.NS'))
-  const firedVolAlerts = [...alerts.entries()]
-    .filter(([k, v]) => v.volAlert && k.includes('.NS'))
+  // Recompute fired alerts purely client-side from snapshot data + settings
+  const allFiredAlerts = useMemo(() => {
+    return computeFiredAlerts(
+      prices,
+      ann,
+      { priceThr, volThr, categories: alertCategories },
+      anchorTime
+    )
+  }, [prices, ann, priceThr, volThr, alertCategories, anchorTime])
+
+  // Inform parent / header about today's fired alerts count
+  useEffect(() => {
+    if (onAlertsCountChange) {
+      onAlertsCountChange(allFiredAlerts.length)
+    }
+  }, [allFiredAlerts.length, onAlertsCountChange])
+
+  // Filter out manually dismissed alert banners
+  const visibleAlerts = useMemo(() => {
+    return allFiredAlerts.filter(a => !dismissedAlerts.has(a.id))
+  }, [allFiredAlerts, dismissedAlerts])
+
+  const handleScrollToEvent = (eventId) => {
+    const el = document.getElementById(eventId)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      el.classList.add('ring-2', 'ring-accent', 'transition-all', 'duration-500')
+      setTimeout(() => {
+        el.classList.remove('ring-2', 'ring-accent')
+      }, 2000)
+    }
+  }
 
   if (annLoading) {
     return (
@@ -114,8 +167,8 @@ export default function BriefingTab() {
 
   return (
     <div className="flex flex-col gap-0">
-      {/* Window picker + sliders toggle */}
-      <div className="sticky top-0 z-30 bg-surface border-b border-border">
+      {/* Window picker + Alert settings toggle */}
+      <div className="sticky top-0 z-30 bg-surface border-b border-border shadow-sm">
         <div className="flex items-center gap-2 px-4 py-2">
           {WINDOWS.map((w, i) => (
             <button
@@ -131,54 +184,156 @@ export default function BriefingTab() {
               {w.label}
             </button>
           ))}
+
           <button
-            onClick={() => setShowSliders(s => !s)}
+            onClick={() => setShowSettings(s => !s)}
             className={clsx(
-              'ml-auto flex items-center gap-1 px-2 py-1 rounded-full text-xs transition-colors',
-              showSliders ? 'bg-accent/20 text-accent' : 'bg-card text-muted hover:text-white'
+              'ml-auto flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium transition-colors border',
+              showSettings
+                ? 'bg-accent/20 border-accent/40 text-accent'
+                : 'bg-card border-border/80 text-muted hover:text-white'
             )}
           >
             <SlidersHorizontal size={12} />
-            Alerts
+            <span>Alerts</span>
+            {allFiredAlerts.length > 0 && (
+              <span className="w-4 h-4 rounded-full bg-accent text-[10px] text-white flex items-center justify-center font-bold ml-0.5">
+                {allFiredAlerts.length}
+              </span>
+            )}
           </button>
         </div>
 
-        {/* Sliders */}
-        {showSliders && (
-          <div className="px-4 pb-3 flex flex-col gap-3 bg-card border-t border-border">
-            <div className="flex items-center gap-3 pt-3">
-              <span className="text-xs text-muted w-28 shrink-0">Price ≥ {priceThr}%</span>
-              <input
-                type="range" min={1} max={10} step={0.5} value={priceThr}
-                onChange={e => setPriceThr(+e.target.value)}
-                className="flex-1 accent-accent"
-              />
+        {/* Expandable Alert Settings Panel (saved in localStorage) */}
+        {showSettings && (
+          <div className="px-4 py-3.5 flex flex-col gap-3.5 bg-card border-t border-border animate-in fade-in slide-in-from-top-1 duration-200">
+            {/* Category Checkboxes */}
+            <div>
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-[11px] font-semibold text-white uppercase tracking-wider">
+                  Announcement Categories to Alert
+                </span>
+                <span className="text-[10px] text-muted font-mono">
+                  {alertCategories.length} selected
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                {ALERT_CATEGORIES.map(cat => {
+                  const isChecked = alertCategories.includes(cat.id)
+                  const meta = categoryMeta(cat.id)
+                  return (
+                    <label
+                      key={cat.id}
+                      className={clsx(
+                        'flex items-center gap-2 px-2.5 py-1.5 rounded-lg border text-xs cursor-pointer select-none transition-all',
+                        isChecked
+                          ? 'bg-accent/10 border-accent/40 text-white'
+                          : 'bg-surface/50 border-border/50 text-muted hover:text-white'
+                      )}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={isChecked}
+                        onChange={() => toggleCategory(cat.id)}
+                        className="rounded border-border text-accent focus:ring-0 w-3.5 h-3.5 accent-accent"
+                      />
+                      <span className={clsx('chip text-[9px] py-0 px-1.5', meta.chip)}>
+                        {cat.label}
+                      </span>
+                    </label>
+                  )
+                })}
+              </div>
             </div>
-            <div className="flex items-center gap-3">
-              <span className="text-xs text-muted w-28 shrink-0">Vol spike ≥ {volThr.toFixed(1)}×</span>
-              <input
-                type="range" min={1.5} max={5} step={0.5} value={volThr}
-                onChange={e => setVolThr(+e.target.value)}
-                className="flex-1 accent-accent"
-              />
+
+            {/* Price Move Slider */}
+            <div className="pt-2 border-t border-border/60">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs text-white/90 font-medium">Price Move Threshold</span>
+                <span className="font-mono text-xs text-accent font-semibold">≥ {priceThr}%</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <input
+                  type="range"
+                  min={1}
+                  max={15}
+                  step={0.5}
+                  value={priceThr}
+                  onChange={e => setPriceThr(e.target.value)}
+                  className="flex-1 accent-accent"
+                />
+              </div>
+            </div>
+
+            {/* Volume Spike Slider */}
+            <div>
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs text-white/90 font-medium">Volume Spike Threshold</span>
+                <span className="font-mono text-xs text-accent font-semibold">≥ {volThr.toFixed(1)}× prior 20d avg</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <input
+                  type="range"
+                  min={1.5}
+                  max={8}
+                  step={0.5}
+                  value={volThr}
+                  onChange={e => setVolThr(e.target.value)}
+                  className="flex-1 accent-accent"
+                />
+              </div>
+            </div>
+
+            {/* Reset to Defaults button & Persistence Note */}
+            <div className="flex items-center justify-between pt-2 border-t border-border/60 text-xs">
+              <button
+                onClick={resetToDefaults}
+                className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface border border-border text-muted hover:text-white transition-colors text-[11px]"
+              >
+                <RotateCcw size={11} />
+                <span>Reset to defaults</span>
+              </button>
+              <span className="text-[10px] text-muted font-mono flex items-center gap-1">
+                <Check size={11} className="text-positive" />
+                <span>Saved in localStorage</span>
+              </span>
             </div>
           </div>
         )}
       </div>
 
-      {/* Alert banners */}
-      {(firedPriceAlerts.length > 0 || firedVolAlerts.length > 0) && (
+      {/* Fired Alert Banners Stack */}
+      {visibleAlerts.length > 0 && (
         <div className="px-3 pt-3 flex flex-col gap-2">
-          {firedPriceAlerts.map(([sym, v]) => (
-            <AlertBanner key={sym + '-price'} symbol={sym} alertData={v} type="price" threshold={priceThr} />
-          ))}
-          {firedVolAlerts.map(([sym, v]) => (
-            <AlertBanner key={sym + '-vol'} symbol={sym} alertData={v} type="vol" threshold={volThr} />
-          ))}
+          <div className="flex items-center justify-between px-1">
+            <span className="text-xs font-semibold text-white flex items-center gap-1.5">
+              <Bell size={13} className="text-accent" />
+              <span>Today's Fired Alerts</span>
+              <span className="chip chip-other text-[10px] font-mono py-0">{visibleAlerts.length}</span>
+            </span>
+            {dismissedAlerts.size > 0 && (
+              <button
+                onClick={() => setDismissedAlerts(new Set())}
+                className="text-[10px] text-muted hover:text-accent font-mono transition-colors"
+              >
+                Restore {dismissedAlerts.size} dismissed
+              </button>
+            )}
+          </div>
+          <div className="flex flex-col gap-2">
+            {visibleAlerts.map(alert => (
+              <AlertBanner
+                key={alert.id}
+                alert={alert}
+                onDismiss={id => setDismissedAlerts(s => new Set(s).add(id))}
+                onScrollToEvent={handleScrollToEvent}
+              />
+            ))}
+          </div>
         </div>
       )}
 
-      {/* Tier 1 */}
+      {/* Tier 1 Events */}
       {tier1.length > 0 && (
         <section className="px-3 pt-4">
           <SectionHeader label="Important" count={tier1.length} />
@@ -186,13 +341,18 @@ export default function BriefingTab() {
             {tier1
               .sort((a, b) => (b.importance_score ?? 0) - (a.importance_score ?? 0))
               .map(ev => (
-                <EventCard key={ev.event_id} event={ev} alertData={alerts.get(ev.ticker)} anchorTime={anchorTime} />
+                <EventCard
+                  key={ev.event_id}
+                  event={ev}
+                  alertData={alerts.get(ev.ticker)}
+                  anchorTime={anchorTime}
+                />
               ))}
           </div>
         </section>
       )}
 
-      {/* Tier 2 */}
+      {/* Tier 2 Events */}
       {tier2.length > 0 && (
         <section className="px-3 pt-4">
           <SectionHeader label="Updates" count={tier2.length} />
@@ -200,7 +360,13 @@ export default function BriefingTab() {
             {tier2
               .sort((a, b) => (b.importance_score ?? 0) - (a.importance_score ?? 0))
               .map(ev => (
-                <EventCard key={ev.event_id} event={ev} alertData={alerts.get(ev.ticker)} anchorTime={anchorTime} compact />
+                <EventCard
+                  key={ev.event_id}
+                  event={ev}
+                  alertData={alerts.get(ev.ticker)}
+                  anchorTime={anchorTime}
+                  compact
+                />
               ))}
           </div>
         </section>
@@ -221,7 +387,14 @@ export default function BriefingTab() {
               {tier3
                 .sort((a, b) => (b.importance_score ?? 0) - (a.importance_score ?? 0))
                 .map(ev => (
-                  <EventCard key={ev.event_id} event={ev} alertData={alerts.get(ev.ticker)} anchorTime={anchorTime} compact minimal />
+                  <EventCard
+                    key={ev.event_id}
+                    event={ev}
+                    alertData={alerts.get(ev.ticker)}
+                    anchorTime={anchorTime}
+                    compact
+                    minimal
+                  />
                 ))}
             </div>
           )}
@@ -249,9 +422,8 @@ export default function BriefingTab() {
 function SectionHeader({ label, count }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="text-xs font-semibold uppercase tracking-widest text-muted">{label}</span>
-      <span className="chip chip-other">{count}</span>
-      <div className="flex-1 h-px bg-border" />
+      <span className="font-semibold text-xs tracking-wider uppercase text-white/70">{label}</span>
+      <span className="chip chip-other text-[10px] font-mono py-0">{count}</span>
     </div>
   )
 }
