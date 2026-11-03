@@ -1,0 +1,104 @@
+﻿====================================================================================================
+STAGE 2: RESULTS AND MANAGEMENT CARDS FOR ALL PORTFOLIO COMPANIES
+====================================================================================================
+Extraction Model: gemini-3.5-flash-lite
+Found 17 results events and 13 management events.
+
+----------------------------------------------------------------------------------------------------
+PART A: FINANCIAL RESULTS EXTRACTION & VALIDATION
+----------------------------------------------------------------------------------------------------
+
+Processing RELIANCE.NS (Reliance Industries)...
+  -> Status: VERIFIED on Page 10
+
+Processing DIXON.NS (Dixon Technologies)...
+  -> DIXON.NS already verified in results.json. Preserving.
+
+Processing HDFCBANK.NS (HDFC Bank)...
+  -> Status: VERIFIED on Page 9
+
+Processing LT.NS (Larsen & Toubro)...
+  -> Status: VERIFIED on Page 11
+
+Processing ICICIBANK.NS (ICICI Bank)...
+  -> Status: VERIFIED on Page 13
+
+Processing TCS.NS (Tata Consultancy Services)...
+  -> Status: VERIFIED on Page 8
+
+Processing INFY.NS (Infosys)...
+  -> Status: VERIFIED on Page 5
+
+Processing MARUTI.NS (Maruti Suzuki India)...
+  -> Status: UNVERIFIED (Page 14) | Reasons: Missing required metric: revenue; Missing required metric: pbt; Missing required metric: pat; PAT or PBT missing
+
+Processing M&M.NS (Mahindra & Mahindra)...
+  -> No Consolidated statement found in Deepak_16102026152139_SE_INTIMATION_LOST_OF_SHARE_CERTIFICATE_2026_-_OCT_.pdf (2 pages)
+
+Processing TRENT.NS (Trent Ltd)...
+  -> Status: UNVERIFIED (Page 14) | Reasons: Missing required metric: revenue; Missing required metric: pbt; Missing required metric: pat; PAT or PBT missing
+
+Processing KOTAKBANK.NS (Kotak Mahindra Bank)...
+  -> Status: VERIFIED on Page 7
+
+Processing SUNPHARMA.NS (Sun Pharma Industries)...
+  -> Status: VERIFIED on Page 12
+
+Processing BEL.NS (Bharat Electronics)...
+  -> Status: VERIFIED on Page 7
+
+Processing TITAN.NS (Titan Company)...
+  -> No Consolidated statement found in TITAN_28102026172546_SEnewspaperadlossofshares.pdf (2 pages)
+
+Processing BAJAJ-AUTO.NS (Bajaj Auto)...
+  -> No Consolidated statement found in lkwalimbe_bajajauto_co_in_27102026153900_Intimation_appointment_Madhusudan_Oct_26.pdf (3 pages)
+
+Processing POLYCAB.NS (Polycab India)...
+  -> Status: VERIFIED on Page 4
+
+Processing CDSL.NS (Central Depository Services)...
+  -> Status: VERIFIED on Page 10
+
+Saved updated results.json to web\public\data\results.json (17 companies)
+
+----------------------------------------------------------------------------------------------------
+PART B: MANAGEMENT CHANGE EXTRACTION
+----------------------------------------------------------------------------------------------------
+Processing management event: DIXON.NS | Appointment of Mr. Prithvi Vachani as Executive Director...
+  -> Extracted: Mr. Prithvi Vachani (Additional Director in the capacity of Executive Director)
+Processing management event: HDFCBANK.NS | Executive Leadership & Directorate Change...
+  -> Extracted: Mr. Sanjay | Role: Senior Management Personnel | Date: October 2026
+Processing management event: LT.NS | Executive Leadership & Directorate Change...
+  -> Extracted: Mr. Suresh Kumar Narang | Role: Senior Management Personnel | Date: October 2026
+Processing management event: TRENT.NS | Retirement of Mr. Noel...
+  -> Extracted: Mr. Noel | Role: Independent Director | Date: 12th November 2026
+Processing management event: TRENT.NS | Executive Leadership & Directorate Change...
+  -> Extracted: Mr. Noel | Role: Independent Director | Date: 12th November 2026
+Processing management event: TRENT.NS | Appointment of Mr Rajiv Dube...
+  -> Extracted: Mr. Rajiv Dube | Role: Independent Director | Date: 12th November 2026
+Processing management event: TRENT.NS | Appointment of Mrs Kalpana Merchant...
+  -> Extracted: Ms. Kalpana Merchant | Role: Independent Director | Date: 12th November 2026
+Processing management event: KOTAKBANK.NS | Appointment of Ms Anu Aggarwal...
+  -> Extracted: Ms. Anu Aggarwal | Role: Senior Management Personnel | Date: October 2026
+Processing management event: KOTAKBANK.NS | Executive Leadership & Directorate Change...
+  -> Extracted: Mr. Anup Kumar Saha | Role: Executive Director | Date: October 2026
+Processing management event: SUNPHARMA.NS | Executive Leadership & Directorate Change...
+  -> Extracted: Mr. Gautam Doshi 
+Mr | Role: Independent Director | Date: 12 October 2026
+Processing management event: BAJAJ-AUTO.NS | Executive Leadership & Directorate Change...
+  -> Extracted: Ms. Pallavi Joshi Bakhru | Role: Independent Director | Date: 01 January 2027
+Processing management event: HAL.NS | Executive Leadership & Directorate Change...
+  -> Extracted: Shri P B Rangarao | Role: Executive Director | Date: 28th October, 2026
+Processing management event: CDSL.NS | Retirement of Shri Ashish Bhatt...
+  -> Extracted: Shri Ashish Bhatt | Role: Senior Management Personnel | Date: October 2026
+
+Saved management.json to web\public\data\management.json (13 events)
+
+====================================================================================================
+STAGE 2 TOKEN USAGE REPORT
+====================================================================================================
+Input Tokens:    37,022
+Output Tokens:   5,223
+Thinking Tokens: 0
+Total Tokens:    42,245
+====================================================================================================

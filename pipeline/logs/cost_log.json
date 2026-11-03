@@ -1,10 +1,10 @@
 {
   "summary": {
-    "total_input_tokens": 19093,
-    "total_output_tokens": 1502,
+    "total_input_tokens": 113226,
+    "total_output_tokens": 14740,
     "total_thinking_tokens": 0,
-    "total_tokens": 20595,
-    "total_estimated_cost_usd": 0.001883
+    "total_tokens": 127966,
+    "total_estimated_cost_usd": 0.007398
   },
   "entries": [
     {
@@ -17,6 +17,50 @@
       "total_tokens": 20595,
       "estimated_cost_usd": 0.001883,
       "notes": "DIXON Promised vs Delivered guidance extraction (13 rows)"
+    },
+    {
+      "timestamp_ist": "2026-11-03 16:40:11 IST",
+      "stage": "Stage 2",
+      "model": "gemini-3.5-flash",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "thinking_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "notes": "Extracted results for 17 companies and 13 management changes"
+    },
+    {
+      "timestamp_ist": "2026-11-03 16:42:56 IST",
+      "stage": "Stage 2",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 28180,
+      "output_tokens": 3958,
+      "thinking_tokens": 0,
+      "total_tokens": 32138,
+      "estimated_cost_usd": 0.00165,
+      "notes": "Extracted results for 17 companies and 13 management changes"
+    },
+    {
+      "timestamp_ist": "2026-11-03 16:45:04 IST",
+      "stage": "Stage 2",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 28931,
+      "output_tokens": 4057,
+      "thinking_tokens": 0,
+      "total_tokens": 32988,
+      "estimated_cost_usd": 0.001693,
+      "notes": "Extracted results for 17 companies and 13 management changes"
+    },
+    {
+      "timestamp_ist": "2026-11-03 16:47:22 IST",
+      "stage": "Stage 2",
+      "model": "gemini-3.5-flash-lite",
+      "input_tokens": 37022,
+      "output_tokens": 5223,
+      "thinking_tokens": 0,
+      "total_tokens": 42245,
+      "estimated_cost_usd": 0.002172,
+      "notes": "Extracted results for 17 companies and 13 management changes"
     }
   ]
 }
