@@ -19,6 +19,7 @@ import {
   ALERT_CATEGORIES,
   DEFAULT_ALERT_SETTINGS,
   computeFiredAlerts,
+  formatVerifiedHeadline,
 } from '../hooks/useAlertSettings.js'
 import { categoryMeta, timeAgo, fmtPct, fmtScore } from '../utils/format.js'
 import EventCard from '../components/EventCard.jsx'
@@ -83,31 +84,38 @@ export default function BriefingTab({ onAlertsCountChange }) {
       })
       .map(ev => {
         const res = resultsData?.[ev.ticker]
-        if (res && ev.primary_category === 'results' && !ev.results && res.status === 'verified') {
-          return {
-            ...ev,
-            results: {
-              period: res.period,
-              type: res.scope,
-              revenue: `₹${res.metrics.revenue.current_quarter.toLocaleString()} Cr`,
-              ebitda: `₹${res.metrics.ebitda.current_quarter.toLocaleString()} Cr`,
-              pbt: `₹${res.metrics.pbt.current_quarter.toFixed(2)} Cr`,
-              pat: `₹${res.metrics.pat.current_quarter.toFixed(2)} Cr`,
-              revenue_qoq_pct: res.metrics.revenue.qoq_pct,
-              revenue_yoy_pct: res.metrics.revenue.yoy_pct,
-              ebitda_qoq_pct: res.metrics.ebitda.qoq_pct,
-              ebitda_yoy_pct: res.metrics.ebitda.yoy_pct,
-              pbt_qoq_pct: res.metrics.pbt.qoq_pct,
-              pbt_yoy_pct: res.metrics.pbt.yoy_pct,
-              pat_qoq_pct: res.metrics.pat.qoq_pct,
-              pat_yoy_pct: res.metrics.pat.yoy_pct,
-              source_url: res.provenance?.source_url,
-              filing_page: res.provenance?.filing_pages?.[2] || 11,
-              status: res.status,
-            },
+        const verifiedHeadline = (res?.status === 'verified') ? formatVerifiedHeadline(res) : null
+        const isResults = ev.primary_category === 'results'
+        const titleToUse = (isResults && verifiedHeadline) ? verifiedHeadline : ev.title
+
+        let resultsObj = ev.results
+        if (res && isResults && !resultsObj && res.status === 'verified') {
+          resultsObj = {
+            period: res.period,
+            type: res.scope,
+            revenue: `₹${res.metrics.revenue.current_quarter.toLocaleString()} Cr`,
+            ebitda: `₹${res.metrics.ebitda.current_quarter.toLocaleString()} Cr`,
+            pbt: `₹${res.metrics.pbt.current_quarter.toFixed(2)} Cr`,
+            pat: `₹${res.metrics.pat.current_quarter.toFixed(2)} Cr`,
+            revenue_qoq_pct: res.metrics.revenue.qoq_pct,
+            revenue_yoy_pct: res.metrics.revenue.yoy_pct,
+            ebitda_qoq_pct: res.metrics.ebitda.qoq_pct,
+            ebitda_yoy_pct: res.metrics.ebitda.yoy_pct,
+            pbt_qoq_pct: res.metrics.pbt.qoq_pct,
+            pbt_yoy_pct: res.metrics.pbt.yoy_pct,
+            pat_qoq_pct: res.metrics.pat.qoq_pct,
+            pat_yoy_pct: res.metrics.pat.yoy_pct,
+            source_url: res.provenance?.source_url,
+            filing_page: res.provenance?.filing_pages?.[2] || 11,
+            status: res.status,
           }
         }
-        return ev
+
+        return {
+          ...ev,
+          title: titleToUse,
+          results: resultsObj,
+        }
       })
   }, [ann, cutoff, resultsData])
 
@@ -122,9 +130,10 @@ export default function BriefingTab({ onAlertsCountChange }) {
       prices,
       ann,
       { priceThr, volThr, categories: alertCategories },
-      anchorTime
+      anchorTime,
+      resultsData
     )
-  }, [prices, ann, priceThr, volThr, alertCategories, anchorTime])
+  }, [prices, ann, priceThr, volThr, alertCategories, anchorTime, resultsData])
 
   // Inform parent / header about today's fired alerts count
   useEffect(() => {

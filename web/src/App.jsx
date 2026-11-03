@@ -5,6 +5,16 @@ import ResearchTab from './tabs/ResearchTab.jsx'
 import { useSnapshot } from './hooks/useSnapshot.js'
 import clsx from 'clsx'
 
+function formatShortAsOf(dateStr) {
+  if (!dateStr) return 'As of 2 Nov'
+  const parts = dateStr.split('-')
+  if (parts.length !== 3) return `As of ${dateStr}`
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  const d = parseInt(parts[2], 10)
+  const m = months[parseInt(parts[1], 10) - 1]
+  return `As of ${d} ${m}`
+}
+
 export default function App() {
   const [activeTab, setActiveTab] = useState('briefing')
   const [todayAlertsCount, setTodayAlertsCount] = useState(0)
@@ -19,15 +29,17 @@ export default function App() {
           <span className="font-bold text-lg tracking-tight text-white">FINN</span>
           <span className="text-muted text-xs font-mono">/ financial intelligence</span>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="chip chip-other text-[10px] font-mono">Data as of {asOfDate}</span>
+        <div className="flex items-center gap-2 shrink-0">
+          <span className="chip chip-other text-[10px] font-mono whitespace-nowrap shrink-0">
+            {formatShortAsOf(asOfDate)}
+          </span>
           {todayAlertsCount > 0 && (
             <button
               onClick={() => {
                 setActiveTab('briefing')
                 window.scrollTo({ top: 0, behavior: 'smooth' })
               }}
-              className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent/20 border border-accent/40 text-accent text-[11px] font-semibold hover:bg-accent/30 transition-colors shadow-sm"
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent/20 border border-accent/40 text-accent text-[11px] font-semibold hover:bg-accent/30 transition-colors shadow-sm whitespace-nowrap shrink-0"
               title="View today's fired alerts"
             >
               <Bell size={11} className="animate-pulse" />

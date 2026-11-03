@@ -81,7 +81,7 @@ export default function EventCard({ event, alertData, compact = false, minimal =
               )}
               <span className="text-muted text-xs ml-auto shrink-0">{tsDisplay}</span>
             </div>
-            <p className="text-sm text-white/80 mt-1 leading-snug">{title}</p>
+            <p className="text-sm font-medium text-white/95 mt-1 leading-snug">{title}</p>
           </div>
           {/* Score */}
           <div className="text-right shrink-0 ml-2">

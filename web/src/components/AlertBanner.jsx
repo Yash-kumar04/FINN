@@ -113,7 +113,7 @@ export default function AlertBanner({ alert, onDismiss, onScrollToEvent }) {
           </span>
         </div>
 
-        <p className="text-xs text-white/80 mt-1 line-clamp-1 leading-snug">
+        <p className="text-xs text-white/90 mt-1 line-clamp-2 leading-snug">
           {title}
         </p>
 

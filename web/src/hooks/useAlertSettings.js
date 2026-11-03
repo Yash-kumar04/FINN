@@ -81,10 +81,29 @@ export function useAlertSettings() {
 }
 
 /**
+ * Formats verified headline numbers strictly from results.json.
+ * Returns null if status !== 'verified'.
+ */
+export function formatVerifiedHeadline(res) {
+  if (!res || res.status !== 'verified' || !res.metrics) return null
+  const rev = res.metrics.revenue
+  const pat = res.metrics.pat
+  if (!rev || !pat) return null
+
+  const revVal = rev.current_quarter != null ? `₹${Number(rev.current_quarter).toLocaleString()} Cr` : ''
+  const revYoY = rev.yoy_pct != null ? `${rev.yoy_pct >= 0 ? '+' : ''}${rev.yoy_pct.toFixed(1)}% YoY` : ''
+  const patVal = pat.current_quarter != null ? `₹${Number(pat.current_quarter).toFixed(2)} Cr` : ''
+  const patYoY = pat.yoy_pct != null ? `${pat.yoy_pct >= 0 ? '+' : ''}${pat.yoy_pct.toFixed(1)}% YoY` : ''
+  const period = res.period || 'Q2 FY27'
+
+  return `${period}: Rev ${revVal} (${revYoY}) · PAT ${patVal} (${patYoY})`
+}
+
+/**
  * Pure client-side alert computation from snapshots
  * Combines market moves (prices.json) and category announcements (announcements.json)
  */
-export function computeFiredAlerts(pricesData, annData, settings, anchorTime = null) {
+export function computeFiredAlerts(pricesData, annData, settings, anchorTime = null, resultsData = null) {
   if (!pricesData?.tickers) return []
 
   const alerts = []
@@ -115,6 +134,16 @@ export function computeFiredAlerts(pricesData, annData, settings, anchorTime = n
       const matchingEvents = tickerEvents.get(sym) || []
       const primaryEvent = matchingEvents[0] || null
 
+      // Check for verified headline if ticker has verified results
+      const res = resultsData?.[sym]
+      const verifiedHeadline = (res?.status === 'verified') ? formatVerifiedHeadline(res) : null
+      const isResultsEvent = primaryEvent?.primary_category === 'results'
+
+      // Replace generic title with verified headline if available and event is results
+      const alertTitle = (isResultsEvent && verifiedHeadline)
+        ? verifiedHeadline
+        : (primaryEvent ? primaryEvent.title : `${shortSym} Significant Market Movement`)
+
       alerts.push({
         id: `mkt-${sym}`,
         ticker: sym,
@@ -124,7 +153,7 @@ export function computeFiredAlerts(pricesData, annData, settings, anchorTime = n
         volRatio: volRatio,
         priceFired,
         volFired,
-        title: primaryEvent ? primaryEvent.title : `${shortSym} Significant Market Movement`,
+        title: alertTitle,
         eventId: primaryEvent ? primaryEvent.event_id : null,
         filingUrl: primaryEvent?.primary_filing?.attachment_url || null,
         timestamp: primaryEvent?.timestamp || td.provenance?.as_of_date || '2026-11-02',
@@ -156,6 +185,13 @@ export function computeFiredAlerts(pricesData, annData, settings, anchorTime = n
       if (!alreadyCovered) {
         const shortSym = ev.ticker.replace(/\.NS$/, '')
         const m = pricesData.tickers[ev.ticker]?.metrics || {}
+
+        // Check for verified headline
+        const res = resultsData?.[ev.ticker]
+        const verifiedHeadline = (res?.status === 'verified' && ev.primary_category === 'results')
+          ? formatVerifiedHeadline(res)
+          : null
+
         alerts.push({
           id: `ann-${ev.event_id}`,
           ticker: ev.ticker,
@@ -164,7 +200,7 @@ export function computeFiredAlerts(pricesData, annData, settings, anchorTime = n
           category: ev.primary_category,
           priceChgPct: m.price_change_pct ?? null,
           volRatio: m.volume_ratio ?? null,
-          title: ev.title,
+          title: verifiedHeadline || ev.title,
           eventId: ev.event_id,
           filingUrl: ev.primary_filing?.attachment_url || null,
           timestamp: ev.timestamp,
