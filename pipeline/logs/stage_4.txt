@@ -1,0 +1,49 @@
+﻿====================================================================================================
+STAGE 4: ANNUAL REPORT OUTPUTS FOR DIXON (FY2025-26 INTEGRATED REPORT)
+====================================================================================================
+Loaded Annual Report PDF: pipeline\cache\transcripts\69e89fccdd7fa7bbcadbdb3d5a1c5f5abc7e3571b4668b7ec905bbd87733fa95.pdf (520 pages)
+
+1. Extracting Business Snapshot & Segments...
+2. Extracting Financial Snapshot...
+3. Corroborating 5-Year Trajectory...
+4. Extracting Balance Sheet & Working Capital Ratios...
+5. Extracting Cash Quality Metrics...
+6. Extracting Contingent Liabilities...
+7. Extracting Related Party Transactions...
+
+----------------------------------------------------------------------------------------------------
+STRICT IN-CODE FACT VERIFICATION ON CITED ANNUAL REPORT PAGES
+----------------------------------------------------------------------------------------------------
+PASS [fact_ar_biz_1] p.76: verified token '30' -> Industry Position
+PASS [fact_ar_biz_2] p.76: verified token '26,000+' -> Workforce Scale
+PASS [fact_ar_biz_3] p.76: verified token '4,88,728' -> Consolidated Group Revenue
+PASS [fact_ar_biz_4] p.106: verified token '4,42,570' -> Mobile Phones & EMS Revenue
+PASS [fact_ar_biz_5] p.106: verified token '28,920' -> Consumer Electronics & Refrigerator Revenue
+PASS [fact_ar_biz_6] p.497: verified token '62%' -> Customer Concentration
+PASS [fact_ar_fin_1] p.106: verified token '4,88,728' -> Total Revenue (FY26)
+PASS [fact_ar_fin_2] p.106: verified token '25,796' -> EBITDA (FY26)
+PASS [fact_ar_fin_3] p.106: verified token '16,443' -> Profit After Tax (PAT FY26)
+PASS [fact_ar_fin_4] p.106: verified token '44.8' -> Return on Capital Employed (RoCE)
+PASS [fact_ar_fin_5] p.106: verified token '28.1' -> Return on Equity (RoE)
+PASS [fact_ar_traj_1] p.106: verified token '4,88,728' -> 5-Year Revenue CAGR
+PASS [fact_ar_traj_2] p.106: verified token '16,443' -> 5-Year PAT Scalability
+PASS [fact_ar_bs_1] p.106: verified token '46,767' -> Net Worth
+PASS [fact_ar_bs_2] p.106: verified token '7,730' -> Net Debt Status
+PASS [fact_ar_bs_3] p.405: verified token '1.37' -> Current Ratio
+PASS [fact_ar_bs_4] p.405: verified token '7.54' -> Inventory Turnover & Days
+PASS [fact_ar_bs_5] p.405: verified token '6.76' -> Trade Receivables Turnover & Days
+PASS [fact_ar_bs_6] p.405: verified token '4.83' -> Trade Payables Turnover & Days
+PASS [fact_ar_cash_1] p.420: verified token '1,78,229' -> Cash Flow from Operations (CFO)
+PASS [fact_ar_cash_2] p.421: verified token '1,06,751' -> Capital Expenditure (Capex)
+PASS [fact_ar_cash_3] p.420: verified token '1,78,229' -> Cash Conversion Ratio
+PASS [fact_ar_cont_1] p.474: verified token '39,841' -> Disputed Customs & Excise Claims
+PASS [fact_ar_cont_2] p.474: verified token '9,443' -> Disputed Direct & GST Taxes
+PASS [fact_ar_cont_3] p.475: verified token '56,793' -> Corporate Guarantees to Suppliers
+PASS [fact_ar_cont_4] p.475: verified token '66,324' -> Outstanding Letters of Credit
+PASS [fact_ar_rpt_1] p.498: verified token '14,280' -> Investment in JV Lightanium
+PASS [fact_ar_rpt_2] p.498: verified token '14,030' -> Lighting Business Divestment
+PASS [fact_ar_rpt_3] p.498: verified token '452' -> JV Services & Job Work
+
+Verification Results: 29 KEPT, 0 DROPPED.
+
+Successfully wrote Annual Report outputs with fact IDs to web\public\data\research\DIXON.json

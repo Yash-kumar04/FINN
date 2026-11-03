@@ -61,6 +61,17 @@
       "total_tokens": 42245,
       "estimated_cost_usd": 0.002172,
       "notes": "Extracted results for 17 companies and 13 management changes"
+    },
+    {
+      "timestamp_ist": "2026-11-03 16:56:21 IST",
+      "stage": "Stage 4",
+      "model": "rules/PyMuPDF (regex extraction)",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "thinking_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "notes": "Extracted and verified 29 Annual Report facts with exact page substring verification"
     }
   ]
 }
