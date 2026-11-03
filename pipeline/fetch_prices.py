@@ -155,8 +155,8 @@ def fetch_all_prices():
 
             as_of_date = last_bar["date"]
 
-            # Calculate 20-day moving average volume
-            vol_20d = [b["volume"] for b in bars[-20:]]
+            # Calculate 20-day moving average volume (PRIOR 20 sessions, excluding the latest bar)
+            vol_20d = [b["volume"] for b in bars[-21:-1]]
             avg_vol_20d = sum(vol_20d) / len(vol_20d) if vol_20d else last_bar["volume"]
 
             # Calculate 1-day price and volume changes

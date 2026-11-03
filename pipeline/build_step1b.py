@@ -143,43 +143,77 @@ def group_ticker_announcements_into_events(ticker_sym: str, announcements: list,
             "why_you_should_care": None
         })
 
-    # 2. Build Management Change Event if distinct from results
+    # 2. Build Management Change Events — one per person (or per generic batch)
     if mgmt_cluster:
-        # Check if already covered under results
         uncovered_mgmt = [m for m in mgmt_cluster if m not in results_cluster]
         if uncovered_mgmt:
-            p_mgmt = uncovered_mgmt[0]
-            score, breakdown = compute_importance_score("management_change", p_weight, vol_ratio, price_chg)
-            all_tags = set(["management_change"])
-            for m in uncovered_mgmt:
-                all_tags.update(m["classification"]["secondary_tags"])
-            events.append({
-                "event_id": f"{ticker_sym}_event_mgmt_{p_mgmt.get('seq_id')}",
-                "ticker": ticker_sym,
-                "company_name": company_name,
-                "title": f"Executive Leadership & Directorate Change",
-                "primary_category": "management_change",
-                "secondary_tags": sorted(list(all_tags)),
-                "timestamp": p_mgmt.get("timestamp"),
-                "filing_count": len(uncovered_mgmt),
-                "primary_filing": {
-                    "desc": p_mgmt.get("desc"),
-                    "attachment_text": p_mgmt.get("attachment_text"),
-                    "attachment_url": p_mgmt.get("attachment_url"),
-                    "seq_id": p_mgmt.get("seq_id")
-                },
-                "supporting_filings": [
-                    {
-                        "desc": sf.get("desc"),
-                        "attachment_text": sf.get("attachment_text"),
-                        "attachment_url": sf.get("attachment_url"),
-                        "seq_id": sf.get("seq_id")
-                    } for sf in uncovered_mgmt[1:]
-                ],
-                "importance_score": score,
-                "score_breakdown": breakdown,
-                "why_you_should_care": None
-            })
+            # Extract a person name from a filing's desc + attachment_text
+            import re
+            def extract_person(filing):
+                text = (filing.get("desc", "") or "") + " " + (filing.get("attachment_text", "") or "")
+                # Match "Mr/Mrs/Ms/Shri + Title-cased words"
+                m = re.search(r"\b(Mr\.?|Mrs\.?|Ms\.?|Shri|Dr\.?)\s+([A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+){0,4})", text)
+                if m:
+                    return m.group(0).strip()
+                return None
+
+            # Group filings by person name; unnamed filings go into a "generic" bucket
+            person_buckets = {}  # person_key -> [filings]
+            for filing in uncovered_mgmt:
+                person = extract_person(filing)
+                key = person if person else "__generic__"
+                person_buckets.setdefault(key, []).append(filing)
+
+            for person_key, filings in person_buckets.items():
+                p_mgmt = filings[0]
+                score, breakdown = compute_importance_score("management_change", p_weight, vol_ratio, price_chg)
+                all_tags = set(["management_change"])
+                for m in filings:
+                    all_tags.update(m["classification"]["secondary_tags"])
+
+                if person_key == "__generic__":
+                    title = "Executive Leadership & Directorate Change"
+                else:
+                    # Use desc verb (Appointment/Resignation/Retirement) if present
+                    desc_lower = (p_mgmt.get("desc", "") or "").lower()
+                    if "appointment" in desc_lower:
+                        verb = "Appointment of"
+                    elif "resignation" in desc_lower:
+                        verb = "Resignation of"
+                    elif "retirement" in desc_lower:
+                        verb = "Retirement of"
+                    else:
+                        verb = "Change in Management:"
+                    title = f"{verb} {person_key}"
+
+                events.append({
+                    "event_id": f"{ticker_sym}_event_mgmt_{p_mgmt.get('seq_id')}",
+                    "ticker": ticker_sym,
+                    "company_name": company_name,
+                    "title": title,
+                    "primary_category": "management_change",
+                    "secondary_tags": sorted(list(all_tags)),
+                    "timestamp": p_mgmt.get("timestamp"),
+                    "filing_count": len(filings),
+                    "person_named": person_key if person_key != "__generic__" else None,
+                    "primary_filing": {
+                        "desc": p_mgmt.get("desc"),
+                        "attachment_text": p_mgmt.get("attachment_text"),
+                        "attachment_url": p_mgmt.get("attachment_url"),
+                        "seq_id": p_mgmt.get("seq_id")
+                    },
+                    "supporting_filings": [
+                        {
+                            "desc": sf.get("desc"),
+                            "attachment_text": sf.get("attachment_text"),
+                            "attachment_url": sf.get("attachment_url"),
+                            "seq_id": sf.get("seq_id")
+                        } for sf in filings[1:]
+                    ],
+                    "importance_score": score,
+                    "score_breakdown": breakdown,
+                    "why_you_should_care": None
+                })
 
     # 3. Individual filings as standalone events
     for of in other_filings:
@@ -272,6 +306,25 @@ def run():
 
     # Sort events by importance score descending
     all_events.sort(key=lambda x: x["importance_score"], reverse=True)
+
+    # ASSERTION: every event must have a recognised primary_category with a tier
+    TIER_MAP = {
+        "results": 1, "management_change": 1, "M&A": 1,
+        "fund_raise": 1, "earnings_call": 1,
+        "litigation": 2, "capex": 2, "credit_rating": 2,
+        "dividend": 2, "press_release": 2, "investor_meetings": 2,
+        "postal_ballot": 3, "unclassified": 3,
+    }
+    untiered = [e for e in all_events if e["primary_category"] not in TIER_MAP]
+    if untiered:
+        for u in untiered:
+            print(f"  UNTIERED: {u['ticker']} | {u['primary_category']} | {u['title']}")
+        raise AssertionError(f"FAIL: {len(untiered)} events have no tier. Fix TIER_MAP or classifier.")
+    print(f"✅ Tier assertion PASSED: all {len(all_events)} events have a recognised tier.")
+
+    # Assign tier to each event for downstream use
+    for e in all_events:
+        e["tier"] = TIER_MAP[e["primary_category"]]
 
     # Save updated announcements.json with events
     ann_json["events"] = all_events

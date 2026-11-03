@@ -2,8 +2,8 @@
   "dataset": "portfolio_prices",
   "provenance": {
     "source": "yfinance",
-    "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-    "as_of_date": "2026-11-02",
+    "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+    "as_of_date": "2026-11-03",
     "target_bar_count": 60,
     "portfolio_size": 19
   },
@@ -22,30 +22,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 1300.0,
-        "last_volume": 88043504,
-        "prev_close": 1164.9000244140625,
-        "price_change_pct": 11.597559683621087,
-        "volume_20d_avg": 18667110.75,
-        "volume_ratio": 4.716504079240008,
-        "is_provisional": false
+        "last_close": 1293.199951171875,
+        "last_volume": 23278308,
+        "prev_close": 1300.0,
+        "price_change_pct": -0.5230806790865384,
+        "volume_20d_avg": 18670991.6,
+        "volume_ratio": 1.2467633481234064,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 1285.0,
-          "high": 1325.199951171875,
-          "low": 1281.199951171875,
-          "close": 1325.0,
-          "adj_close": 1325.0,
-          "volume": 20342297,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 1320.0,
@@ -633,8 +623,18 @@
           "low": 1214.199951171875,
           "close": 1300.0,
           "adj_close": 1300.0,
-          "volume": 88043504,
+          "volume": 88121121,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 1287.9000244140625,
+          "high": 1307.0,
+          "low": 1282.0,
+          "close": 1293.199951171875,
+          "adj_close": 1293.199951171875,
+          "volume": 23278308,
+          "provisional": true
         }
       ]
     },
@@ -647,30 +647,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 3939.9,
-        "last_volume": 2055983,
-        "prev_close": 3871.699951171875,
-        "price_change_pct": 1.7615013995979336,
-        "volume_20d_avg": 2091701.25,
-        "volume_ratio": 0.9829238281518453,
-        "is_provisional": false
+        "last_close": 3951.89990234375,
+        "last_volume": 625650,
+        "prev_close": 3939.89990234375,
+        "price_change_pct": 0.3045762658300403,
+        "volume_20d_avg": 2091743.55,
+        "volume_ratio": 0.2991045436712354,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 4056.0,
-          "high": 4070.0,
-          "low": 4045.0,
-          "close": 4061.800048828125,
-          "adj_close": 4061.800048828125,
-          "volume": 1401341,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 4040.10009765625,
@@ -1256,10 +1246,20 @@
           "open": 3894.199951171875,
           "high": 3953.39990234375,
           "low": 3870.300048828125,
-          "close": 3939.9,
-          "adj_close": 3939.9,
-          "volume": 2055983,
+          "close": 3939.89990234375,
+          "adj_close": 3939.89990234375,
+          "volume": 2056829,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 3958.89990234375,
+          "high": 3964.0,
+          "low": 3922.699951171875,
+          "close": 3951.89990234375,
+          "adj_close": 3951.89990234375,
+          "volume": 625650,
+          "provisional": true
         }
       ]
     },
@@ -1272,30 +1272,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 700.0,
-        "last_volume": 21473893,
-        "prev_close": 692.7999877929688,
-        "price_change_pct": 1.039262750273438,
-        "volume_20d_avg": 30062979.25,
-        "volume_ratio": 0.7142969038905218,
-        "is_provisional": false
+        "last_close": 718.2000122070312,
+        "last_volume": 13508482,
+        "prev_close": 700.0,
+        "price_change_pct": 2.600001743861607,
+        "volume_20d_avg": 30063313.95,
+        "volume_ratio": 0.44933442874816537,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 739.0,
-          "high": 740.5,
-          "low": 733.5499877929688,
-          "close": 734.2999877929688,
-          "adj_close": 734.2999877929688,
-          "volume": 44772122,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 733.0,
@@ -1883,8 +1873,18 @@
           "low": 688.5999755859375,
           "close": 700.0,
           "adj_close": 700.0,
-          "volume": 21473893,
+          "volume": 21480587,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 708.0,
+          "high": 721.2999877929688,
+          "low": 706.0499877929688,
+          "close": 718.2000122070312,
+          "adj_close": 718.2000122070312,
+          "volume": 13508482,
+          "provisional": true
         }
       ]
     },
@@ -1897,30 +1897,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 1387.4,
-        "last_volume": 9041488,
-        "prev_close": 1398.0,
-        "price_change_pct": -0.7582260371959877,
-        "volume_20d_avg": 12360630.85,
-        "volume_ratio": 0.7314746399048071,
-        "is_provisional": false
+        "last_close": 1409.9000244140625,
+        "last_volume": 5188651,
+        "prev_close": 1387.4000244140625,
+        "price_change_pct": 1.6217384751382267,
+        "volume_20d_avg": 12360736.85,
+        "volume_ratio": 0.41976874542070686,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 1460.0,
-          "high": 1460.0,
-          "low": 1448.300048828125,
-          "close": 1457.5,
-          "adj_close": 1457.5,
-          "volume": 14954726,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 1451.0,
@@ -2506,10 +2496,20 @@
           "open": 1398.199951171875,
           "high": 1402.0,
           "low": 1375.199951171875,
-          "close": 1387.4,
-          "adj_close": 1387.4,
-          "volume": 9041488,
+          "close": 1387.4000244140625,
+          "adj_close": 1387.4000244140625,
+          "volume": 9043608,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 1403.0,
+          "high": 1410.0,
+          "low": 1395.5,
+          "close": 1409.9000244140625,
+          "adj_close": 1409.9000244140625,
+          "volume": 5188651,
+          "provisional": true
         }
       ]
     },
@@ -2522,30 +2522,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 458.35,
-        "last_volume": 21126673,
-        "prev_close": 461.6000061035156,
-        "price_change_pct": -0.7040741032370731,
-        "volume_20d_avg": 24919045.5,
-        "volume_ratio": 0.8478122887973377,
-        "is_provisional": false
+        "last_close": 458.45001220703125,
+        "last_volume": 4728143,
+        "prev_close": 458.3500061035156,
+        "price_change_pct": 0.02181871979577092,
+        "volume_20d_avg": 24919055.85,
+        "volume_ratio": 0.1897400538953405,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 397.25,
-          "high": 398.79998779296875,
-          "low": 393.75,
-          "close": 394.0,
-          "adj_close": 394.0,
-          "volume": 10378024,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 393.0,
@@ -3131,10 +3121,20 @@
           "open": 462.0,
           "high": 465.95001220703125,
           "low": 456.45001220703125,
-          "close": 458.35,
-          "adj_close": 458.35,
-          "volume": 21126673,
+          "close": 458.3500061035156,
+          "adj_close": 458.3500061035156,
+          "volume": 21126880,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 460.0,
+          "high": 460.20001220703125,
+          "low": 455.3999938964844,
+          "close": 458.45001220703125,
+          "adj_close": 458.45001220703125,
+          "volume": 4728143,
+          "provisional": true
         }
       ]
     },
@@ -3147,30 +3147,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 2501.7,
-        "last_volume": 2816907,
-        "prev_close": 2502.60009765625,
-        "price_change_pct": -0.035966499685393075,
-        "volume_20d_avg": 5945798.5,
-        "volume_ratio": 0.4737642891867257,
-        "is_provisional": false
+        "last_close": 2499.5,
+        "last_volume": 592603,
+        "prev_close": 2501.699951171875,
+        "price_change_pct": -0.0879382505821481,
+        "volume_20d_avg": 5945812.75,
+        "volume_ratio": 0.09966728266038986,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 2417.0,
-          "high": 2434.5,
-          "low": 2368.5,
-          "close": 2373.0,
-          "adj_close": 2360.45166015625,
-          "volume": 2729141,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 2375.0,
@@ -3756,10 +3746,20 @@
           "open": 2523.0,
           "high": 2549.89990234375,
           "low": 2492.89990234375,
-          "close": 2501.7,
-          "adj_close": 2501.7,
-          "volume": 2816907,
+          "close": 2501.699951171875,
+          "adj_close": 2501.699951171875,
+          "volume": 2817192,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 2520.0,
+          "high": 2532.0,
+          "low": 2494.300048828125,
+          "close": 2499.5,
+          "adj_close": 2499.5,
+          "volume": 592603,
+          "provisional": true
         }
       ]
     },
@@ -3772,37 +3772,27 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 1161.0,
-        "last_volume": 12914307,
-        "prev_close": 1185.0,
-        "price_change_pct": -2.0253164556962027,
-        "volume_20d_avg": 16716925.8,
-        "volume_ratio": 0.7725288222551062,
-        "is_provisional": false
+        "last_close": 1145.300048828125,
+        "last_volume": 2671631,
+        "prev_close": 1161.0,
+        "price_change_pct": -1.3522783093776918,
+        "volume_20d_avg": 16717113.65,
+        "volume_ratio": 0.15981413155015547,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 1174.0999755859375,
-          "high": 1185.800048828125,
-          "low": 1163.0,
-          "close": 1165.0,
-          "adj_close": 1165.0,
-          "volume": 8521064,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 1160.0,
           "high": 1183.0,
           "low": 1155.5999755859375,
           "close": 1175.0999755859375,
-          "adj_close": 1175.0999755859375,
+          "adj_close": 1148.7841796875,
           "volume": 7581410,
           "provisional": false
         },
@@ -3812,7 +3802,7 @@
           "high": 1195.0,
           "low": 1175.199951171875,
           "close": 1183.0,
-          "adj_close": 1183.0,
+          "adj_close": 1156.50732421875,
           "volume": 9377001,
           "provisional": false
         },
@@ -3822,7 +3812,7 @@
           "high": 1193.5,
           "low": 1182.0,
           "close": 1190.699951171875,
-          "adj_close": 1190.699951171875,
+          "adj_close": 1164.0347900390625,
           "volume": 10160091,
           "provisional": false
         },
@@ -3832,7 +3822,7 @@
           "high": 1190.4000244140625,
           "low": 1163.300048828125,
           "close": 1176.0999755859375,
-          "adj_close": 1176.0999755859375,
+          "adj_close": 1149.7618408203125,
           "volume": 7529777,
           "provisional": false
         },
@@ -3842,7 +3832,7 @@
           "high": 1175.0,
           "low": 1157.0,
           "close": 1175.0,
-          "adj_close": 1175.0,
+          "adj_close": 1148.6865234375,
           "volume": 6234215,
           "provisional": false
         },
@@ -3852,7 +3842,7 @@
           "high": 1174.0999755859375,
           "low": 1158.9000244140625,
           "close": 1169.199951171875,
-          "adj_close": 1169.199951171875,
+          "adj_close": 1143.016357421875,
           "volume": 5844763,
           "provisional": false
         },
@@ -3862,7 +3852,7 @@
           "high": 1166.5,
           "low": 1129.699951171875,
           "close": 1139.9000244140625,
-          "adj_close": 1139.9000244140625,
+          "adj_close": 1114.37255859375,
           "volume": 5817153,
           "provisional": false
         },
@@ -3872,7 +3862,7 @@
           "high": 1131.9000244140625,
           "low": 1112.5,
           "close": 1115.0,
-          "adj_close": 1115.0,
+          "adj_close": 1090.0301513671875,
           "volume": 8851110,
           "provisional": false
         },
@@ -3882,7 +3872,7 @@
           "high": 1134.699951171875,
           "low": 1113.800048828125,
           "close": 1119.800048828125,
-          "adj_close": 1119.800048828125,
+          "adj_close": 1094.72265625,
           "volume": 8408573,
           "provisional": false
         },
@@ -3892,7 +3882,7 @@
           "high": 1144.699951171875,
           "low": 1125.699951171875,
           "close": 1130.0,
-          "adj_close": 1130.0,
+          "adj_close": 1104.6942138671875,
           "volume": 8559841,
           "provisional": false
         },
@@ -3902,7 +3892,7 @@
           "high": 1133.5,
           "low": 1118.0,
           "close": 1121.0,
-          "adj_close": 1121.0,
+          "adj_close": 1095.895751953125,
           "volume": 6094967,
           "provisional": false
         },
@@ -3912,7 +3902,7 @@
           "high": 1144.5,
           "low": 1122.0,
           "close": 1130.0,
-          "adj_close": 1130.0,
+          "adj_close": 1104.6942138671875,
           "volume": 8565354,
           "provisional": false
         },
@@ -3922,7 +3912,7 @@
           "high": 1144.0,
           "low": 1119.9000244140625,
           "close": 1144.0,
-          "adj_close": 1144.0,
+          "adj_close": 1118.3807373046875,
           "volume": 8121237,
           "provisional": false
         },
@@ -3932,7 +3922,7 @@
           "high": 1142.0,
           "low": 1118.300048828125,
           "close": 1120.0,
-          "adj_close": 1120.0,
+          "adj_close": 1094.918212890625,
           "volume": 6323984,
           "provisional": false
         },
@@ -3942,7 +3932,7 @@
           "high": 1130.699951171875,
           "low": 1107.199951171875,
           "close": 1110.800048828125,
-          "adj_close": 1110.800048828125,
+          "adj_close": 1085.92431640625,
           "volume": 6933998,
           "provisional": false
         },
@@ -3952,7 +3942,7 @@
           "high": 1145.0,
           "low": 1123.300048828125,
           "close": 1144.0,
-          "adj_close": 1144.0,
+          "adj_close": 1118.3807373046875,
           "volume": 9621969,
           "provisional": false
         },
@@ -3962,7 +3952,7 @@
           "high": 1143.9000244140625,
           "low": 1111.0999755859375,
           "close": 1133.800048828125,
-          "adj_close": 1133.800048828125,
+          "adj_close": 1108.4091796875,
           "volume": 8808120,
           "provisional": false
         },
@@ -3972,7 +3962,7 @@
           "high": 1156.0,
           "low": 1125.5999755859375,
           "close": 1156.0,
-          "adj_close": 1156.0,
+          "adj_close": 1130.1119384765625,
           "volume": 13516123,
           "provisional": false
         },
@@ -3982,7 +3972,7 @@
           "high": 1147.800048828125,
           "low": 1118.5999755859375,
           "close": 1140.0,
-          "adj_close": 1140.0,
+          "adj_close": 1114.4703369140625,
           "volume": 8564358,
           "provisional": false
         },
@@ -3992,7 +3982,7 @@
           "high": 1144.0,
           "low": 1122.5,
           "close": 1130.300048828125,
-          "adj_close": 1130.300048828125,
+          "adj_close": 1104.987548828125,
           "volume": 5786250,
           "provisional": false
         },
@@ -4002,7 +3992,7 @@
           "high": 1146.699951171875,
           "low": 1125.4000244140625,
           "close": 1130.0,
-          "adj_close": 1130.0,
+          "adj_close": 1104.6942138671875,
           "volume": 5881388,
           "provisional": false
         },
@@ -4012,7 +4002,7 @@
           "high": 1109.9000244140625,
           "low": 1085.0,
           "close": 1087.5,
-          "adj_close": 1087.5,
+          "adj_close": 1063.14599609375,
           "volume": 7668346,
           "provisional": false
         },
@@ -4022,7 +4012,7 @@
           "high": 1095.0,
           "low": 1078.9000244140625,
           "close": 1082.0,
-          "adj_close": 1082.0,
+          "adj_close": 1057.7691650390625,
           "volume": 6269037,
           "provisional": false
         },
@@ -4032,7 +4022,7 @@
           "high": 1059.0,
           "low": 1026.5,
           "close": 1035.0,
-          "adj_close": 1035.0,
+          "adj_close": 1011.8217163085938,
           "volume": 13530457,
           "provisional": false
         },
@@ -4042,7 +4032,7 @@
           "high": 1046.5999755859375,
           "low": 1027.300048828125,
           "close": 1036.5,
-          "adj_close": 1036.5,
+          "adj_close": 1013.2881469726562,
           "volume": 8998529,
           "provisional": false
         },
@@ -4052,7 +4042,7 @@
           "high": 1047.300048828125,
           "low": 1029.699951171875,
           "close": 1037.699951171875,
-          "adj_close": 1037.699951171875,
+          "adj_close": 1014.461181640625,
           "volume": 6168088,
           "provisional": false
         },
@@ -4062,7 +4052,7 @@
           "high": 1097.699951171875,
           "low": 1071.699951171875,
           "close": 1077.0,
-          "adj_close": 1077.0,
+          "adj_close": 1052.881103515625,
           "volume": 14816117,
           "provisional": false
         },
@@ -4072,7 +4062,7 @@
           "high": 1085.0999755859375,
           "low": 1053.5,
           "close": 1060.0,
-          "adj_close": 1060.0,
+          "adj_close": 1036.2618408203125,
           "volume": 6230590,
           "provisional": false
         },
@@ -4082,7 +4072,7 @@
           "high": 1063.5999755859375,
           "low": 1048.5999755859375,
           "close": 1058.5999755859375,
-          "adj_close": 1058.5999755859375,
+          "adj_close": 1034.8931884765625,
           "volume": 5469865,
           "provisional": false
         },
@@ -4092,7 +4082,7 @@
           "high": 1061.9000244140625,
           "low": 1038.0,
           "close": 1051.4000244140625,
-          "adj_close": 1051.4000244140625,
+          "adj_close": 1027.8544921875,
           "volume": 22124953,
           "provisional": false
         },
@@ -4102,7 +4092,7 @@
           "high": 1044.5,
           "low": 1030.300048828125,
           "close": 1038.5,
-          "adj_close": 1038.5,
+          "adj_close": 1015.2433471679688,
           "volume": 6074358,
           "provisional": false
         },
@@ -4112,7 +4102,7 @@
           "high": 1041.0,
           "low": 1019.2000122070312,
           "close": 1029.4000244140625,
-          "adj_close": 1029.4000244140625,
+          "adj_close": 1006.34716796875,
           "volume": 9341109,
           "provisional": false
         },
@@ -4122,7 +4112,7 @@
           "high": 1029.4000244140625,
           "low": 1015.0999755859375,
           "close": 1020.5,
-          "adj_close": 1020.5,
+          "adj_close": 997.6464233398438,
           "volume": 5108734,
           "provisional": false
         },
@@ -4132,7 +4122,7 @@
           "high": 1022.7999877929688,
           "low": 1005.2000122070312,
           "close": 1014.5,
-          "adj_close": 1014.5,
+          "adj_close": 991.7808227539062,
           "volume": 6891893,
           "provisional": false
         },
@@ -4142,7 +4132,7 @@
           "high": 1004.2000122070312,
           "low": 991.5999755859375,
           "close": 1000.2000122070312,
-          "adj_close": 1000.2000122070312,
+          "adj_close": 977.801025390625,
           "volume": 10240700,
           "provisional": false
         },
@@ -4152,7 +4142,7 @@
           "high": 1009.5,
           "low": 986.5999755859375,
           "close": 1003.2000122070312,
-          "adj_close": 1003.2000122070312,
+          "adj_close": 980.73388671875,
           "volume": 8567672,
           "provisional": false
         },
@@ -4162,7 +4152,7 @@
           "high": 1015.4000244140625,
           "low": 980.4000244140625,
           "close": 1015.4000244140625,
-          "adj_close": 1015.4000244140625,
+          "adj_close": 992.66064453125,
           "volume": 12992711,
           "provisional": false
         },
@@ -4172,7 +4162,7 @@
           "high": 1024.0,
           "low": 992.2000122070312,
           "close": 994.0999755859375,
-          "adj_close": 994.0999755859375,
+          "adj_close": 971.837646484375,
           "volume": 13508984,
           "provisional": false
         },
@@ -4182,7 +4172,7 @@
           "high": 1035.0,
           "low": 999.1500244140625,
           "close": 1035.0,
-          "adj_close": 1035.0,
+          "adj_close": 1011.8217163085938,
           "volume": 15166446,
           "provisional": false
         },
@@ -4192,7 +4182,7 @@
           "high": 1052.300048828125,
           "low": 1010.0,
           "close": 1020.5,
-          "adj_close": 1020.5,
+          "adj_close": 997.6464233398438,
           "volume": 12126808,
           "provisional": false
         },
@@ -4202,7 +4192,7 @@
           "high": 1020.5,
           "low": 1003.1500244140625,
           "close": 1013.8499755859375,
-          "adj_close": 1013.8499755859375,
+          "adj_close": 991.1453247070312,
           "volume": 8252213,
           "provisional": false
         },
@@ -4212,7 +4202,7 @@
           "high": 1009.0,
           "low": 990.0999755859375,
           "close": 992.0,
-          "adj_close": 992.0,
+          "adj_close": 969.78466796875,
           "volume": 7493993,
           "provisional": false
         },
@@ -4222,7 +4212,7 @@
           "high": 1012.6500244140625,
           "low": 992.9000244140625,
           "close": 997.0,
-          "adj_close": 997.0,
+          "adj_close": 974.6727294921875,
           "volume": 14847874,
           "provisional": false
         },
@@ -4232,7 +4222,7 @@
           "high": 1030.9000244140625,
           "low": 1007.2999877929688,
           "close": 1023.4000244140625,
-          "adj_close": 1023.4000244140625,
+          "adj_close": 1000.4815063476562,
           "volume": 14094234,
           "provisional": false
         },
@@ -4242,7 +4232,7 @@
           "high": 1033.800048828125,
           "low": 1010.6500244140625,
           "close": 1020.0,
-          "adj_close": 1020.0,
+          "adj_close": 997.1576538085938,
           "volume": 8429312,
           "provisional": false
         },
@@ -4252,7 +4242,7 @@
           "high": 1065.0,
           "low": 1027.0,
           "close": 1062.0999755859375,
-          "adj_close": 1062.0999755859375,
+          "adj_close": 1038.3148193359375,
           "volume": 21781113,
           "provisional": false
         },
@@ -4262,7 +4252,7 @@
           "high": 1096.4000244140625,
           "low": 1069.449951171875,
           "close": 1088.0,
-          "adj_close": 1088.0,
+          "adj_close": 1063.634765625,
           "volume": 22113407,
           "provisional": false
         },
@@ -4272,7 +4262,7 @@
           "high": 1126.699951171875,
           "low": 1095.800048828125,
           "close": 1110.0,
-          "adj_close": 1110.0,
+          "adj_close": 1085.14208984375,
           "volume": 16012759,
           "provisional": false
         },
@@ -4282,7 +4272,7 @@
           "high": 1167.8499755859375,
           "low": 1122.0,
           "close": 1161.199951171875,
-          "adj_close": 1161.199951171875,
+          "adj_close": 1135.1954345703125,
           "volume": 25566304,
           "provisional": false
         },
@@ -4292,7 +4282,7 @@
           "high": 1156.949951171875,
           "low": 1125.0999755859375,
           "close": 1130.699951171875,
-          "adj_close": 1130.699951171875,
+          "adj_close": 1105.3785400390625,
           "volume": 13258477,
           "provisional": false
         },
@@ -4302,7 +4292,7 @@
           "high": 1170.9000244140625,
           "low": 1147.949951171875,
           "close": 1168.0,
-          "adj_close": 1168.0,
+          "adj_close": 1141.84326171875,
           "volume": 18597997,
           "provisional": false
         },
@@ -4312,7 +4302,7 @@
           "high": 1174.5,
           "low": 1144.050048828125,
           "close": 1153.3499755859375,
-          "adj_close": 1153.3499755859375,
+          "adj_close": 1127.5213623046875,
           "volume": 17007168,
           "provisional": false
         },
@@ -4322,7 +4312,7 @@
           "high": 1197.800048828125,
           "low": 1038.050048828125,
           "close": 1153.800048828125,
-          "adj_close": 1153.800048828125,
+          "adj_close": 1127.9613037109375,
           "volume": 33044499,
           "provisional": false
         },
@@ -4332,7 +4322,7 @@
           "high": 1166.0,
           "low": 1107.0,
           "close": 1166.0,
-          "adj_close": 1166.0,
+          "adj_close": 1139.8880615234375,
           "volume": 25964569,
           "provisional": false
         },
@@ -4342,7 +4332,7 @@
           "high": 1165.800048828125,
           "low": 1129.300048828125,
           "close": 1163.0,
-          "adj_close": 1163.0,
+          "adj_close": 1136.9552001953125,
           "volume": 20117848,
           "provisional": false
         },
@@ -4352,7 +4342,7 @@
           "high": 1133.800048828125,
           "low": 1103.4000244140625,
           "close": 1123.1500244140625,
-          "adj_close": 1123.1500244140625,
+          "adj_close": 1097.9976806640625,
           "volume": 15636449,
           "provisional": false
         },
@@ -4362,7 +4352,7 @@
           "high": 1146.5,
           "low": 1125.199951171875,
           "close": 1146.5,
-          "adj_close": 1146.5,
+          "adj_close": 1120.82470703125,
           "volume": 14048472,
           "provisional": false
         },
@@ -4372,7 +4362,7 @@
           "high": 1185.0,
           "low": 1147.9000244140625,
           "close": 1185.0,
-          "adj_close": 1185.0,
+          "adj_close": 1158.4625244140625,
           "volume": 13030713,
           "provisional": false
         },
@@ -4382,9 +4372,19 @@
           "high": 1194.5,
           "low": 1151.0,
           "close": 1161.0,
-          "adj_close": 1161.0,
-          "volume": 12914307,
+          "adj_close": 1135.0,
+          "volume": 12918064,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 1155.699951171875,
+          "high": 1162.0,
+          "low": 1143.5,
+          "close": 1145.300048828125,
+          "adj_close": 1145.300048828125,
+          "volume": 2671631,
+          "provisional": true
         }
       ]
     },
@@ -4397,30 +4397,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 11672.0,
-        "last_volume": 413958,
-        "prev_close": 11397.0,
-        "price_change_pct": 2.4129156795647977,
-        "volume_20d_avg": 468006.8,
-        "volume_ratio": 0.8845127891304143,
-        "is_provisional": false
+        "last_close": 11745.0,
+        "last_volume": 78912,
+        "prev_close": 11672.0,
+        "price_change_pct": 0.6254283755997259,
+        "volume_20d_avg": 468013.5,
+        "volume_ratio": 0.16861052085036007,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 14181.0,
-          "high": 14181.0,
-          "low": 13985.0,
-          "close": 14080.0,
-          "adj_close": 13940.0,
-          "volume": 333510,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 13811.0,
@@ -5008,8 +4998,18 @@
           "low": 11545.0,
           "close": 11672.0,
           "adj_close": 11672.0,
-          "volume": 413958,
+          "volume": 414092,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 11751.0,
+          "high": 11769.0,
+          "low": 11675.0,
+          "close": 11745.0,
+          "adj_close": 11745.0,
+          "volume": 78912,
+          "provisional": true
         }
       ]
     },
@@ -5022,30 +5022,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 2868.8,
-        "last_volume": 2157561,
-        "prev_close": 2840.300048828125,
-        "price_change_pct": 1.003413395835906,
-        "volume_20d_avg": 2298643.3,
-        "volume_ratio": 0.9386236655334911,
-        "is_provisional": false
+        "last_close": 2901.5,
+        "last_volume": 775865,
+        "prev_close": 2868.800048828125,
+        "price_change_pct": 1.139847692948576,
+        "volume_20d_avg": 2298659.75,
+        "volume_ratio": 0.33752929288469075,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 3449.0,
-          "high": 3449.0,
-          "low": 3406.0,
-          "close": 3406.0,
-          "adj_close": 3406.0,
-          "volume": 1656879,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 3405.0,
@@ -5631,10 +5621,20 @@
           "open": 2860.0,
           "high": 2898.0,
           "low": 2853.199951171875,
-          "close": 2868.8,
-          "adj_close": 2868.8,
-          "volume": 2157561,
+          "close": 2868.800048828125,
+          "adj_close": 2868.800048828125,
+          "volume": 2157890,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 2910.800048828125,
+          "high": 2910.800048828125,
+          "low": 2861.0,
+          "close": 2901.5,
+          "adj_close": 2901.5,
+          "volume": 775865,
+          "provisional": true
         }
       ]
     },
@@ -5647,17 +5647,17 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 10339.0,
-        "last_volume": 370207,
+        "last_close": 10426.0,
+        "last_volume": 128618,
         "prev_close": 10350.0,
-        "price_change_pct": -0.10628019323671498,
-        "volume_20d_avg": 297767.9,
-        "volume_ratio": 1.2432737041165283,
-        "is_provisional": false
+        "price_change_pct": 0.7342995169082126,
+        "volume_20d_avg": 353822.55,
+        "volume_ratio": 0.3635099006550035,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
@@ -6252,14 +6252,14 @@
           "provisional": false
         },
         {
-          "date": "2026-11-02",
-          "open": 10455.0,
-          "high": 10539.0,
-          "low": 10240.0,
-          "close": 10339.0,
-          "adj_close": 10339.0,
-          "volume": 370207,
-          "provisional": false
+          "date": "2026-11-03",
+          "open": 10470.0,
+          "high": 10470.0,
+          "low": 10309.0,
+          "close": 10426.0,
+          "adj_close": 10426.0,
+          "volume": 128618,
+          "provisional": true
         }
       ]
     },
@@ -6272,30 +6272,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 12319.0,
-        "last_volume": 1631376,
-        "prev_close": 11000.0,
-        "price_change_pct": 11.99090909090909,
-        "volume_20d_avg": 342792.25,
-        "volume_ratio": 4.759080755180434,
-        "is_provisional": false
+        "last_close": 12219.0,
+        "last_volume": 223671,
+        "prev_close": 12319.0,
+        "price_change_pct": -0.8117542008279892,
+        "volume_20d_avg": 342815.95,
+        "volume_ratio": 0.652452139405999,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 14310.0,
-          "high": 14445.0,
-          "low": 14137.0,
-          "close": 14200.0,
-          "adj_close": 14189.0810546875,
-          "volume": 207079,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 14200.0,
@@ -6883,8 +6873,18 @@
           "low": 11057.0,
           "close": 12319.0,
           "adj_close": 12319.0,
-          "volume": 1631376,
+          "volume": 1631850,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 12342.0,
+          "high": 12498.0,
+          "low": 12182.0,
+          "close": 12219.0,
+          "adj_close": 12219.0,
+          "volume": 223671,
+          "provisional": true
         }
       ]
     },
@@ -6897,30 +6897,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 3210.0,
-        "last_volume": 468119,
-        "prev_close": 3131.0,
-        "price_change_pct": 2.523155541360588,
-        "volume_20d_avg": 737910.25,
-        "volume_ratio": 0.6343847371682396,
-        "is_provisional": false
+        "last_close": 3238.0,
+        "last_volume": 125795,
+        "prev_close": 3210.0,
+        "price_change_pct": 0.8722741433021807,
+        "volume_20d_avg": 737921.8,
+        "volume_ratio": 0.17047199310279218,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 3900.0,
-          "high": 3928.5,
-          "low": 3822.0,
-          "close": 3830.0,
-          "adj_close": 3830.0,
-          "volume": 942467,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 3830.0,
@@ -7508,8 +7498,18 @@
           "low": 3135.0,
           "close": 3210.0,
           "adj_close": 3210.0,
-          "volume": 468119,
+          "volume": 468350,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 3234.800048828125,
+          "high": 3275.10009765625,
+          "low": 3210.300048828125,
+          "close": 3238.0,
+          "adj_close": 3238.0,
+          "volume": 125795,
+          "provisional": true
         }
       ]
     },
@@ -7522,17 +7522,17 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 7920.0,
-        "last_volume": 310315,
+        "last_close": 7929.0,
+        "last_volume": 78213,
         "prev_close": 7787.0,
-        "price_change_pct": 1.7079748298446127,
-        "volume_20d_avg": 446885.5,
-        "volume_ratio": 0.6943948729596283,
-        "is_provisional": false
+        "price_change_pct": 1.8235520739694362,
+        "volume_20d_avg": 454554.3,
+        "volume_ratio": 0.17206525161020367,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
@@ -8127,14 +8127,14 @@
           "provisional": false
         },
         {
-          "date": "2026-11-02",
-          "open": 7836.0,
-          "high": 7920.0,
-          "low": 7712.0,
-          "close": 7920.0,
-          "adj_close": 7920.0,
-          "volume": 310315,
-          "provisional": false
+          "date": "2026-11-03",
+          "open": 7946.0,
+          "high": 7963.0,
+          "low": 7870.0,
+          "close": 7929.0,
+          "adj_close": 7929.0,
+          "volume": 78213,
+          "provisional": true
         }
       ]
     },
@@ -8147,30 +8147,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 4855.0,
-        "last_volume": 584316,
-        "prev_close": 4853.7001953125,
-        "price_change_pct": 0.026779665722973515,
-        "volume_20d_avg": 681877.4,
-        "volume_ratio": 0.8569223734354592,
-        "is_provisional": false
+        "last_close": 4943.10009765625,
+        "last_volume": 318797,
+        "prev_close": 4855.0,
+        "price_change_pct": 1.8146261103244077,
+        "volume_20d_avg": 681886.45,
+        "volume_ratio": 0.4675221219016744,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 4695.2998046875,
-          "high": 4950.0,
-          "low": 4685.39990234375,
-          "close": 4920.0,
-          "adj_close": 4910.05029296875,
-          "volume": 4796689,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 4925.0,
@@ -8758,8 +8748,18 @@
           "low": 4812.39990234375,
           "close": 4855.0,
           "adj_close": 4855.0,
-          "volume": 584316,
+          "volume": 584497,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 4868.0,
+          "high": 4956.89990234375,
+          "low": 4835.2001953125,
+          "close": 4943.10009765625,
+          "adj_close": 4943.10009765625,
+          "volume": 318797,
+          "provisional": true
         }
       ]
     },
@@ -8772,30 +8772,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 376.5,
-        "last_volume": 13873384,
-        "prev_close": 369.8999938964844,
-        "price_change_pct": 1.7842676973286515,
-        "volume_20d_avg": 10336946.2,
-        "volume_ratio": 1.3421163012341113,
-        "is_provisional": false
+        "last_close": 380.1499938964844,
+        "last_volume": 3405011,
+        "prev_close": 376.5,
+        "price_change_pct": 0.9694538901684927,
+        "volume_20d_avg": 10336994.3,
+        "volume_ratio": 0.3294004912046822,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 389.6499938964844,
-          "high": 400.8999938964844,
-          "low": 388.6499938964844,
-          "close": 399.20001220703125,
-          "adj_close": 398.6588134765625,
-          "volume": 17574744,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 401.0,
@@ -9383,8 +9373,18 @@
           "low": 370.20001220703125,
           "close": 376.5,
           "adj_close": 376.5,
-          "volume": 13873384,
+          "volume": 13874346,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 379.0,
+          "high": 381.95001220703125,
+          "low": 374.04998779296875,
+          "close": 380.1499938964844,
+          "adj_close": 380.1499938964844,
+          "volume": 3405011,
+          "provisional": true
         }
       ]
     },
@@ -9397,30 +9397,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 3046.4,
-        "last_volume": 995466,
-        "prev_close": 3017.300048828125,
-        "price_change_pct": 0.9644367713173599,
-        "volume_20d_avg": 1333987.85,
-        "volume_ratio": 0.7462331834581551,
-        "is_provisional": false
+        "last_close": 3033.699951171875,
+        "last_volume": 379950,
+        "prev_close": 3046.39990234375,
+        "price_change_pct": -0.4168839147514508,
+        "volume_20d_avg": 1333991.9,
+        "volume_ratio": 0.28482181938286133,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 3120.0,
-          "high": 3244.5,
-          "low": 3046.199951171875,
-          "close": 3107.10009765625,
-          "adj_close": 3107.10009765625,
-          "volume": 4403351,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 3106.5,
@@ -10006,10 +9996,20 @@
           "open": 3034.39990234375,
           "high": 3047.5,
           "low": 2990.0,
-          "close": 3046.4,
-          "adj_close": 3046.4,
-          "volume": 995466,
+          "close": 3046.39990234375,
+          "adj_close": 3046.39990234375,
+          "volume": 995547,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 3043.0,
+          "high": 3063.300048828125,
+          "low": 3013.5,
+          "close": 3033.699951171875,
+          "adj_close": 3033.699951171875,
+          "volume": 379950,
+          "provisional": true
         }
       ]
     },
@@ -10022,30 +10022,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 4476.3,
-        "last_volume": 603063,
-        "prev_close": 4436.5,
-        "price_change_pct": 0.8971035726360911,
-        "volume_20d_avg": 801403.3,
-        "volume_ratio": 0.7525087555791198,
-        "is_provisional": false
+        "last_close": 4479.2001953125,
+        "last_volume": 199100,
+        "prev_close": 4476.2998046875,
+        "price_change_pct": 0.0647943782041311,
+        "volume_20d_avg": 801410.3,
+        "volume_ratio": 0.24843703655917573,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 4883.89990234375,
-          "high": 5005.0,
-          "low": 4883.89990234375,
-          "close": 4998.0,
-          "adj_close": 4998.0,
-          "volume": 1283840,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 4978.10009765625,
@@ -10631,10 +10621,20 @@
           "open": 4436.5,
           "high": 4480.0,
           "low": 4420.2998046875,
-          "close": 4476.3,
-          "adj_close": 4476.3,
-          "volume": 603063,
+          "close": 4476.2998046875,
+          "adj_close": 4476.2998046875,
+          "volume": 603203,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 4503.0,
+          "high": 4524.89990234375,
+          "low": 4455.0,
+          "close": 4479.2001953125,
+          "adj_close": 4479.2001953125,
+          "volume": 199100,
+          "provisional": true
         }
       ]
     },
@@ -10647,30 +10647,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 1770.0,
-        "last_volume": 3456916,
-        "prev_close": 1777.699951171875,
-        "price_change_pct": -0.43314121524271443,
-        "volume_20d_avg": 1691136.65,
-        "volume_ratio": 2.044137592311065,
-        "is_provisional": false
+        "last_close": 1765.4000244140625,
+        "last_volume": 397480,
+        "prev_close": 1770.0,
+        "price_change_pct": -0.2598856263241525,
+        "volume_20d_avg": 1691180.4,
+        "volume_ratio": 0.23503110608424743,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 1930.0,
-          "high": 1965.9000244140625,
-          "low": 1930.0,
-          "close": 1951.0,
-          "adj_close": 1951.0,
-          "volume": 1864891,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 1955.0,
@@ -11258,8 +11248,18 @@
           "low": 1722.0,
           "close": 1770.0,
           "adj_close": 1770.0,
-          "volume": 3456916,
+          "volume": 3457791,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 1766.0999755859375,
+          "high": 1770.0,
+          "low": 1747.0,
+          "close": 1765.4000244140625,
+          "adj_close": 1765.4000244140625,
+          "volume": 397480,
+          "provisional": true
         }
       ]
     },
@@ -11272,30 +11272,20 @@
       "status": "ok",
       "provenance": {
         "source": "yfinance",
-        "fetched_at_ist": "2026-11-03T01:15:57.074193+05:30",
-        "as_of_date": "2026-11-02"
+        "fetched_at_ist": "2026-11-03T10:45:58.537362+05:30",
+        "as_of_date": "2026-11-03"
       },
       "metrics": {
-        "last_close": 1252.0,
-        "last_volume": 2675954,
-        "prev_close": 1263.0,
-        "price_change_pct": -0.870942201108472,
-        "volume_20d_avg": 952619.35,
-        "volume_ratio": 2.809048545990589,
-        "is_provisional": false
+        "last_close": 1322.699951171875,
+        "last_volume": 1589403,
+        "prev_close": 1252.0,
+        "price_change_pct": 5.646960956220048,
+        "volume_20d_avg": 952676.8,
+        "volume_ratio": 1.6683548922362756,
+        "is_provisional": true
       },
       "bar_count": 60,
       "bars": [
-        {
-          "date": "2026-08-06",
-          "open": 1327.800048828125,
-          "high": 1341.9000244140625,
-          "low": 1325.0999755859375,
-          "close": 1331.0,
-          "adj_close": 1331.0,
-          "volume": 817532,
-          "provisional": false
-        },
         {
           "date": "2026-08-07",
           "open": 1331.0,
@@ -11883,8 +11873,18 @@
           "low": 1240.800048828125,
           "close": 1252.0,
           "adj_close": 1252.0,
-          "volume": 2675954,
+          "volume": 2677103,
           "provisional": false
+        },
+        {
+          "date": "2026-11-03",
+          "open": 1264.0,
+          "high": 1323.0,
+          "low": 1260.300048828125,
+          "close": 1322.699951171875,
+          "adj_close": 1322.699951171875,
+          "volume": 1589403,
+          "provisional": true
         }
       ]
     }
