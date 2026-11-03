@@ -1,0 +1,60 @@
+CONVO 1
+Read docs/brief.pdf and docs/reference.pdf fully. Do NOT write code yet.
+
+Context: hiring challenge, deadline is TODAY. Don't pad the plan: build in
+small checkpoints so there is always a working, deployable version, and put
+anything non-essential in a cut list. Windows, Python 3.13, Node installed.
+Work only inside this repo folder. API keys live in .env (GEMINI_API_KEY) and
+must never be printed or committed.
+
+Product direction (challenge me if you have a better idea):
+- Mobile-first web app (React + Vite), two tabs: Briefing (push) and Research (pull).
+- Briefing: ranked, filtered portfolio announcements with a window picker, routine
+  filings collapsed, configurable volume/price alert thresholds, and rich cards
+  for results (Revenue, EBITDA, PBT, PAT with QoQ/YoY) and management changes.
+- Research: any NSE ticker, grounded ONLY in annual reports and concall
+  transcripts, with citations. Hero feature: promised vs delivered.
+
+1. Write SPEC.md: requirements and grading signals in your own words.
+2. Write PLAN.md (max 1 page): the smallest prototype that nails 1-2 workflows
+   and certainly runs. Snapshot-first: a pipeline writes JSON, the app reads it,
+   so the demo never depends on a live scrape. Include a cut list and a build
+   order with a checkpoint after each step.
+3. List your top uncertainties, especially data-source risks (NSE blocking,
+   screener.in structure), and how you would test each one first.
+
+Do not ask me questions before producing the files. Put open questions at the
+end of PLAN.md.
+
+
+
+Both SPEC.md and PLAN.md are written and saved to the repository root. No code has been written yet.
+
+Challenge to Product Direction: How We Sharpen It
+
+Your proposed two-tab model (Briefing for Push, Research for Pull) is the correct mental model for public-markets investors. It directly maps to the real workflow: Morning Pulse followed by Deep Dives.
+
+To maximize the grading signals highlighted by ENAM (product judgment, no AI slop, density, and design), we propose sharpening three specific elements:
+
+Briefing: Aggressive Signal Hierarchy over Flat Feeds
+The Trap: Even categorized lists quickly feel like an email inbox.
+The Sharpening: Implement an explicit 3-tier signal hierarchy:
+Tier 1 (Actionable Hero Cards): Quarterly Results (with automated QoQ/YoY delta pills and EBITDA margin expansion/contraction) and Management Changes (with executive dossier cards detailing pedigree/background).
+Tier 2 (Compact Badges): Material corporate actions (M&A, Capex, Credit Ratings, Insider buying).
+Tier 3 (Collapsed Noise): Routine filings (ESOPs, compliance certificates, secretarial filings) collapsed into a single summary bar ("18 routine filings collapsed — tap to view").
+Research: The "Promised vs. Delivered" Accountability Matrix
+The Trap: Most financial AI summarises what management says today.
+The Sharpening: Differentiate analysis from summarization. Our hero feature directly pairs management forward-guidance quotes from past earnings calls against actual reported quarterly numbers 1–4 quarters later, issuing an explicit credibility verdict: Beat, Met, Missed, or Pivoted, with clickable primary source citations.
+Primary-Source Grounding Discipline (Verifiable Citations)
+No generic summaries or broker fluff. Every data point in the research tab carries an interactive citation chip (e.g. [Q2 FY25 Concall, p. 14]). Tapping a chip displays the verbatim excerpt in an inspection drawer.
+Top Uncertainties & How We Test Each First
+#	Risk / Uncertainty	Root Cause	Impact	First Test to Run
+1	NSE Anti-Bot Blocking & Cloudflare WAF	nseindia.com enforces aggressive Akamai/Cloudflare bot detection, TLS fingerprinting, and session-cookie requirements. Direct Python requests frequently get 403 Forbidden.	Live scraping during demo or evaluation could fail catastrophically.	Probe 1: Run a 10-line Python probe comparing BSE Announcements API (api.bseindia.com/BseIndiaAPI/api/AnnSubCategoryGetData) vs NSE endpoints with browser headers. BSE's JSON endpoint is significantly more reliable and cleaner.
+2	Screener.in Transcript Availability & Format Drift	Screener.in links to transcripts hosted externally (ResearchBytes, company IR sites, exchange PDFs) with inconsistent formatting, scanned tables, or varying PDF structures.	Automated PDF text extraction can fail or be mangled on unstandardized layouts.	Probe 2: Run a Python script probing Screener's consolidated quarterly data table and transcript URLs for 3 diverse test tickers (DIXON, TRENT, TATAMOTORS). Confirm URL structures and extract sample transcripts.
+3	Gemini Context Window Latency & Cost	25–40 page earnings call transcripts and 200-page Annual Reports will incur high latency and token usage if passed raw on every query.	Breaches the "efficiency earns bonus points" grading rubric and introduces multi-second UI lag.	Probe 3: Pre-segment transcripts into Management Remarks vs Analyst Q&A, and route extraction to gemini-2.5-flash with structured Pydantic/JSON schemas. Measure extraction latency and token cost on a single transcript.
+4	Demo Day Fragility (Deadline is Today)	Depending on live network requests or external scraping during an evaluation is the #1 point of failure.	A broken demo is graded lowest.	Mitigation: Strict Snapshot-First Architecture. Pre-compute verified JSON snapshots for a 16-company mock portfolio and 4 deep-dive research tickers. The app works 100% offline with zero latency, while the generalization pipeline exists as an independent engine.
+Summary of Produced Artifacts
+SPEC.md: Complete product requirements, grading signal breakdown, visual card specifications, and system architecture.
+PLAN.md: 1-page progressive build plan with 6 testable checkpoints, the explicit cut list, and open alignment questions at the end.
+
+When you're ready, we can run Step 0 (the data probes) and begin Step 1 (data contracts and snapshots).
