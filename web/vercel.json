@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "https://finn-api.onrender.com/api/$1" },
+    { "source": "/api/(.*)", "destination": "https://finn-c2p3.onrender.com/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
