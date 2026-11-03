@@ -1,0 +1,79 @@
+{
+  "DIXON.NS": {
+    "ticker": "DIXON.NS",
+    "company_name": "Dixon Technologies (India) Limited",
+    "period": "Q2 FY27",
+    "period_ended": "30-Sep-2026",
+    "scope": "Consolidated",
+    "units": "Rs Crore",
+    "status": "verified",
+    "validation": {
+      "scope_labelled": true,
+      "units_crore": true,
+      "pat_le_pbt": true,
+      "yoy_matches_printed": true,
+      "all_checks_passed": true
+    },
+    "provenance": {
+      "source_url": "https://nsearchives.nseindia.com/corporate/DIXON_30102026160547_Outcome30102026.pdf",
+      "filing_pages": [
+        1,
+        3,
+        11
+      ],
+      "fetched_at_ist": "2026-11-03T13:47:15+05:30"
+    },
+    "metrics": {
+      "revenue": {
+        "current_quarter": 21863.0,
+        "current_quarter_unrounded": 21862.37,
+        "preceding_quarter": 16075.95,
+        "year_ago_quarter": 15350.78,
+        "qoq_pct": 36.0,
+        "yoy_pct": 42.4,
+        "printed_yoy_pct": 42.0,
+        "direction": "up"
+      },
+      "ebitda": {
+        "current_quarter": 666.0,
+        "current_quarter_unrounded": 666.0,
+        "preceding_quarter": 1000.05,
+        "year_ago_quarter": 1058.22,
+        "qoq_pct": -33.4,
+        "yoy_pct": -37.1,
+        "printed_yoy_pct": -37.0,
+        "direction": "down"
+      },
+      "pbt": {
+        "current_quarter": 532.35,
+        "current_quarter_unrounded": 532.35,
+        "preceding_quarter": 868.98,
+        "year_ago_quarter": 923.59,
+        "qoq_pct": -38.7,
+        "yoy_pct": -42.4,
+        "printed_yoy_pct": -42.0,
+        "direction": "down"
+      },
+      "pat": {
+        "current_quarter": 410.87,
+        "current_quarter_unrounded": 410.87,
+        "preceding_quarter": 717.83,
+        "year_ago_quarter": 745.7,
+        "qoq_pct": -42.8,
+        "yoy_pct": -44.9,
+        "printed_yoy_pct": -45.0,
+        "direction": "down"
+      }
+    },
+    "management_appointment": {
+      "person": "Mr. Prithvi Vachani",
+      "din": "08247706",
+      "role": "Additional Director in the capacity of Executive Director",
+      "date_of_appointment": "30-10-2026",
+      "term_of_appointment": "5 (five) consecutive years with effect from 30th October, 2026",
+      "intimation_source": "Page 1, Paragraph ii & Page 3, Annexure-A",
+      "extracted_text_page1": "Appointment of Mr. Prithvi Vachani (DIN: 08247706) as an Additional Director in the capacity of Executive Director of the  Company for a period of 5 (five) consecutive years with effect from 30th October, 2026, along with his remuneration, subject  to approval of shareholders of the Company.",
+      "brief_profile_page3": "Mr. Prithvi Vachani is currently serving as the Vice President at Dixon  Technologies (India) Limited. A 2017 graduate of Bentley University, Mr. Prithvi  quickly demonstrated his strategic acumen upon entering the professional  arena. His exceptional foresight and leadership were notably displayed when  he successfully orchestrated a major collaboration with boAt, India\u2019s leading  audio product company, resulting in the production of innovative twin wireless  speakers. Mr. Prithvi has been at the forefront of Dixon\u2019s ambitious expansion,  spearheading the establishment of a state-of-the-art facility in Chennai.  Through strategic partnerships with industry giants like Asus and HP, he has  driven the rapid growth of Dixon\u2019s IT hardware division, solidifying its position  as a key player in the tech manufacturing landscape.    A proponent of continuous learning and global perspectives, Mr. Prithvi  pursued a Master of Business Administration at the prestigious London  Business School. Equipped with this advanced degree, he has played a pivotal  role in Dixon\u2019s mobile division, managing key accounts such as Jio and Xiaomi.  His strategic insights and hands-on leadership have been instrumental in  building strong partnerships and significantly contributing to the company\u2019s  success. Mr. Prithvi is committed to positioning Dixon Technologies as an  engineering powerhouse. He is leading efforts to diversify into new product  categories, ensuring that the company remains at the forefront of innovation  and continues to scale new heights in the rapidly evolving tech industry."
+    }
+  }
+}

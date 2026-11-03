@@ -17,6 +17,7 @@ const WINDOWS = [
 export default function BriefingTab() {
   const { data: ann, loading: annLoading, error: annError } = useSnapshot('announcements.json')
   const { data: prices } = useSnapshot('prices.json')
+  const { data: resultsData } = useSnapshot('results.json')
 
   const [windowIdx, setWindowIdx]   = useState(0)
   const [priceThr, setPriceThr]     = useState(3)
@@ -45,15 +46,44 @@ export default function BriefingTab() {
 
   const events = useMemo(() => {
     if (!ann?.events) return []
-    return ann.events.filter(ev => {
-      // timestamp is like "30-Oct-2026 19:40:11" — parse it
-      const ts = ev.timestamp
-      if (!ts) return true
-      const parsed = new Date(ts.replace(/-/g, ' '))
-      if (isNaN(parsed)) return true
-      return parsed >= cutoff
-    })
-  }, [ann, cutoff])
+    return ann.events
+      .filter(ev => {
+        // timestamp is like "30-Oct-2026 19:40:11" — parse it
+        const ts = ev.timestamp
+        if (!ts) return true
+        const parsed = new Date(ts.replace(/-/g, ' '))
+        if (isNaN(parsed)) return true
+        return parsed >= cutoff
+      })
+      .map(ev => {
+        const res = resultsData?.[ev.ticker]
+        if (res && ev.primary_category === 'results' && !ev.results && res.status === 'verified') {
+          return {
+            ...ev,
+            results: {
+              period: res.period,
+              type: res.scope,
+              revenue: `₹${res.metrics.revenue.current_quarter.toLocaleString()} Cr`,
+              ebitda: `₹${res.metrics.ebitda.current_quarter.toLocaleString()} Cr`,
+              pbt: `₹${res.metrics.pbt.current_quarter.toFixed(2)} Cr`,
+              pat: `₹${res.metrics.pat.current_quarter.toFixed(2)} Cr`,
+              revenue_qoq_pct: res.metrics.revenue.qoq_pct,
+              revenue_yoy_pct: res.metrics.revenue.yoy_pct,
+              ebitda_qoq_pct: res.metrics.ebitda.qoq_pct,
+              ebitda_yoy_pct: res.metrics.ebitda.yoy_pct,
+              pbt_qoq_pct: res.metrics.pbt.qoq_pct,
+              pbt_yoy_pct: res.metrics.pbt.yoy_pct,
+              pat_qoq_pct: res.metrics.pat.qoq_pct,
+              pat_yoy_pct: res.metrics.pat.yoy_pct,
+              source_url: res.provenance?.source_url,
+              filing_page: res.provenance?.filing_pages?.[2] || 11,
+              status: res.status
+            }
+          }
+        }
+        return ev
+      })
+  }, [ann, cutoff, resultsData])
 
   // Tier split — use primary_category field
   const tier1 = events.filter(e => categoryMeta(e.primary_category).tier === 1)

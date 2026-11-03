@@ -22687,20 +22687,39 @@
         "final_score": 13.75
       },
       "why_you_should_care": null,
-      "tier": 1
+      "tier": 1,
+      "results": {
+        "period": "Q2 FY27",
+        "type": "Consolidated",
+        "revenue": "\u20b921,863 Cr",
+        "ebitda": "\u20b9666 Cr",
+        "pbt": "\u20b9532.35 Cr",
+        "pat": "\u20b9410.87 Cr",
+        "revenue_qoq_pct": 36.0,
+        "revenue_yoy_pct": 42.4,
+        "ebitda_qoq_pct": -33.4,
+        "ebitda_yoy_pct": -37.1,
+        "pbt_qoq_pct": -38.7,
+        "pbt_yoy_pct": -42.4,
+        "pat_qoq_pct": -42.8,
+        "pat_yoy_pct": -44.9,
+        "source_url": "https://nsearchives.nseindia.com/corporate/DIXON_30102026160547_Outcome30102026.pdf",
+        "filing_page": 11,
+        "status": "verified"
+      }
     },
     {
       "event_id": "DIXON.NS_event_mgmt_106836531",
       "ticker": "DIXON.NS",
       "company_name": "Dixon Technologies",
-      "title": "Executive Leadership & Directorate Change",
+      "title": "Appointment of Mr. Prithvi Vachani as Executive Director",
       "primary_category": "management_change",
       "secondary_tags": [
         "management_change"
       ],
       "timestamp": "30-Oct-2026 16:10:12",
       "filing_count": 1,
-      "person_named": null,
+      "person_named": "Mr. Prithvi Vachani",
       "primary_filing": {
         "desc": "Change in Management",
         "attachment_text": "Dixon Technologies (India) Limited has informed the Exchange about change in Management",
@@ -22720,7 +22739,16 @@
         "final_score": 12.37
       },
       "why_you_should_care": null,
-      "tier": 1
+      "tier": 1,
+      "management_changes": [
+        {
+          "name": "Mr. Prithvi Vachani",
+          "type": "incoming",
+          "role": "Additional Director in the capacity of Executive Director",
+          "effective_date": "30-10-2026",
+          "bio_source": "https://nsearchives.nseindia.com/corporate/DIXON_30102026160547_Outcome30102026.pdf"
+        }
+      ]
     },
     {
       "event_id": "DIXON.NS_event_std_106809698",
