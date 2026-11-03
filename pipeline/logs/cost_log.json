@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "total_input_tokens": 19093,
+    "total_output_tokens": 1502,
+    "total_thinking_tokens": 0,
+    "total_tokens": 20595,
+    "total_estimated_cost_usd": 0.001883
+  },
+  "entries": [
+    {
+      "timestamp_ist": "2026-11-03 16:33:02 IST",
+      "stage": "Stage 1",
+      "model": "gemini-3.5-flash",
+      "input_tokens": 19093,
+      "output_tokens": 1502,
+      "thinking_tokens": 0,
+      "total_tokens": 20595,
+      "estimated_cost_usd": 0.001883,
+      "notes": "DIXON Promised vs Delivered guidance extraction (13 rows)"
+    }
+  ]
+}

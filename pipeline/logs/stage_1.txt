@@ -1,0 +1,72 @@
+﻿Fetching latest 5 concall transcripts for DIXON from Screener.in...
+Found 5 transcripts. Processing downloads and extracting text per page with PyMuPDF...
+
+
+============================================================================================================================================
+PART 2: PROMISED VS DELIVERED ANALYSIS FOR DIXON
+============================================================================================================================================
+============================================================================================================================================
+VERDICT RULES IN CODE (DOCUMENTED)
+============================================================================================================================================
+1. Metric Alignment Rule: A verdict is allowed ONLY when the delivered figure measures the SAME metric as the promise
+   (volume vs volume, revenue vs revenue, margin vs margin). Revenue growth is not volume growth. Otherwise verdict is Unclear.
+2. Numerical Evaluation Rules:
+   - Met    : Inside promised range [T_min, T_max], or at most 5 percentage points above a stated floor (T_floor <= actual <= T_floor + 5.0)
+   - Beat   : More than 5 percentage points above the top of the range or stated floor (actual > T_top + 5.0)
+   - Missed : Below the floor or range (actual < T_floor or actual < T_min)
+   - Unclear: Metrics do not match, or 'No comparable figure disclosed'
+
+============================================================================================================================================
+JUL 2026 ROW REVENUE RECONCILIATION
+============================================================================================================================================
+Source Label:     NSE results filing (results.json, p.11)
+Q2 FY27 Revenue:  Γé╣21,862.37 Cr (results.json['DIXON.NS'].metrics.revenue.current_quarter_unrounded)
+Q1 FY27 Revenue:  Γé╣16,075.95 Cr (results.json['DIXON.NS'].metrics.revenue.preceding_quarter)
+QoQ Growth %:     +36.0% ((21862.37 - 16075.95) / 16075.95 = +35.995% rounded to 36.0%)
+Promised Metric:  volume (20% to 25% volume growth QoQ)
+Delivered Metric: revenue (+36.0% QoQ revenue growth)
+Verdict:          Unclear (Revenue growth is not volume growth; next concall transcript does not exist)
+
+============================================================================================================================================
+VOLUME PROMISES: NEXT QUARTER TRANSCRIPT SUBSTRING AUDIT
+============================================================================================================================================
+1. Jul 2025 p.4 Promise: 'Ahead of the festive season we expect volume growth of at least 15% quarter-on-quarter.'
+   Next Transcript:      Concall Oct 17, 2025 (filed Oct 24, 2025)
+   Verified Quote:       'healthy volume growth across the various \nsmartphone brands' (Page 5)
+   Substring Verified:   True (doc['pages'][4]['text'])
+   Numerical % in text:  None disclosed -> Delivered: 'No comparable figure disclosed' -> Verdict: Unclear
+2. Jul 2026 p.4 Promise: 'and we expect 20% to 25% volume growth quarter-on-quarter growth...'
+   Next Transcript:      None exists (Q2 FY27 transcript not released)
+   Delivered Figure:     +36.0% QoQ revenue growth (Q2 FY27 Γé╣21,862.37 Cr vs Q1 FY27 Γé╣16,075.95 Cr)
+   Delivered Source:     NSE results filing (results.json, p.11) -> Verdict: Unclear
+
+============================================================================================================================================
+COMPACT TABLE: ALL 13 ROWS
+============================================================================================================================================
+Row  | Page    | Metric     | Promised                                   | Delivered Figure                       | Delivered Source                       | Verdict
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1    | p.4     | volume     | Volume growth of at least 15% QoQ          | No comparable figure disclosed         | Concall Oct 17, 2025, p.5 (quote: "h.. | Unclear
+2    | p.5     | growth_pct | 50% growth this fiscal for refrigerators.. | No comparable figure disclosed         | Screener Quarters table, row 'Sales'.. | Unclear
+3    | p.4     | margin_pct | Display modules EBITDA margin in higher .. | No comparable figure disclosed         | Screener Quarters table, row 'OPM %'.. | Unclear
+4    | p.4     | revenue    | Camera modules revenue INR 6,000-7,000 C.. | No comparable figure disclosed         | Screener Quarters table, row 'Sales'.. | Unclear
+5    | p.4     | margin_pct | Sub-10% EBITDA margins for camera module.. | No comparable figure disclosed         | Screener Quarters table, row 'OPM %'.. | Unclear
+6    | p.4     | volume     | Camera modules volume 190-200M units/ann.. | No comparable figure disclosed         | Screener Quarters table                | Unclear
+7    | p.4     | capex      | INR 3,000 crores capex commitment over n.. | No comparable figure disclosed         | Screener Quarters table (no quarterl.. | Unclear
+8    | p.7     | volume     | New smartphone ODM customer volume ~0.5 .. | No comparable figure disclosed         | Concall Jan 29, 2026 (customer-speci.. | Unclear
+9    | p.5     | volume     | Expand camera module capacity from 40M t.. | No comparable figure disclosed         | Concall May 12, 2026                   | Unclear
+10   | p.5     | growth_pct | We expect this vertical to deliver high .. | No comparable figure disclosed         | Screener Quarters table                | Unclear
+11   | p.5     | growth_pct | 3x revenue growth in segment in FY27 aga.. | No comparable figure disclosed         | Screener Quarters table, row 'Sales'.. | Unclear
+12   | p.6     | growth_pct | Lighting JV revenues to grow almost 2x i.. | No comparable figure disclosed         | Screener Quarters table, row 'Sales'.. | Unclear
+13   | p.4     | volume     | 20% to 25% volume growth QoQ in Q2 FY27    | +36.0% QoQ revenue growth (Q2 FY27 Γé╣.. | NSE results filing (results.json, p... | Unclear
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Saved research dossier to web\public\data\research\DIXON.json
+
+============================================================================================================================================
+TOKEN USAGE REPORT
+============================================================================================================================================
+Input Tokens:    19,093
+Output Tokens:   1,502
+Thinking Tokens: 0 (minimal thinking budget enforced = 0)
+Total Tokens:    20,595
+============================================================================================================================================
