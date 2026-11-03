@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    background-color: #0f1117;
+    color: #e5e7eb;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Thin scrollbar for desktop */
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #2a2d3a; border-radius: 2px; }
+}
+
+@layer components {
+  .tab-bar {
+    @apply fixed bottom-0 left-0 right-0 flex border-t border-border bg-card z-50;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+  .tab-btn {
+    @apply flex-1 flex flex-col items-center gap-1 py-3 text-muted transition-colors;
+  }
+  .tab-btn.active {
+    @apply text-accent;
+  }
+  .tab-label {
+    @apply text-[10px] font-medium tracking-wide uppercase;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+  .chip-results   { @apply bg-indigo-500/20 text-indigo-300; }
+  .chip-mgmt      { @apply bg-amber-500/20 text-amber-300; }
+  .chip-ma        { @apply bg-purple-500/20 text-purple-300; }
+  .chip-call      { @apply bg-blue-500/20 text-blue-300; }
+  .chip-press     { @apply bg-slate-500/20 text-slate-300; }
+  .chip-meetings  { @apply bg-teal-500/20 text-teal-300; }
+  .chip-other     { @apply bg-zinc-500/20 text-zinc-400; }
+}
+

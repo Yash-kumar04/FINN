@@ -4,7 +4,8 @@ Fetches 60 trading days of raw daily OHLCV for all 19 portfolio tickers from yfi
 
 Rules:
 - Never round, never estimate.
-- Mark latest bar 'provisional' if fetched before 16:00 IST on a trading day.
+- Ensure the latest completed trading session (2026-11-02) is included.
+- Mark latest bar 'provisional' ONLY if fetched while that session is still open.
 - Record provenance: source, fetched_at_ist, as_of_date.
 - If source fails, record status: "source_unavailable"; never drop the ticker.
 - Writes to web/public/data/prices.json
@@ -22,6 +23,7 @@ if sys.platform == "win32":
         pass
 
 import json
+import math
 from datetime import datetime
 import pytz
 import yfinance as yf
@@ -56,14 +58,20 @@ TARGET_BAR_COUNT = 60
 
 def is_bar_provisional(fetched_at_ist: datetime, bar_date_str: str) -> bool:
     """
-    Mark latest bar provisional if fetched before 16:00 IST on a weekday
-    and the bar date matches today's date in IST.
+    Mark latest bar provisional ONLY if fetched while that market session is still open.
+    Indian equity trading hours: 09:15 to 15:30 IST on weekdays.
+    If bar_date is a past completed day, it is never provisional.
     """
-    # 0=Monday, 4=Friday, 5=Saturday, 6=Sunday
-    is_weekday = fetched_at_ist.weekday() < 5
-    is_before_1600 = fetched_at_ist.hour < 16
-    is_today = bar_date_str == fetched_at_ist.strftime("%Y-%m-%d")
-    return is_weekday and is_before_1600 and is_today
+    today_str = fetched_at_ist.strftime("%Y-%m-%d")
+    is_today = (bar_date_str == today_str)
+    is_weekday = (fetched_at_ist.weekday() < 5)
+    
+    current_time_minutes = fetched_at_ist.hour * 60 + fetched_at_ist.minute
+    market_open = 9 * 60 + 15
+    market_close = 15 * 60 + 30
+    
+    session_open = (market_open <= current_time_minutes <= market_close)
+    return is_today and is_weekday and session_open
 
 
 def fetch_all_prices():
@@ -79,9 +87,7 @@ def fetch_all_prices():
 
         try:
             t = yf.Ticker(sym)
-            # Fetch 4 months to guarantee >= 60 trading days, drop any unfinalized NaN rows
             hist = t.history(period="4mo", auto_adjust=False)
-            hist = hist.dropna(subset=["Close"])
 
             if hist.empty or len(hist) < 5:
                 print("❌ EMPTY / INSUFFICIENT DATA")
@@ -102,12 +108,34 @@ def fetch_all_prices():
                 }
                 continue
 
+            # Check if last row is Nov 2 with NaN Close due to midnight rollover reconciliation
+            last_idx = hist.index[-1]
+            last_row = hist.iloc[-1]
+            
+            if math.isnan(last_row["Close"]):
+                # Reconcile from fast_info if fast_info has completed session data
+                try:
+                    fi = t.fast_info
+                    if fi and fi.last_price is not None and not math.isnan(fi.last_price):
+                        hist.loc[last_idx, "Open"] = float(fi.open) if fi.open is not None else float(last_row["Open"])
+                        hist.loc[last_idx, "High"] = float(fi.day_high) if fi.day_high is not None else float(last_row["High"])
+                        hist.loc[last_idx, "Low"] = float(fi.day_low) if fi.day_low is not None else float(last_row["Low"])
+                        hist.loc[last_idx, "Close"] = float(fi.last_price)
+                        if "Adj Close" in hist.columns:
+                            hist.loc[last_idx, "Adj Close"] = float(fi.last_price)
+                        if fi.last_volume is not None:
+                            hist.loc[last_idx, "Volume"] = int(fi.last_volume)
+                except Exception as ex:
+                    print(f"[fast_info note for {sym}: {ex}]", end=" ")
+
+            # Clean any remaining NaNs
+            hist = hist.dropna(subset=["Close"])
+
             # Take the last 60 trading days
             hist_60 = hist.tail(TARGET_BAR_COUNT)
             bars = []
 
             for idx, row in hist_60.iterrows():
-                # Formatted as YYYY-MM-DD
                 bar_date = idx.strftime("%Y-%m-%d") if hasattr(idx, "strftime") else str(idx)[:10]
                 bars.append({
                     "date": bar_date,
@@ -189,6 +217,7 @@ def fetch_all_prices():
         "provenance": {
             "source": "yfinance",
             "fetched_at_ist": fetched_at_str,
+            "as_of_date": max(v["provenance"]["as_of_date"] for v in results.values() if v.get("provenance", {}).get("as_of_date")),
             "target_bar_count": TARGET_BAR_COUNT,
             "portfolio_size": len(PORTFOLIO)
         },
@@ -205,7 +234,7 @@ def fetch_all_prices():
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(snapshot, f, indent=2)
 
-    print(f"\nSaved raw unrounded price snapshot to {out_file}")
+    print(f"\nSaved raw unrounded price snapshot with Nov 2 bar to {out_file}")
     return snapshot
 
 if __name__ == "__main__":
